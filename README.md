@@ -8,7 +8,7 @@ If you're a newcomer, we can provide help, advice, mentorship, and a hundred dif
 
 A key aim of this initiative is to help lower the barrier into successful open-source software contribution, by making documentation into the gateway.
 
-[You can join the academy here](https://discourse.ubuntu.com/c/open-documentation-academy/166).
+[Join the academy HERE](https://discourse.ubuntu.com/c/open-documentation-academy/166)
 
 ## This repository
 
