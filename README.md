@@ -1,6 +1,6 @@
 # Open Documentation Academy
 
-__An open source on-ramp through documentation__
+*An open source on-ramp through documentation*
 
 The Open Documentation Academy combines Canonical’s documentation team with documentation newcomers, experts, and those in-between, to help us all improve documentation practice and become better writers. Fill blanks in your resume and paint your GitHub activity tracker golden.
 
