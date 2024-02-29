@@ -54,43 +54,43 @@ Edit pre-existing documentation for consistency, accuracy, style and application
 
 Create or revise a document to better reflect an understanding-oriented [explanation](https://diataxis.fr/explanation/).
 
-### good first issue
+#### good first issue
 
 An ideal task to start with. Marking issues with this label is a widely adopted [GitHub convention](https://github.com/topics/good-first-issue).
 
-### help wanted
+#### help wanted
 
 Another [GitHub convention](https://github.com/topics/help-wanted) to indicate that a project welcomes community help with an issue. 
 
-### how-to
+#### how-to
 
 Create or revise a document to better reflect a [how-to guide](https://diataxis.fr/how-to-guides/) to achieve a specific goal.
 
-### new
+#### new
 
 Adding new or missing documentation for a specific tool, feature, or function.
 
-### oda-admin
+#### oda-admin
 
 Tasks relating to the admin of the Open Documentation Academy (ODA) project.
 
-### reference
+#### reference
 
 Create or revise a document to better reflect a technical description to use as [reference](https://diataxis.fr/reference/) material.
 
-### review
+#### review
 
 Review pre-existing documentation for quality, accuracy and consistency. This work may require small updates to the original documentation and/or the creation of sub-tasks to address any detected and substantial shortcomings.
 
-### size 
+#### size 
 
 This is our estimation of effort and complexity. Size values range from 1 to 8, representing _least effort_ to _most effort_ respectively. These numbers follow the [Fibonacci ### sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) sequence of 1, 2, 3, 5, 8, with size 8 likely to be a significant undertaking.
 
-### tutorial
+#### tutorial
 
 Develop, write, edit or update a [tutorial](https://diataxis.fr/tutorials/). Tutorials are often the hardest kinds of documentation to write or update because they primarily require good teaching skills and perception, before you even start writing.
 
-### update
+#### update
 
 Update potentially outdated instructions, commands, or version numbers. These tasks might include release notes, version numbers, new command line arguments and features, and even complete overhauls when a major release occurs.
 
