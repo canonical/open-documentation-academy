@@ -20,7 +20,8 @@ Issues are identified and shared by participating projects at Canonical who cont
 
 The first words of an issue's title will typically indicate the project it involved. These include the following:
 
-- [Canonical OpenStack](https://ubuntu.com/openstack/docs): our enterprise cloud platform 
+- [Charmed OpenStack](https://ubuntu.com/openstack/docs): our traditional enterprise cloud solution
+- [MicroStack](https://microstack.run/docs): our next generation enterprise cloud solution
 - [Juju](https://juju.is/docs):  open source orchestration engine
 - [Canonical Kubernetes](https://ubuntu.com/kubernetes/docs): the reference platform for Kubernetes on all major public clouds
 - [LXD](https://documentation.ubuntu.com/lxd/en/latest/): open source container and VM management at any scale
