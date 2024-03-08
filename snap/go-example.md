@@ -5,6 +5,8 @@ This is the work I needed to do.
 
 more changes§
 
+Even more changes
+
 The process of creating a snap for a Go application builds on standard
 Go packaging tools, making it possible to adapt or integrate an
 application's existing packaging into the snap building process.
