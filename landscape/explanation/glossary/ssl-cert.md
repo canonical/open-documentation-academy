@@ -1,0 +1,1 @@
+This file will have the explanation of how SSL certs and Landscape relate to each other.
