@@ -44,6 +44,8 @@ We'll break this file down into its components in the following sections.
 
 ### Metadata
 
+Does this fix the review.
+
 The `snapcraft.yaml` file starts with a small amount of
 human-readable metadata, which is often already available in the project's
 own packaging metadata or `README.md` file. This data is used in the
