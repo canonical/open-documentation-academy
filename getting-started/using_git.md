@@ -158,7 +158,19 @@ The next time I go to the main repository on the website, I should have a yellow
 
 ## Create a pull request
 
+Now you have pushed your changes to your remote fork, you can go back to the GitHub website. Navigate to the Open Documentation Academy repository page, and you should see a banner like this:
 
+!["New pull request" banner](images/new_pull_request.png)
+
+You can click on the "Compare and pull request" button to review what you've submitted, and to create a pull request. The pull request is used to **pull** the changes from your remote fork into the original repository.
+
+![](images/create_pull_request.png)
+
+In the line at the top, we can see that we are proposing to bring changes from my test branch, on my fork into the origin repository's main branch. 
+
+When we open a pull request, we usually include a description as well, to say what changes we've made (and why), and sometimes a repository will have other information they want you to include with your pull request. In those cases, they might have a template that you should fill out. Not following the template (if one is provided) can slow down the process of getting your PR approved and merged. 
+
+When you're happy with your message, click the "Create pull request" button. At this point, the maintainers of the repository will be notified of your new pull request, and it will undergo a review process. As part of that process you might be asked to...
 
 ## Edit a pull request
 
@@ -179,9 +191,6 @@ git push <your-remote-name> <your-branch>
 This will take the changes you have made, and update your pull request automatically!
 
 You can make as many changes as you like using this method, until the pull request is ready to be accepted and merged.
-
-### If you have un-stashed changes…
-
  
 ## Updating, rebasing and merge conflicts
 

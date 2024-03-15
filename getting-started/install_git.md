@@ -108,7 +108,7 @@ https://github.com/canonical/open-documentation-academy
 
 This will download everything into a new folder *inside your `src` folder*, called "open-documentation-academy". This will be important later!
 
-
+Next, let's start using git to learn how it works! [Working with git on the command line](using_git.md)
 
 
 

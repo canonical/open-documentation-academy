@@ -4,7 +4,8 @@ Working on the command line takes a little getting used to, but doesn't need too
 
 |||
 | -- | -- |
-| `cd <folder>` | Change directory to `<folder>` |
+| `cd <folder>` | Change directory down to `<folder>` |
+| `cd ..` | Go back up one directory level |
 | `ls` (or `ls -all`) | Lists all files (including hidden files) |
 | `touch <file name>` | Create an empty file called `<file name>` |
 | `rm <file name>` | Remove the file called `<file name>` |
