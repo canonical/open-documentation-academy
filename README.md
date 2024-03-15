@@ -99,6 +99,8 @@ Update potentially outdated instructions, commands, or version numbers. These ta
 
 ## Further resources
 
+If you're new to GitHub and working on the command line, you may want to start off with our [getting started guide](getting-started/get_started.md). Even if you are running a Windows machine, you can start contributing using this guide.
+
 ### Community forum
 
 Our community forum is the hub for all things Open Documentation Academy. It includes our _Getting started_ guide and links to our weekly _Documentation office hours_, alongside  meeting notes, updates, external links and discussions.
