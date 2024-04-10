@@ -25,62 +25,80 @@ Ready to get started? By the end of this guide, you'll understand how to make a 
 
 ## Getting started
 
-Snaps are defined in a single YAML file placed in the root folder of your project. The following example shows the entire *snapcraft.yaml* file for an existing project, [Freeplane](https://github.com/snapcraft-docs/freeplane). Don't worry, we’ll break this down.
+Snaps are defined in a single YAML file placed either in the root folder of your project or in a directory named `snap`. The following example shows the entire *snapcraft.yaml* file for an existing project, [Cal - The Console Calendar Generator](https://github.com/frossm/cal).
 
-Using a few lines of yaml and the snapcraft tool, a Java application, it's dependencies and the correct JRE can be packaged as a snap. We’ll break this down.
+Using a few lines of yaml and the snapcraft tool, a Java application, its dependencies and the correct JRE can be packaged as a snap. Don't worry, we’ll break this down.
 
-[details=snapcraft.yaml for Freeplane]
+[details=snapcraft.yaml for Cal]
 
 ```yaml
-name: freeplane
-title: Freeplane
-version: '1.8.1'
-summary: A free tool to structure and organise your information with mind mapping
+name: fcal
+version: '2.7.1'
+summary: Command line calendar display
 description: |
-  Freeplane is a free and open source software application that supports
-  thinking, sharing information and getting things done at work, in school
-  and at home. The core of the software is tools for mind mapping (also known
-  as concept mapping or information mapping) and using mapped information.
+  fCal is a command line calendar utility.  It will display a
+  calendar on the command line with any month/year requested.  Defaults 
+  to the current year. fCal can also display local holidays. See help.
 
-  Occupying the middle ground between an editor and a diagramming tool,
-  Freeplane allows the user to add content as quickly and naturally as they
-  would in a text editor, yet producing structured content that can be
-  manipulated as easily as a diagram.
-
-  Features include ordering ideas in nodes and freely positionable nodes,
-  connecting nodes, automatic/conditional styles, scripting, add-ons, LaTeX,
-  search/filtering, different export features, printing, password protection
-  of nodes/maps and more.
-
-base: core18
+grade: stable
 confinement: strict
+base: core22
+
+title: fCal
+website: https://github.com/frossm/cal
+issues: https://github.com/frossm/cal/issues
+license: MIT
+
+# Enable faster LZO compression
+compression: lzo
+
+# Ignore useless library warnings
+lint:
+  ignore:
+    - library
 
 apps:
-  freeplane:
-    extensions:
-      - gnome-3-28
-    command: freeplane-$SNAPCRAFT_PROJECT_VERSION/freeplane.sh
-    environment:
-      JAVA_HOME: $SNAP/usr/lib/jvm/java-11-openjdk-amd64
-      PATH: $JAVA_HOME/jre/bin:$PATH
+  fcal:
+    command: cal-wrapper
     plugs:
-      - home
       - network
-      - cups-control
 
 parts:
-  freeplane:
-    plugin: gradle
-    source: https://github.com/freeplane/freeplane.git
-    source-tag: release-$SNAPCRAFT_PROJECT_VERSION
-    gradle-version: '5.1.1'
-    gradle-output-dir: BIN
-    gradle-options: [binZip, -xtest, -xcreateGitTag]
-    override-build: |
-      snapcraftctl build
-      unzip -o DIST/freeplane_bin-*.zip -d $SNAPCRAFT_PART_INSTALL/
+  wrapper:
+    plugin: dump
+    source: snap/local
+    source-type: local
+
+  library:
+    plugin: maven
+    source: https://github.com/frossm/library.git
+    source-type: git
+    source-tag: 'v2023.12.03'
+    maven-parameters:
+      - install
+
     build-packages:
-      - unzip
+      - maven
+      - openjdk-11-jdk-headless
+
+  cal:
+    plugin: maven
+    source: https://github.com/frossm/cal.git
+    source-branch: master
+    source-type: git
+    after:
+      - library
+
+    build-packages:
+      - maven
+      - openjdk-11-jdk-headless
+
+    stage-packages:
+      - openjdk-11-jre-headless
+
+    override-prime: |
+      snapcraftctl prime
+      rm -vf usr/lib/jvm/java-11-openjdk-*/lib/security/blacklisted.certs
 ```
 
 [/details]
@@ -90,25 +108,13 @@ parts:
 The `snapcraft.yaml` file starts with a small amount of human-readable metadata, which usually can be lifted from the GitHub description or project README.md. This data is used in the presentation of your app in the Snap Store.
 
 ```yaml
-name: freeplane
-title: Freeplane
-version: '1.8.1'
-summary: A free tool to structure and organise your information with mind mapping
+name: fcal
+version: '2.7.1'
+summary: Command line calendar display
 description: |
-  Freeplane is a free and open source software application that supports
-  thinking, sharing information and getting things done at work, in school
-  and at home. The core of the software is tools for mind mapping (also known
-  as concept mapping or information mapping) and using mapped information.
-
-  Occupying the middle ground between an editor and a diagramming tool,
-  Freeplane allows the user to add content as quickly and naturally as they
-  would in a text editor, yet producing structured content that can be
-  manipulated as easily as a diagram.
-
-  Features include ordering ideas in nodes and freely positionable nodes,
-  connecting nodes, automatic/conditional styles, scripting, add-ons, LaTeX,
-  search/filtering, different export features, printing, password protection
-  of nodes/maps and more.
+  fCal is a command line calendar utility.  It will display a
+  calendar on the command line with any month/year requested.  Defaults 
+  to the current year. fCal can also display local holidays. See help.
 ```
 
 ## Base
@@ -116,9 +122,9 @@ description: |
 The base keyword declares which _base snap_ to use with  your project.  A base snap is a special kind of snap that provides a run-time environment alongside a minimal set of libraries that are common to most applications:
 
 ```yaml
-base: core18
+base: core22
 ```
-As used above, [`core18`](https://snapcraft.io/core18) is the current standard base for snap building and is based on [Ubuntu 18.04 LTS](http://releases.ubuntu.com/18.04/).
+As used above, [`core22`](https://snapcraft.io/core22) is the current standard base for snap building and is based on [Ubuntu 22.04 LTS](https://releases.ubuntu.com/22.04/).
 
 See [Base snaps](/t/base-snaps/11198) for more details.
 
@@ -132,66 +138,88 @@ confinement: devmode
 
 Snaps are containerised to ensure more predictable application behaviour and greater security. Unlike other container systems, the shape of this confinement can be changed through a set of interfaces. These are declarations that tell the system to give permission for a specific task, such as accessing a webcam or binding to a network port.
 
-It's best to start a snap with the confinement in warning mode, rather than strictly applied. This is indicated through the `devmode` keyword. When a snap is in devmode, runtime confinement violations will be allowed but reported. These can be reviewed by running `journalctl -xe`.
+It's best to start a snap with the confinement in warning mode, rather than strictly applied. This is indicated through the `devmode` keyword. When a snap is in `devmode`, runtime confinement violations will be allowed but reported. These can be reviewed by running `journalctl -xe`.
 
-Because devmode is only intended for development, snaps must be set to strict confinement before they can be published as "stable" in the Snap Store. Once an app is working well in devmode, you can review confinement violations, add appropriate interfaces, and switch to strict confinement.
+Because `devmode` is only intended for development, snaps must be set to `strict` confinement before they can be published as "stable" in the Snap Store. Once an app is working well in `devmode`, you can review confinement violations, add appropriate interfaces, and switch to `strict` confinement.
 
 ## Apps
 
-Apps are the commands and services exposed to end users. If your command name matches the snap `name`, users will be able run the command directly. If the names differ, then apps are prefixed with the snap `name` (`freeplane.command-name`, for example). This is to avoid conflicting with apps defined by other installed snaps.
+Apps are the commands and services exposed to end users. If your command name matches the snap `name`, users will be able to run the command directly. If the names differ, then apps are prefixed with the snap `name` (`fcal.command-name`, for example). This is to avoid conflicting with apps defined by other installed snaps.
 
 If you don’t want your command prefixed you can request an alias for it on the [Snapcraft forum](https://forum.snapcraft.io/t/process-for-reviewing-aliases-auto-connections-and-track-requests/455). These are set up automatically when your snap is installed from the Snap Store.
 
 ```yaml
 apps:
-  freeplane:
-    extensions:
-      - gnome-3-28
-    command: freeplane-$SNAPCRAFT_PROJECT_VERSION/freeplane.sh
-    environment:
-      JAVA_HOME: $SNAP/usr/lib/jvm/java-11-openjdk-amd64
-      PATH: $JAVA_HOME/jre/bin:$PATH
+  fcal:
+    command: cal-wrapper
     plugs:
-      - home
       - network
-      - cups-control
 ```
-
-Since Freeplane is a desktop application, we use the [`gnome-3-28` extension](/t/the-gnome-3-28-extension/13485) to configure and setup the desktop integration and permissions for the snap. Although Freeplane is a Java Swing application which doesn't need acces to GTK or GNOME, the GNOME extension is still useful because it sets up many toolkit-independent libraries and functionality such as mouse cursor themes, locales and the XDG runtime environment.
 
 ## Parts
 
-Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. In this case we have only one: the Freeplane source. In other cases these can point to local directories, remote git repositories or other revision control systems.
+Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. These can point to local directories, remote git repositories or other revision control systems.  
+In this case we have the following sources: 
+* `cal`: A remote git repository that contains the source code for the `Cal` application.
+* `library`: A remote git repository that contains the source code for dependent libraries.
+* `wrapper`: Path to a local directory that contains a wrapper script to run the application in a bash shell.
 
-The gradle plugin can build the application using standard parameters. In this case, however, the default build logic of the gradle plugin is not sufficient. While gradle by default build the `jar` target, Freeplane has a `binZip` target which build a handy zip file. We use `gradle-options` to specify that we want to build the `binZip` target and use an [`override-build` scriptlet to add additional logic](/t/scriptlets/4892#heading--overriding-the-build-step) to the build step to extract the zip in the directory which will later get added to the final snap. See the [parts lifecycle docs](/t/parts-lifecycle/12231#heading--parts-directories) for more information on these directories. Since we use the `unzip` command in the build script, we specify it in `build-packages` so it is installed before the build script runs. Finally, we use the `gradle-output-dir` key to point the snapcraft plugin to the location of the built `jar` files for Freeplane.
+For details on metadata specific to snapcraft parts, see [Snapcraft parts metadata](/t/snapcraft-parts-metadata/8336).
+
+The `maven` plugin can build the application using standard parameters. This plugin requires a `pom.xml` in the root of the source tree. For more details on Maven-specific metadata, see [The Maven plugin](/t/the-maven-plugin/4282).  
+
+The `dump` plugin dumps the content from a specified source. For more details on metadata specific to the `dump` plugin, see [The Dump plugin](/t/the-dump-plugin/8007).
+
+
 
 ```yaml
 parts:
-  freeplane:
-    plugin: gradle
-    source: https://github.com/freeplane/freeplane.git
-    source-tag: release-$SNAPCRAFT_PROJECT_VERSION
-    gradle-version: '5.1.1'
-    gradle-output-dir: BIN
-    gradle-options: [binZip, -xtest, -xcreateGitTag]
-    override-build: |
-      snapcraftctl build
-      unzip -o DIST/freeplane_bin-*.zip -d $SNAPCRAFT_PART_INSTALL/
-    build-packages:
-      - unzip
-```
+  wrapper:
+    plugin: dump
+    source: snap/local
+    source-type: local
 
-For more details on Gradle-specific metadata, see [The Gradle plugin](/t/the-gradle-plugin/5390).
+  library:
+    plugin: maven
+    source: https://github.com/frossm/library.git
+    source-type: git
+    source-tag: 'v2023.12.03'
+    maven-parameters:
+      - install
+
+    build-packages:
+      - maven
+      - openjdk-11-jdk-headless
+
+  cal:
+    plugin: maven
+    source: https://github.com/frossm/cal.git
+    source-branch: master
+    source-type: git
+    after:
+      - library
+
+    build-packages:
+      - maven
+      - openjdk-11-jdk-headless
+
+    stage-packages:
+      - openjdk-11-jre-headless
+
+    override-prime: |
+      snapcraftctl prime
+      rm -vf usr/lib/jvm/java-11-openjdk-*/lib/security/blacklisted.certs
+```
 
 ## Building the snap
 
 You can download the example repository with the following command:
 
 ```
-$ git clone https://github.com/galgalesh/freeplane-1
+$ git clone https://github.com/frossm/cal.git
 ```
 
-After you’ve created the snapcraft.yaml, you can build the snap by simply executing the snapcraft command in the project directory:
+After you’ve reviewed the `snapcraft.yaml`, you can build the snap by simply executing the snapcraft command in the project directory:
 
 ```bash
 $ snapcraft
@@ -200,19 +228,19 @@ $ snapcraft
 The resulting snap can be installed locally. This requires the `--dangerous` flag because the snap is not signed by the Snap Store. The `--devmode` flag acknowledges that you are installing an unconfined application:
 
 ```bash
-$ sudo snap install freeplane_*.snap --devmode --dangerous
+$ sudo snap install fcal_*.snap --devmode --dangerous
 ```
 
 You can then try it out:
 
 ```bash
-$ freeplane
+$ fcal
 ```
 
 Removing the snap is simple too:
 
 ```bash
-$ sudo snap remove freeplane
+$ sudo snap remove fcal
 ```
 
 ## Publishing your snap
@@ -245,6 +273,6 @@ Use snapcraft to push the snap to the Snap Store.
 $ snapcraft upload --release=edge myjavasnap_*.snap
 ```
 
-If you’re happy with the result, you can commit the snapcraft.yaml to your GitHub repo and [turn on automatic builds](https://build.snapcraft.io) so any further commits automatically get released to edge, without requiring you to manually build locally.
+If you’re happy with the result, you can commit the snapcraft.yaml to your GitHub repo. You can optionally enable [Build from GitHub](/t/build-from-github/26004) so any further commits automatically get released to edge, without requiring you to manually build locally.
 
 Congratulations! You've just built and published your first Java snap. For a more in-depth overview of the snap building process, see [Creating a snap](/t/creating-a-snap/6799).
