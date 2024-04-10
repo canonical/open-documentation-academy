@@ -27,7 +27,7 @@ Ready to get started? By the end of this guide, you'll understand how to make a 
 
 Snaps are defined in a single YAML file placed either in the root folder of your project or in a directory named `snap`. The following example shows the entire *snapcraft.yaml* file for an existing project, [Cal - The Console Calendar Generator](https://github.com/frossm/cal).
 
-Using a few lines of yaml and the snapcraft tool, a Java application, it's dependencies and the correct JRE can be packaged as a snap. Don't worry, we’ll break this down.
+Using a few lines of yaml and the snapcraft tool, a Java application, its dependencies and the correct JRE can be packaged as a snap. Don't worry, we’ll break this down.
 
 [details=snapcraft.yaml for Cal]
 
@@ -49,7 +49,7 @@ website: https://github.com/frossm/cal
 issues: https://github.com/frossm/cal/issues
 license: MIT
 
-# Enable faszter LZO compression
+# Enable faster LZO compression
 compression: lzo
 
 # Ignore useless library warnings
@@ -273,6 +273,6 @@ Use snapcraft to push the snap to the Snap Store.
 $ snapcraft upload --release=edge myjavasnap_*.snap
 ```
 
-If you’re happy with the result, you can commit the `snapcraft.yaml` to your GitHub repo and [turn on automatic builds](https://build.snapcraft.io) so any further commits automatically get released to edge, without requiring you to manually build locally.
+If you’re happy with the result, you can commit the snapcraft.yaml to your GitHub repo. You can optionally enable [Build from GitHub](/t/build-from-github/26004) so any further commits automatically get released to edge, without requiring you to manually build locally.
 
 Congratulations! You've just built and published your first Java snap. For a more in-depth overview of the snap building process, see [Creating a snap](/t/creating-a-snap/6799).
