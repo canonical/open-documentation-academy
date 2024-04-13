@@ -17,33 +17,7 @@ This guide provides an example of how to install and set up your Landscape serve
 
 ### Install `Azure CLI`
 
-Get packages needed for the installation process:
-```
-sudo apt update
-sudo apt install ca-certificates curl apt-transport-https lsb-release gnupg
-```
-
-Download and install the Microsoft signing key:
-```
-sudo mkdir -p /etc/apt/keyrings
-curl -sLS https://packages.microsoft.com/keys/microsoft.asc |
-    gpg --dearmor |
-    sudo tee /etc/apt/keyrings/microsoft.gpg > /dev/null
-sudo chmod go+r /etc/apt/keyrings/microsoft.gpg
-```
-
-Add the Azure CLI software repository:
-```
-AZ_DIST=$(lsb_release -cs)
-echo "deb [arch=`dpkg --print-architecture` signed-by=/etc/apt/keyrings/microsoft.gpg] https://packages.microsoft.com/repos/azure-cli/ $AZ_DIST main" | 
-	sudo tee /etc/apt/sources.list.d/azure-cli.list
-```
-
-Update repository information and install the `azure-cli` package:
-```
-sudo apt update
-sudo apt install azure-cli
-```
+To install `Azure CLI`, refer to the [Install Azure CLI on Ubuntu](https://documentation.ubuntu.com/azure/en/latest/azure-how-to/instances/install-azure-cli/) guide.
 
 ### Connect `Azure` with your Microsoft Azure account
 
@@ -140,13 +114,13 @@ Once you’ve chosen your configuration template, complete the following steps.
 - If you’re using `cloud-init-quickstart.yaml`, run:
 ```
 curl -s https://raw.githubusercontent.com/canonical/landscape-scripts/main/provisioning/cloud-init-quickstart.yaml -o cloud-init.yaml
-IMAGE_FAMILY=Canonical:0001-com-ubuntu-server-jammy:22_04-lts-gen2:latest
+IMAGE_FAMILY=Canonical:0001-com-ubuntu-pro-jammy:pro-22_04-lts-gen2:latest
 ```
 
  - If you’re using `cloud-init-quickstart-fips.yaml`, run:
 ```
 curl -s https://raw.githubusercontent.com/canonical/landscape-scripts/main/provisioning/cloud-init-quickstart-fips.yaml -o cloud-init.yaml
-IMAGE_FAMILY=Canonical:0001-com-ubuntu-server-focal:20_04-lts-gen2:latest
+IMAGE_FAMILY=Canonical:0001-com-ubuntu-pro-focal-fips:pro-fips-20_04-gen2:latest
 ```
 
 2. Open the downloaded cloud-init YAML file in an editor, determine which configuration parameters need to be changed between lines 4 and 32 and change these parameters.
@@ -176,6 +150,9 @@ az vm open-port \
 ```
 
 It takes a few minutes to create the VM and supporting resources.
+
+> [!NOTE]
+When creating the VM an error may occur with the code `MarketplacePurchaseEligibilityFailed`. This error indicates that before the subscription can use this image, you need to accept the legal terms of the image. Viewing and accepting the terms can be done via the Azure CLI. Refer to Microsoft Azure documentation [az vm image terms](https://learn.microsoft.com/en-us/cli/azure/vm/image/terms).
 
 Observe the process by tailing the `cloud-init-output.log` file. Replace `{landscape.domain.com}` with your FQDN or static IP address:
 ```
