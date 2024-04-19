@@ -28,9 +28,12 @@ The first words of an issue's title will typically indicate the project it invol
 - [Landscape](https://ubuntu.com/landscape/docs): Ubuntu systems management, monitoring and administration platform
 - [Launchpad](https://documentation.ubuntu.com/launchpad/en/latest/): software development lifecycle and collaboration platform
 - [MAAS](https://maas.io/docs): bare metal cloud with on-demand servers
+- [Multipass](https://discourse.ubuntu.com/t/multipass-documentation/8294): tool to generate cloud-style Ubuntu virtual machines
+- [Netplan](https://github.com/canonical/netplan): network configuration for various backends
 - [Our Sphinx and RST starter pack](https://github.com/canonical/sphinx-docs-starter-pack): our open source template for building modern documentation
 - [Snap and Snapcraft](https://snapcraft.io/docs): Linux app packages and the build tools for desktop, cloud and IoT
 - [ubuntu-image](https://github.com/canonical/ubuntu-image): Tool for generating bootable Ubuntu images
+- [Ubuntu Packaging Guide](https://github.com/canonical/ubuntu-packaging-guide): manual for Ubuntu package maintainers
 
 This list will expand as more projects get involved. We're also happy to include projects outside of Canonical.
 
