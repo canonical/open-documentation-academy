@@ -1,2 +1,1 @@
-Get started - a hands-on introduction to Multipass for new users.
-
+Get started - a hands-on introduction to Multipass for new users. These platform-specific tutorials teach you about creating and managing Multipass instances, and offer basic examples on how to use the instances.
