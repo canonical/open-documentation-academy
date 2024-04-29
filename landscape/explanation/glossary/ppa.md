@@ -1,6 +1,6 @@
 # PPA 
 
 A **Personal Package Archive (PPA)** is a software repository specifically made for Ubuntu users. PPAs are used by developers to distribute their software. When you install Landscape, you provide a PPA so your system knows where to download Landscape and its required packages. For example, if you want the beta version of Landscape, you must add the Landscape beta PPA to your system.
-When installing and deploying the Landscape server on one machine, it is important to be mindful of the PPA being used as the [Quickstart installation](https://ubuntu.com/landscape/docs/quickstart-deployment) guide mentions that it varies upon the version of server being used. For example, if the beta version of Landscape is being used, [its PPA is `ppa:landscape/self-hosted-beta`](https://ubuntu.com/landscape/docs/quickstart-deployment) whereas the [recent server's PPA is: `ppa:landscape/self-hosted-23.03`](https://ubuntu.com/landscape/docs/quickstart-deployment).  
+It's important to use the correct PPA when you install Landscape. This is because there are different PPAs for different Landscape versions. For example, the Landscape beta PPA is `ppa:landscape/self-hosted-beta`, and the PPA for Landscape 23.03 LTS is `ppa:landscape/self-hosted-23.03`. Before you install Landscape, make sure you select the desired PPA for your system.
 
 Think of Landscape's PPA as picking a movie or show from your playlist on your favorite streaming site. You get to pick specific software from the PPA based on the needs of your software's repository. 
