@@ -50,7 +50,7 @@ If the `wsl --install` command does not work for you, especially if it returns t
 
 3. The next step is to restart your machine and try the `wsl --install` command again. It should work now.
 
-4. If you retry the command and it doesn't work as expected, you might see an error that says, "Windows Subsystem for Linux is already installed. The operation timed out".  You should update your WSL version with this command:
+4. If you retry the command and it doesn't work as expected, you might see an error that says, "Windows Subsystem for Linux is already installed. The operation timed out".  In this case, you should update your WSL version with this command:
     ```shell
     wsl.exe --update
     ```
