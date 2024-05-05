@@ -1,2 +1,1 @@
-Discussion and clarification of key topics.
-
+The following explanations provide context and clarification on key-topics related to the use and configuration of Multipass. 
