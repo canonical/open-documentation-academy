@@ -131,7 +131,6 @@ A successful connection grants any necessary permissions that may be required by
 
 ## Disconnect interfaces
 
-
 To disconnect an interface, use `snap disconnect`:
 
 ```bash
@@ -160,6 +159,6 @@ An application first needs to be installed as a snap:
 
 To access the interface management functions, either search for an installed snap, or select it from the _Installed_ view. To view the  interfaces for the selected application, select **Permissions**:
 
-![Snap store permissions](../media/GIMP-interfaces.png)
+![A screenshot of a Snap permissions dialogue.](../media/GIMP-interfaces.png)
 
 Each interface can now be connected or disconnected by selecting the toggle switch to the right of its description, and you may be prompted for your password.
