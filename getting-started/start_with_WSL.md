@@ -8,9 +8,9 @@ WSL is the Windows Subsystem for Linux. It sets aside some space on your compute
 
 ## Install VS Code on your Windows machine
 
-It might seem strange to install VS Code before we install WSL, but by doing things this way round, we'll save ourselves several fiddly steps later!
+It might seem strange to install VS Code before we install WSL, but by doing things this way round we'll save ourselves several fiddly steps later!
 
-You will need a text editor to be able to make changes to the content you're working with, and the best editor is VS Code. It can be installed on your Windows machine, and then WSL can use it – even from inside your Ubuntu virtual machine.
+You will need a text editor to be able to make changes to the content you're working with, and the best editor is VS Code. It can be installed on your windows machine, and then WSL can use it – even from inside your Ubuntu virtual machine.
 
 Go to the [Visual Studio code website](https://code.visualstudio.com/) and scroll down until you see the download button for Windows. 
 
@@ -34,37 +34,11 @@ When asked if you want to allow WSL to make changes to your device, click "yes".
 
 After WSL has finished installing, you'll need to restart your computer (your physical machine, not just the Terminal window) before you can continue.
 
-
-## Troubleshooting WSL Failed Installation
-
-If the `wsl --install` command does not work for you, especially if it returns the message "This operation timed out", you can debug the issue by following these steps:
-
-1. Using your search bar, search for "Turn Windows features on or off" and select it. It'll open a window with some options for you. In this window, you should select the following options:
-    * Virtual Machine Platform
-    * Windows Subsystem for Linux
-
-    ![Turn Windows features on or off](images/windows_on_and_off_feature.png)
-    
-2. After you select these options, open your system's task manager and navigate to the performance tab. You should look for an option that says "virtualisation" to make sure it's enabled. If it isn't enabled, follow this [tutorial to enable it for your system](https://support.microsoft.com/en-us/windows/enable-virtualization-on-windows-11-pcs-c5578302-6e43-4b4b-a449-8ced115f58e1).
-    ![performance tab of the Windows Task Manager](./images/task_manager_virtualisation.png)
-
-3. The next step is to restart your machine and try the `wsl --install` command again. It should work now.
-
-4. If you retry the command and it doesn't work as expected, you might see an error that says, "Windows Subsystem for Linux is already installed. The operation timed out".  You should update your WSL version with this command:
-    ```shell
-    wsl.exe --update
-    ```
-    The next step is to set the default WSL version to version 2. Use this command:
-    ```shell
-    wsl --set-default-version 2
-    ```
-5. Once you have completed the above steps, open your Microsoft Store and search for "Ubuntu". It's advisable to install the latest version. After the installation, you should launch the app. It'll automatically connect to your WSL and you should be able to follow the next steps without errors.
-
 ## Your new Ubuntu VM
 
 After you've restarted your physical machine, WSL will automatically launch Ubuntu in a new Terminal window. You won't need the Windows Terminal anymore, so you can close that one, and leave only the Ubuntu window open.
 
-The Ubuntu window will ask you to set up a username and password. This is separate from the credentials you use to log into your Windows machine, although you can choose the same. The password you type will be completely "hidden", so you won't be able to see it or see how many characters you've typed. It will ask you to confirm the password anyway, so if you think you made a mistake, you'll still have to type it correctly twice.
+The Ubuntu window will be asking you to set up a username and password. This is separate to the credentials you use to log into your Windows machine, although you can choose the same. The password you type will be completely "hidden", so you won't be able to see it or see how many characters you've typed. It will ask you to confirm the password anyway, so if you think you made a mistake, you'll still have to type it correctly twice.
 
 After this is done, your Ubuntu VM will be ready to use!
 
@@ -76,8 +50,8 @@ It's always a good idea when you start up a new virtual machine to update and up
 sudo apt update && sudo apt upgrade
 ```
 
-Using `sudo` will prompt you for a password. This is the same password you entered when you set up your Ubuntu machine in the previous step.
+Using `sudo` will prompt you for a password. This is the same password as you entered when you set up your Ubuntu machine in the previous step.
 
 When asked if you want to continue, type `y` (not case sensitive).
 
-You're now ready to move on to the next stage! [Install and configure git](install_git.md).
+You're now ready to move onto the next stage! [Install and configure git](install_git.md).
