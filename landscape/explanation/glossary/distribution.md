@@ -9,14 +9,6 @@ The following is a list of example Landscape API methods that need a distributio
 
 - **Repositories**: These methods allow you to manage different repositories. For more information, see the [repository methods](https://ubuntu.com/landscape/docs/api-repositories)
 
-- **Reporting Methods**: These methods allow you to do reporting on selections of computers. They usually take the distribution as a query parameter. For example, here's how to use the `GetCSVComplianceData` method:
-    ```shell
-    ```
-    In this case, you reference the distribution by its version number. Read about [reporting API methods](https://ubuntu.com/landscape/docs/api-reporting) for more information.
+- **Reporting Methods**: These methods allow you to do reporting on selections of computers. They usually take the distribution as a query parameter. Read about [reporting API methods](https://ubuntu.com/landscape/docs/api-reporting) for more information.
 
-- **Computers**: The methods under Computers help you retrieve computers and do basic operations such as tagging on them. With these methods, you can reference the distribution with either the version number or the code name. Here's an example of the `AddTagsToComputers` method:
-    ```shell
-    ?action=AddTagsToComputers&query=distribution:22.04&tags.1=server
-    &tags.2=jammy
-    ```
-    The command above references the distribution with the version number. You can modify it to use the code name if you prefer. Read [Computers](https://ubuntu.com/landscape/docs/api-computers) for more information.
+- **Computers**: The methods under Computers help you retrieve computers and do basic operations such as tagging on them. With these methods, you can reference the distribution by using either the version number or the code name. Read [about Computers](https://ubuntu.com/landscape/docs/api-computers) to learn how you can implement this method.
