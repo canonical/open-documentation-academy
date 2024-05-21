@@ -1,6 +1,6 @@
 # Distribution
 
-In Landscape, a distribution refers to a specific release of the Ubuntu operating System. You can reference it with either the code name (for example jammy), the version number such as 22.04.4, or the actual name (Ubuntu) depending on your current use case.
+In Landscape, a **distribution** refers to the Ubuntu operating system. There are different ways to refer to the distribution depending on your use case.
 
 Distributions are useful for many reasons in Landscape. Many Landscape APIs require you to define a distribution in order to use them. Distributions are also important if you want to perform an action such as [repository mirroring](https://ubuntu.com/landscape/docs/explanation-about-repository-mirroring).
 
