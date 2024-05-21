@@ -2,7 +2,7 @@
 
 In Landscape, a **distribution** refers to the Ubuntu operating system. There are different ways to refer to the distribution depending on your use case.
 
-Distributions are useful for many reasons in Landscape. Many Landscape APIs require you to define a distribution in order to use them. Distributions are also important if you want to perform an action such as [repository mirroring](https://ubuntu.com/landscape/docs/explanation-about-repository-mirroring).
+There are some Landscape API methods and web portal features that require you to provide the distribution. For example, distributions are important if you want to mirror repositories via the web portal or API. For more information, see an [explanation of repository mirroring](https://ubuntu.com/landscape/docs/explanation-about-repository-mirroring).
 
 ## Landscape APIs That Require a Distribution
 The following is a list of some Landscape APIs that need a distribution to function properly:
