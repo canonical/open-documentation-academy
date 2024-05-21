@@ -11,7 +11,6 @@ The following is a list of example Landscape API methods that need a distributio
 
 - **Reporting Methods**: These methods allow you to do reporting on selections of computers. They usually take the distribution as a query parameter. For example, here's how to use the `GetCSVComplianceData` method:
     ```shell
-    ?action=GetCSVComplianceData&query=distribution:12.04
     ```
     In this case, you reference the distribution by its version number. Read about [reporting API methods](https://ubuntu.com/landscape/docs/api-reporting) for more information.
 
