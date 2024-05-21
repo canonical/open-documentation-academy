@@ -7,7 +7,7 @@ There are some Landscape API methods and web portal features that require you to
 ## Example API methods that require a distribution
 The following is a list of example Landscape API methods that need a distribution:
 
-- **Repositories**: The methods under repositories allow you to manage different repositories. Some of these methods include `CreateDistribution`, and `GetDistributions`. In both cases, you reference the distribution by its name. Read [repository methods for more information](https://ubuntu.com/landscape/docs/api-repositories)
+- **Repositories**: These methods allow you to manage different repositories. For more information, see the [repository methods](https://ubuntu.com/landscape/docs/api-repositories)
 
 - **Reporting Methods**: These methods allow you to do reporting on selections of computers. They usually take the distribution as a query parameter. For example, here's how to use the `GetCSVComplianceData` method:
     ```shell
