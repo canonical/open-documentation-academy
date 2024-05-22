@@ -1,6 +1,6 @@
 # Troubleshooting
 
-This document aims to help you fix issues you're likely to encounter when setting up your machine to contribute to the Ubuntu guides.
+This document aims to help you fix issues you may encounter when getting started.
 
 ## Troubleshooting WSL Failed Installation
 
