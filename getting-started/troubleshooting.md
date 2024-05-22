@@ -23,7 +23,7 @@ If the `wsl --install` command returns the message "This operation timed out", y
     ```shell
     wsl.exe --update
     ```
-    The next step is to set the default WSL version to version 2. Use this command:
+    Then set the default WSL version to version 2:
     ```shell
     wsl --set-default-version 2
     ```
