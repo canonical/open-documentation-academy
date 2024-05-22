@@ -6,7 +6,7 @@ This document aims to help you fix issues you may encounter when getting started
 
 This section provides a possible way to troubleshoot a failed installation of Windows Subsystem for Linux (WSL). You can also refer to [Microsoft's official WSL documentation](https://learn.microsoft.com/en-us/windows/wsl/troubleshooting) for more information on troubleshooting WSL.
 
-If the `wsl --install` command does not work for you, especially if it returns the message "This operation timed out", you can debug the issue by following these steps:
+If the `wsl --install` command returns the message "This operation timed out", you can debug the issue by following these steps:
 
 1. Using your search bar, search for "Turn Windows features on or off" and select it. It'll open a window with some options for you. In this window, you should select the following options:
     * Virtual Machine Platform
