@@ -34,7 +34,7 @@ When asked if you want to allow WSL to make changes to your device, click "yes".
 
 After WSL has finished installing, you'll need to restart your computer (your physical machine, not just the Terminal window) before you can continue.
 
-**NOTE**: If you face issues with installing WSL on your Windows machine, you can refer to our [troubleshooting section](./troubleshooting.md) or the [Windows official documentation for WSL](https://learn.microsoft.com/en-us/windows/wsl/troubleshooting)
+**NOTE**: If you have issues with installing WSL on your Windows machine, you can refer to our [troubleshooting section](./troubleshooting.md) or [Microsoft's official WSL documentation](https://learn.microsoft.com/en-us/windows/wsl/troubleshooting)
 
 ## Your new Ubuntu VM
 
