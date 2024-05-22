@@ -2,7 +2,7 @@
 
 This document aims to help you fix issues you may encounter when getting started.
 
-## Troubleshooting WSL Failed Installation
+## Troubleshoot a failed WSL installation
 
 In this section, you'll learn how to troubleshoot the failed installation of Windows Subsystem for Linux (WSL) on your Windows machine. Note that if this method does not solve your specific problem, you can always refer to the [official Windows documentation](https://learn.microsoft.com/en-us/windows/wsl/troubleshooting) to find a fix for your case.
 
