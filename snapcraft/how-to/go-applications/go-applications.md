@@ -82,7 +82,7 @@ The `name` must be unique in the Snap Store. Valid snap names consist of lowerca
 
 The `summary` cannot exceed 79 characters. You can use a chevron '>' in the `description` key to declare a multi-line description.
 
-The `adopt-info: woke` indicates that the snap should use metadata from the part named `woke`. This means that Snapcraft will look within the source repository defined in the `woke` part to find and adopt specific metadata such as `version`.
+The `adopt-info` keyword is used to import metadata from other sources within the upstream project. This reduces redundancy and ensures consistency. Here, Snapcraft will look within the source repository defined in the `woke` part to find and adopt metadata such as `version`.
 
 ### Base
 
@@ -156,7 +156,7 @@ the main project repository.
 
 The `source-type` keyword indicates that the source is a git repository.
 
-The `override-pull` keyword in the `snapcraft.yaml` file allows you to customize the actions taken during the pull step of the build process. The pull step is responsible for downloading or fetching the source code specified in the source key. By default, Snapcraft handles this step automatically, but `override-pull` lets you define your own commands to extend or replace this behavior. See [Override build steps](https://snapcraft.io/docs/overrides)for more details.
+The `override-pull` keyword in the `snapcraft.yaml` file allows you to customise the actions taken during the pull step of the build process. The pull step is responsible for fetching the source code from the repository specified in the `source` keyword. By default, Snapcraft handles this step automatically, but `override-pull` lets you define your own commands to extend or replace this behavior. See [Override build steps](https://snapcraft.io/docs/overrides)for more details.
 
 ### Apps
 
