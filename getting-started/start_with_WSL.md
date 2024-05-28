@@ -8,9 +8,9 @@ WSL is the Windows Subsystem for Linux. It sets aside some space on your compute
 
 ## Install VS Code on your Windows machine
 
-It might seem strange to install VS Code before we install WSL, but by doing things this way round we'll save ourselves several fiddly steps later!
+It might seem strange to install VS Code before we install WSL, but by doing things this way round, we'll save ourselves several fiddly steps later!
 
-You will need a text editor to be able to make changes to the content you're working with, and the best editor is VS Code. It can be installed on your windows machine, and then WSL can use it – even from inside your Ubuntu virtual machine.
+You will need a text editor to be able to make changes to the content you're working with, and the best editor is VS Code. It can be installed on your Windows machine, and then WSL can use it – even from inside your Ubuntu virtual machine.
 
 Go to the [Visual Studio code website](https://code.visualstudio.com/) and scroll down until you see the download button for Windows. 
 
@@ -34,11 +34,13 @@ When asked if you want to allow WSL to make changes to your device, click "yes".
 
 After WSL has finished installing, you'll need to restart your computer (your physical machine, not just the Terminal window) before you can continue.
 
+**NOTE**: If you have issues with installing WSL on your Windows machine, you can refer to our [troubleshooting section](./troubleshooting.md) or [Microsoft's official WSL documentation](https://learn.microsoft.com/en-us/windows/wsl/troubleshooting)
+
 ## Your new Ubuntu VM
 
 After you've restarted your physical machine, WSL will automatically launch Ubuntu in a new Terminal window. You won't need the Windows Terminal anymore, so you can close that one, and leave only the Ubuntu window open.
 
-The Ubuntu window will be asking you to set up a username and password. This is separate to the credentials you use to log into your Windows machine, although you can choose the same. The password you type will be completely "hidden", so you won't be able to see it or see how many characters you've typed. It will ask you to confirm the password anyway, so if you think you made a mistake, you'll still have to type it correctly twice.
+The Ubuntu window will ask you to set up a username and password. This is separate from the credentials you use to log into your Windows machine, although you can choose the same. The password you type will be completely "hidden", so you won't be able to see it or see how many characters you've typed. It will ask you to confirm the password anyway, so if you think you made a mistake, you'll still have to type it correctly twice.
 
 After this is done, your Ubuntu VM will be ready to use!
 
@@ -50,8 +52,8 @@ It's always a good idea when you start up a new virtual machine to update and up
 sudo apt update && sudo apt upgrade
 ```
 
-Using `sudo` will prompt you for a password. This is the same password as you entered when you set up your Ubuntu machine in the previous step.
+Using `sudo` will prompt you for a password. This is the same password you entered when you set up your Ubuntu machine in the previous step.
 
 When asked if you want to continue, type `y` (not case sensitive).
 
-You're now ready to move onto the next stage! [Install and configure git](install_git.md).
+You're now ready to move on to the next stage! [Install and configure git](install_git.md).
