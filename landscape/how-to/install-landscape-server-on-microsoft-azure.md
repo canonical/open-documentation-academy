@@ -7,7 +7,7 @@ This guide provides an example of how to install and set up your Landscape serve
 **Contents:**
 
 - Install and set up Microsoft Azure CLI
-- Provision Azure resources and deploy
+- Provision Azure resources
 - Deploy Landscape Server VM with cloud-init
 - Configure Landscape
 - (Optional) Perform a complete teardown
@@ -31,7 +31,7 @@ If the Azure CLI can open your default browser, it will open the default browser
 Sign in with your account credentials in the browser. For more information on signing in with the Azure CLI, see [Microsoft's documentation on signing in interactively with the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli-interactively).
 
 
-## Provision Azure resources and deploy
+## Provision Azure resources
 
 ### Create a resource group
 
@@ -123,10 +123,13 @@ IMAGE_FAMILY=Canonical:0001-com-ubuntu-pro-focal-fips:pro-fips-20_04-gen2:latest
 
 2. Open the downloaded cloud-init YAML file in an editor, determine which configuration parameters need to be changed between lines 4 and 32 and change these parameters.
 
-The `HOSTNAME` on line 16 and `DOMAIN` on line 19 must be changed. Updating `EMAIL` on line 9, and adding your SendGrid API key on line 29 as the `SMTP_PASSWORD` are optional, but strongly recommended.
+The `HOSTNAME` on line 16 and `DOMAIN` on line 19 must be changed. Updating `EMAIL` on line 9, and adding your SendGrid API key on line 29 as the `SMTP_PASSWORD` are optional.
 
 
 ### Create VM
+
+> [!NOTE]
+> Microsoft recommends not storing sensitive data in custom data such as cloud-init. For more information, see [Microsoft's documentation on custom data and cloud-init for virtual machines](https://learn.microsoft.com/en-us/azure/virtual-machines/custom-data).
 
 Run the following commands to create a VM and add a security rule to the network security group (NSG) to open port 80 and 443.  These ports are required to be open to allow the LetsEncrypt SSL provisioning step defined in the cloud-init to succeed.  The `--generate-ssh-keys` parameter causes the CLI to look for an available ssh key in `~/.ssh`. If one is found, that key is used. If not, one is generated and stored in `~/.ssh`.  The `--custom-data` parameter to pass in the cloud-init config file. Provide the full path to the `cloud-init.yaml` config if you saved the file outside of your present working directory:
 ```
@@ -149,7 +152,7 @@ az vm open-port \
 It usually takes a few minutes to create the VM and supporting resources.
 
 > [!NOTE]
-When creating the VM an error may occur with the code `MarketplacePurchaseEligibilityFailed`. This error indicates that before the subscription can use this image, you need to accept the legal terms of the image. You can view and accept the terms via the Azure CLI. Refer to [Microsoft's documentation on VM image terms](https://learn.microsoft.com/en-us/cli/azure/vm/image/terms).
+> When creating the VM an error may occur with the code `MarketplacePurchaseEligibilityFailed`. This error indicates that before the subscription can use this image, you need to accept the legal terms of the image. You can view and accept the terms via the Azure CLI. Refer to [Microsoft's documentation on VM image terms](https://learn.microsoft.com/en-us/cli/azure/vm/image/terms).
 
 Observe the process by tailing the `cloud-init-output.log` file. Replace `{landscape.domain.com}` with your FQDN or static IP address:
 ```
