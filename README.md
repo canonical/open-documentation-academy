@@ -25,6 +25,7 @@ The first words of an issue's title will typically indicate the project it invol
 - [Juju](https://juju.is/docs):  open source orchestration engine
 - [Canonical Kubernetes](https://ubuntu.com/kubernetes/docs): the reference platform for Kubernetes on all major public clouds
 - [LXD](https://documentation.ubuntu.com/lxd/en/latest/): open source container and VM management at any scale
+- [Anbox Cloud](https://anbox-cloud.io/docs): Solution offering scalable Android in the cloud
 - [Landscape](https://ubuntu.com/landscape/docs): Ubuntu systems management, monitoring and administration platform
 - [Launchpad](https://documentation.ubuntu.com/launchpad/en/latest/): software development lifecycle and collaboration platform
 - [MAAS](https://maas.io/docs): bare metal cloud with on-demand servers
@@ -34,6 +35,7 @@ The first words of an issue's title will typically indicate the project it invol
 - [Snap and Snapcraft](https://snapcraft.io/docs): Linux app packages and the build tools for desktop, cloud and IoT
 - [Ubuntu Developer Guide](https://github.com/canonical/ubuntu-for-developers-docs): guide for developers using Ubuntu Desktop as a development platform
 - [ubuntu-image](https://github.com/canonical/ubuntu-image): Tool for generating bootable Ubuntu images
+- [Ubuntu on public cloud](https://documentation.ubuntu.com/public-cloud/en/latest/): Optimised Ubuntu images for partner clouds
 - [Ubuntu Packaging Guide](https://github.com/canonical/ubuntu-packaging-guide): manual for Ubuntu package maintainers
 - [Ubuntu WSL](https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/): Ubuntu terminal environment on Windows with the Windows Subsystem for Linux (WSL)
 
