@@ -14,7 +14,7 @@
 
 <!--### Hypervisor.framework / hyperkit-->
 
-The default backend on macOS is `qemu`, wrapping Apple's Hypervisor.framework. You can use any Mac (M1, M2, or Intel based) with _macOS 10.15 Catalina_ or later installed.
+The default backend on macOS is `qemu`, wrapping Apple's Hypervisor framework. You can use any Mac (M1, M2, or Intel based) with _macOS 10.15 Catalina_ or later installed.
 
 <a href="#heading--install-upgrade-uninstall"><h2 id="heading--install-upgrade-uninstall">Install, upgrade, uninstall</h2></a>
 
