@@ -34,6 +34,7 @@ The first words of an issue's title will typically indicate the project it invol
 - [Snap and Snapcraft](https://snapcraft.io/docs): Linux app packages and the build tools for desktop, cloud and IoT
 - [ubuntu-image](https://github.com/canonical/ubuntu-image): Tool for generating bootable Ubuntu images
 - [Ubuntu Packaging Guide](https://github.com/canonical/ubuntu-packaging-guide): manual for Ubuntu package maintainers
+- [Ubuntu WSL](https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/): Ubuntu terminal environment on Windows with the Windows Subsystem for Linux (WSL)
 
 This list will expand as more projects get involved. We're also happy to include projects outside of Canonical.
 
