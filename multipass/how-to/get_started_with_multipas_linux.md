@@ -17,7 +17,7 @@ This tutorial will give you an understanding of how Multipass works, and the ski
 
 <a href="#heading--install-multipass"><h2 id="heading--install-multipass">Install Multipass</h3></a>
 
-Multipass is available for Linux, macOS, or Windows. To install it on your OS of choice, please follow the instructions given [how-to guides](https://multipass.run/docs/how-to-guides). Note: This tutorial demonstrates use on Linux, specifically Ubuntu, but the experience on any OS should be similar.
+Multipass is available for Linux, macOS, or Windows. To install it on your OS of choice, please follow the instructions given in the [how-to guides](https://multipass.run/docs/how-to-guides). Note: This tutorial demonstrates use on Linux, specifically Ubuntu, but the experience on any OS should be similar.
 
 <a href="#heading--create-and-use-a-basic-instance"><h2 id="heading--create-and-use-a-basic-instance">Create and use a basic instance</h2></a>
 
@@ -98,7 +98,7 @@ Exercise 1:
 When you clicked on Open Shell just now, what happened in the background was the equivalent of the CLI commands `multipass launch –name primary`  followed by  `multipass shell`. Open a terminal and try `multipass shell` (if you didn't follow the steps above, you will have to run the `launch` command first).
 
 Exercise 2:
-In Multipass, an instance with the name `primary` is privileged. For example, it is the default argument of multipass shell. In two terminal instances, check `multipass shell primary` and `multipass shell`. Both commands should give the same result.
+In Multipass, an instance with the name `primary` is privileged. For example, it is the default argument of a multipass shell. In two terminal instances, check `multipass shell primary` and `multipass shell`. Both commands should give the same result.
 [/details]
 
 <a href="#heading--create-a-customised-instance"><h2 id="heading--create-a-customised-instance">Create a customised instance</h3></a>
@@ -135,7 +135,7 @@ minikube                                      latest           minikube is local
 
 Let’s launch an instance running Ubuntu 22.10 (“Kinetic Kudu”) by typing the command `multipass launch kinetic`
 
-Now we have an instance running which has been named randomly by Multipass, in my case it is called coherent-trumpetfish.
+Now we have an instance running that has been named randomly by Multipass; in my case, it is called coherent-trumpetfish.
 
 ```plain
 $ multipass launch kinetic
@@ -183,7 +183,7 @@ Memory usage:   170.4MiB out of 1.9GiB
 Mounts:         --
 ```
 
-We’ve created and deleted quite a few instances now. Let’s run multipass list to see what instances we currently have.
+We’ve created and deleted quite a few instances now. Let’s run a multipass list to see what instances we currently have.
 
 ```plain
 $ multipass list                                         
@@ -224,7 +224,7 @@ Now, let’s open a browser and type in the IP address of the instance in the ad
 
 Just like that, we’ve got a web server running in a Multipass instance!
 
-We can use this web server locally for any kind of local development or testing we like. If however, we want to access this web server from the internet (e.g. from a different computer), we need an instance that is exposed to the external network.
+We can use this web server locally for any kind of local development or testing we like. If, however, we want to access this web server from the internet (e.g., from a different computer), we need an instance that is exposed to the external network.
 
 <a href="#heading--launch-from-a-blueprint-to-run-docker-containers"><h3 id="heading--launch-from-a-blueprint-to-run-docker-containers">Launch from a Blueprint to run Docker containers</h3></a>
 
