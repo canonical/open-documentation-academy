@@ -22,22 +22,39 @@ description: |
       feels welcome and included. woke is a text file analysis tool that finds
       places within your source code that contain non-inclusive language and
       suggests replacing them with more inclusive alternatives.
-version: git
-grade: stable
-base: core20
+adopt-info: woke
+base: core22
 
 confinement: devmode
+
+plugs:
+  dot-config-woke:
+    interface: personal-files
+    read:
+      - $HOME/.config/woke.yaml
+      - $HOME/.config/woke.yml
+      - $HOME/.woke.yaml
+      - $HOME/.woke.yml
 
 apps:
   woke:
     command: bin/woke
     plugs:
       - home
+      - dot-config-woke
+      - network
+      - removable-media
+
 parts:
   woke:
     plugin: go
-    source-type: git
+    build-snaps: [go/latest/stable]
     source: https://github.com/get-woke/woke
+    source-type: git
+    override-pull: |
+      snapcraftctl pull
+      snapcraftctl set-version \
+      "$(git describe --long --tags --always --match=v*.*.* | sed 's/v//')"
 ```
 
 We'll break this file down into its components in the following sections.
@@ -58,14 +75,14 @@ description: |
       feels welcome and included. woke is a text file analysis tool that finds
       places within your source code that contain non-inclusive language and
       suggests replacing them with more inclusive alternatives.
-version: git
+adopt-info: woke
 ```
 
-The `name` must be unique in the Snap Store. Valid snap names consist of lower-case alphanumeric characters and hyphens. They cannot be all numbers and they also cannot start or end with a hyphen.
+The `name` must be unique in the Snap Store. Valid snap names consist of lowercase alphanumeric characters and hyphens. They cannot be all numbers and they also cannot start or end with a hyphen.
 
-By specifying `git` for the version, the current git tag or commit will be used as the version string. Versions carry no semantic meaning in snaps.
+The `summary` cannot exceed 79 characters. You can use a chevron '>' in the `description` key to declare a multi-line description.
 
-The `summary` can not exceed 79 characters. You can use a chevron '>' in the `description` key to declare a multi-line description.
+The `adopt-info` keyword is used to import metadata from other sources within the upstream project. This reduces redundancy and ensures consistency. Here, Snapcraft will look within the source repository defined in the `woke` part to find and adopt metadata such as `version`.
 
 ### Base
 
@@ -74,11 +91,11 @@ A base snap is a special kind of snap that provides a run-time environment
 alongside a minimal set of libraries that are common to most applications.
 
 ```yaml
-base: core20
+base: core22
 ```
 
-In this example, [core20](https://snapcraft.io/core20) is used as the base for snap building, and is based
-on [Ubuntu 20.04 LTS](http://releases.ubuntu.com/20.04/). See [Base snaps](/t/11198) for more details.
+In this example, [core22](https://snapcraft.io/core22) is used as the base for snap building, and is based
+on [Ubuntu 22.04 LTS](https://releases.ubuntu.com/22.04/). See [Base snaps](/t/11198) for more details.
 
 ### Security model
 
@@ -117,8 +134,13 @@ we only need to use one part for the *woke* source code:
 parts:
   woke:
     plugin: go
-    source-type: git
+    build-snaps: [go/latest/stable]
     source: https://github.com/get-woke/woke
+    source-type: git
+    override-pull: |
+      snapcraftctl pull
+      snapcraftctl set-version \
+      "$(git describe --long --tags --always --match=v*.*.* | sed 's/v//')"
 ```
 
 The `plugin` keyword is used to select a language or technology-specific
@@ -126,9 +148,15 @@ plugin that knows how to perform the build steps for the project.
 In this example, the [go plugin](/t/7818) is used to
 automate the build of this project using the version of Go on the host system.
 
+The `build-snaps` keyword specifies a list of snaps that should be available during the build process. Here, using `go/latest/stable` ensures that the latest stable version of the Go snap is available for building the snap package.
+
 The `source` keyword points to the source code of the project, which
 can be a local directory or remote Git repository. In this case, it refers to
 the main project repository.
+
+The `source-type` keyword indicates that the source is a git repository.
+
+The `override-pull` keyword in the `snapcraft.yaml` file allows you to customise the actions taken during the pull step of the build process. The pull step is responsible for fetching the source code from the repository specified in the `source` keyword. By default, Snapcraft handles this step automatically, but `override-pull` lets you define your own commands to extend or replace this behavior. See [Override build steps](https://snapcraft.io/docs/overrides)for more details.
 
 ### Apps
 
@@ -156,7 +184,7 @@ to avoid naming conflicts between installed snaps. An example of this would be
 
 The confinement of the snap, which was defined in the **Security model** section
 above, can be changed through a set of :term:`interfaces`. In this example,
-the `plugs` keyword is used to specify the interfaces that the snap needs
+the `plugs` keyword specifies the interfaces that the snap needs
 to access.
 
 ### Building the snap
@@ -219,7 +247,7 @@ $ sudo snap remove woke
 
 ## Publishing your snap
 
-To share your snaps you need to publish them in the Snap Store. First, create an account on [the dashboard](https://dashboard.snapcraft.io/dev/account/). Here you can customise how your snaps are presented, review your uploads and control publishing.
+To share your snaps, you need to publish them in the Snap Store. First, create an account on [the dashboard](https://dashboard.snapcraft.io/dev/account/). Here you can customise how your snaps are presented, review your uploads, and control publishing.
 
 You’ll need to choose a unique “developer namespace” as part of the account creation process. This name will be visible by users and associated with your published snaps.
 
