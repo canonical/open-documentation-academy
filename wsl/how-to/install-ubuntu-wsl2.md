@@ -4,6 +4,7 @@
 ## What you will learn:
 
 * How to enable and install WSL on Windows 10 and Windows 11
+* How to install `Ubuntu 24.04 LTS` using: Microsoft Store, WSL CLI, or Winget 
 
 ## What you will need:
 
@@ -11,8 +12,8 @@
 
 ## Install WSL
 
-WSL can be installed from the command line. Open a PowerShell prompt as an Administrator (we recommend using Windows Terminal) and run:
-```
+You can install WSL from the command line. Open a PowerShell prompt as an Administrator (we recommend using [Windows Terminal](https://github.com/microsoft/terminal)) and run:
+```text
 wsl --install
 ```
 
@@ -20,9 +21,9 @@ This command will enable the features necessary to run WSL and also install the 
 
 ## Install Ubuntu WSL
 
-WSL supports a variety of Linux distributions including the latest Ubuntu release. Check out [the documentation](../reference/distributions.md) to see which one you prefer. For the rest of this tutorial we'll use `Ubuntu` as the example.
+WSL supports a variety of Linux distributions including the latest Ubuntu LTS release. Check out [the documentation](../reference/distributions.md) to see which one you prefer. For the rest of this tutorial we'll use `Ubuntu 24.04 LTS` as the example.
 
-There are multiple ways of installing distros on WSL, here we show three: via the Microsoft store, via Winget, and the WSL CLI. The result is equivalent.
+There are multiple ways of installing distros on WSL, here we show three: via the Microsoft store, WSL Command Line Interface, and Winget. The result is the same regardless of the method.
 
 ### Method 1: Microsoft store
 
@@ -36,37 +37,38 @@ Ubuntu will then be installed on your machine. Once installed, you can either la
 
 ### Method 2: WSL Command line interface
 
-It is possible to install the same Ubuntu applications available on the Windows Store directly from the command line.
-In a PowerShell terminal, you can run `wsl --list --online` to see all available distros.
+It is possible to install the same Ubuntu versions available on the Windows Store directly from the command line.
+In a PowerShell terminal, you can run `wsl --list --online` to see all available distros and versions.
 
 ![image|690x388](https://github.com/ubuntu/WSL/blob/main/docs/guides/assets/install-ubuntu-wsl2/wsl-list-online.png?raw=true) 
 
-You can install a distro using the NAME by running:
-```
-wsl --install -d Ubuntu-20.04
+You can install the version using its NAME:
+```text
+wsl --install -d Ubuntu-24.04
 ```
 
 ![image|690x388](https://github.com/ubuntu/WSL/blob/main/docs/guides/assets/install-ubuntu-wsl2/installing.png?raw=true) 
 
-Use `wsl -l -v` to see all your currently installed distros and which version of WSL they are using:
+Use `wsl -l -v` to see all your currently installed distros and the version of WSL they are using:
 
 ![image|690x311](https://github.com/ubuntu/WSL/blob/main/docs/guides/assets/install-ubuntu-wsl2/wsl-l-v.png?raw=true?raw=true) 
 
 ### Method 3: Winget
+
 Open a PowerShell terminal and type:
-```powershell
+```text
 winget show --name Ubuntu --source msstore
 ```
 
-You'll see a list of distros available and their ID. Choose the one you prefer and install it. For instance, Ubuntu:
-```powershell
-winget install --Id "9PDXGNCFSCZV" --source msstore
+You'll see a list of available distros and their Ids. Choose the one you prefer and install it. For instance, for `Ubuntu 24.04 LTS`:
+```text
+winget install --Id "9NZ3KLHXDJP5" --source msstore
 ```
 
 You'll be prompted to accept the source and package agreements before installing. You need to accept them in order to proceed.
 
 Check out [the documentation](../reference/distributions.md) to see which executable matches your application and run it.
-```
+```text
 ubuntu.exe
 ```
 
@@ -77,17 +79,18 @@ Congratulations, you now have an Ubuntu terminal running on your Windows machine
 Once it has finished its initial setup, you will be prompted to create a username and password. They don't need to match your Windows user credentials.
 
 Finally, it’s always good practice to install the latest updates with the following commands, entering your password when prompted.
-```bash
+```text
 sudo apt update
 sudo apt full-upgrade -y
 ```
 ## Enjoy Ubuntu on WSL!
 
-That’s it! In this tutorial, we’ve shown you how to install WSL and Ubuntu on Windows 11, set up your profile, install a few packages, and run a graphical application.
+That’s it! In this tutorial, we’ve shown you how to install WSL and Ubuntu on Windows 10 or 11.
 
-We hope you enjoy working with Ubuntu inside WSL. Don’t forget to check out [our blog](https://ubuntu.com/blog) for the latest news on all things Ubuntu.
+We hope you enjoy working with Ubuntu in WSL. Don’t forget to check out [our blog](https://ubuntu.com/blog) for the latest news on all things Ubuntu.
 
 ### Further Reading
+
 * [Setting up WSL for Data Science](https://ubuntu.com/blog/upgrade-data-science-workflows-ubuntu-wsl)
 * [Whitepaper: Ubuntu WSL for Data Scientists](https://ubuntu.com/engage/ubuntu-wsl-for-data-scientists)
 * [Microsoft WSL Documentation](https://learn.microsoft.com/en-us/windows/wsl/)
