@@ -18,8 +18,9 @@ This tutorial will help you understand how Multipass works, and the skills you n
 
 <a href="#heading--install-multipass"><h2 id="heading--install-multipass">Install Multipass</h3></a>
 
-Multipass is available for Linux, macOs, and Windows. To install it on the OS of your choice, please follow the instructions given in this [how-to-guides](https://multipass.run/docs/how-to-guides). Note that this tutorial demonstrates how to use Multipass on Linux, specifically Ubuntu, but the experience on any OS should be similar.
+Multipass is available for Linux, macOs, and Windows. To install it on the OS of your choice, please follow the instructions given in this [how-to-guides](https://multipass.run/docs/how-to-guides). 
 
+Note that this tutorial demonstrates how to use Multipass on Linux, specifically Ubuntu, but the experience on any OS should be similar.
 
 <a href="#heading--create-and-use-a-basic-instance"><h2 id="heading--create-and-use-a-basic-instance">Create and use a basic instance</h2></a>
 
@@ -34,7 +35,7 @@ Start Multipass from the application launcher. In Ubuntu, press the super key an
 
 ![|800x450](https://assets.ubuntu.com/v1/949aa05e-mp-linux-1.png) 
 
-Once you've launched the application, you should see the Multipass tray icon on the upper right section of the screen:
+Once you've launched the application, you should see the Multipass tray icon on the upper right section of the screen.
 
 ![|688x52](https://assets.ubuntu.com/v1/5ec546da-mp-linux-2.png) 
 
@@ -43,6 +44,7 @@ Click on the **icon**, then select **Open Shell**.
 ![|286x274](https://assets.ubuntu.com/v1/3ecc5e7d-mp-linux-2a.png) 
 
 Clicking this button does many things in the background. First, it creates a new virtual machine (instance) named "primary", with 1GB of RAM, 5GB of disk, and 1 CPU. Second, it installs the most recent Ubuntu LTS release on that instance. Third, it mounts your `$HOME` directory in the instance. Last, it opens a shell to the instance, announced by the command prompt `ubuntu@primary`. 
+
 You can see elements of this in the printout below:
 
 ```plain
@@ -75,7 +77,7 @@ To check for new updates run: sudo apt update
 ubuntu@primary:~$
 ```
 
-Let's test it out. As you've just learnt, the previous step automatically mounted your `$HOME` directory in the instance. Use this to share data with your instance. More concretely, create a new folder called `Multipass_Files` in your `$HOME` directory:
+Let's test it out. As you've just learnt, the previous step automatically mounted your `$HOME` directory in the instance. Use this to share data with your instance. More concretely, create a new folder called `Multipass_Files` in your `$HOME` directory.
 
 ![|720x405](https://assets.ubuntu.com/v1/fbfc8304-mp-linux-3.png) 
 
@@ -100,12 +102,12 @@ Exercise 1:
 When you select Open Shell, what happens in the background is the equivalent of the CLI commands `multipass launch –name primary`  followed by  `multipass shell`. Open a terminal and try `multipass shell` (if you didn't follow the steps above, you will have to run the `launch` command first).
 
 Exercise 2: 
-In Multipass, an instance with the name "primary" is privileged. That is, it serves as the default argument of `multipass shell` among other capabilities. In two terminal instances, check `multipass shell primary` and `multipass shell`. Both commands should give the same result.
+In Multipass, an instance with the name "primary" is privileged. That is, it serves as the default argument of `multipass shell` among other capabilities. In different terminal instances, check `multipass shell primary` and `multipass shell`. Both commands should give the same result.
 [/details]
 
 <a href="#heading--create-a-customised-instance"><h2 id="heading--create-a-customised-instance">Create a customised instance</h3></a>
 
-Multipass has a great feature to help you get started with creating customised instances. Open a terminal and run the command `multipass find`. The result shows a list of all of the images you can launch through Multipass currently.
+Multipass has a great feature to help you get started with creating customised instances. Open a terminal and run the `multipass find` command. The result shows a list of all of the images you can launch through Multipass currently.
 
 ```plain
 $ multipass find
@@ -135,7 +137,7 @@ jellyfin                                      latest           Jellyfin is a Fre
 minikube                                      latest           minikube is local Kubernetes
 ```
 
-Launch an instance running Ubuntu 22.10 ("Kinetic Kudu") by typing the command `multipass launch kinetic`.
+Launch an instance running Ubuntu 22.10 ("Kinetic Kudu") by typing the `multipass launch kinetic` command.
 
 Now, you have an instance running and it has been named randomly by Multipass. In this case, it has been named "coherent-trumpetfish".
 
@@ -195,7 +197,7 @@ coherent-trumpetfish    Deleted           --               Not Available
 ltsInstance             Running           10.110.66.139    Ubuntu 22.04 LTS
 ```
 
-The result shows that you have two instances running, the "primary" instance and the LTS machine with customised specs. The "coherent-trumpetfish" instance is still listed, but its state is "Deleted". You can recover this instance by running `multipass recover coherent-trumpetfish`. But for now, delete the instance permanently by running `multipass purge`. Then run `multipass list` again to confirm that the instance has been permanently deleted: 
+The result shows that you have two instances running, the "primary" instance and the LTS machine with customised specs. The "coherent-trumpetfish" instance is still listed, but its state is "Deleted". You can recover this instance by running `multipass recover coherent-trumpetfish`. But for now, delete the instance permanently by running `multipass purge`. Then run `multipass list` again to confirm that the instance has been permanently deleted. 
 
 ```plain
 $ multipass list
@@ -207,6 +209,8 @@ ltsInstance             Running           10.110.66.139    Ubuntu 22.04 LTS
 You've now seen a few ways to create, customise, and delete an instance. It is time to put those instances to work!
 
 <a href="#heading--put-your-instances-to-use"><h2 id="heading--put-your-instances-to-use">Put your instances to use</h2></a>
+
+One way to put a Multipass instance to use is by running a local or web server in it.
 
 <a href="#heading--run-a-simple-web-server"><h3 id="heading--run-a-simple-web-server">Run a simple web server</h3></a>
 
@@ -263,7 +267,7 @@ Inside the newly selected local Docker environment, navigate to the **table of c
 
 ![|720x460](https://assets.ubuntu.com/v1/86be3eae-mp-linux-7.png) 
 
-From the Portainer dashboard, you can see the ports available on nginx. To verify that you have nginx running in a Docker container inside Multipass, open a web browser and paste the IP address of your instance followed by one of the port numbers.
+From the Portainer dashboard, you can see the ports available on nginx. To verify that you have nginx running in a Docker container inside Multipass, open a new web page and paste the IP address of your instance followed by one of the port numbers.
 
 ![|720x465](https://assets.ubuntu.com/v1/25585a03-mp-linux-8.png) 
 
