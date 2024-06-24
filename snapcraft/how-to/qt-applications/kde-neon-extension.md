@@ -1,13 +1,13 @@
 [note]
 
-Snapcraft extensions simplify and streamline the process of adding common elements to a snap, such as libraries and environment variables. See [Snapcraft extensions](/t/snapcraft-extensions/13486) for further details.
+Snapcraft extensions simplify and streamline the process of adding commonly used elements to a snap, such as libraries, themes and environment variables. See [Snapcraft extensions](/t/snapcraft-extensions/13486) for further details.
 [/note]
 
-The `kde-neon` extension helps developers to create snaps that use [Qt 5](https://doc.qt.io/qt-5/) with (or without) the add-on [KDE Frameworks 5](https://kde.org/products/frameworks/) libraries.
+The `kde-neon` extension helps developers to create snaps that use [Qt 5](https://doc.qt.io/qt-5/), with or without the add-on [KDE Frameworks 5](https://kde.org/products/frameworks/) libraries.
 
 The extension is maintained and supported for use with the `core22` base snap. Whilst older versions of the extension are still available for `core20` and `core18`, these bases are no longer actively supported.
 
-The remainder of this document focuses on the current version of the `core22` extension:
+The rest of this document focuses on the current version of the `core22` extension:
 
 | Base | Versions | Platform snap | Build snap |
 |-|----|----|----|
@@ -15,7 +15,7 @@ The remainder of this document focuses on the current version of the `core22` ex
 
 [note type="caution"]
 
-The extension is designed for C++-based Qt/KDE applications. It does not provide the bindings needed for *Qt for Python* (PySide2) or *PyQt* applications. In addition, the extension does not cover include every optional Qt library; for example, it does not include Qt3D, QtCharts, QtDataVisualization or QtGamepad.
+The extension is designed for C++ based Qt/KDE Frameworks applications. It does not provide the bindings needed for *Qt for Python* (*PySide2*) or *PyQt* applications. In addition, the extension does not provide all of the optional Qt 5 libraries; for example, it does not include Qt3D, QtCharts, QtDataVisualization or QtGamepad.
 [/note]
 
 ## How to use it
@@ -35,7 +35,7 @@ See [Qt 5 and KDE Frameworks applications](/t/qt5-and-kde-frameworks-application
 
 ## Interface connections
 
-The extension connects your snap to the following content snaps:
+The extension connects your snap to the following run-time content snaps:
 
 - [`kf5-5-113-qt-5-15-11-core22`](https://snapcraft.io/kf5-5-113-qt-5-15-11-core22) for the Qt 5 and KDE Frameworks run-time libraries
 - [`gtk-common-themes`](https://snapcraft.io/gtk-common-themes) for common icon, cursor and sound themes
@@ -61,17 +61,19 @@ plugs:
         target: $SNAP/kf5
 ```
 
-In addition, the extension adds the following plugs to your snapped application:
+In addition, the following plugs are added to each app that includes the `kde-neon` extension entry:
 
 ```yaml
 apps:
-  <each application>:
+  <app name>:
+    ...
     plugs:
       - desktop
       - desktop-legacy
       - opengl
       - wayland
       - x11
+    ...
 ```
 
 See [Adding interfaces](/t/adding-interfaces/13123) for more details.
@@ -82,13 +84,13 @@ The `kde-neon` extension depends on two separate snaps: a build snap and a platf
 
 The _build snap_ ensures that the relevant Qt 5 and KDE Frameworks development libraries and supporting files are available during the build process. These libraries are sourced from the Ubuntu-based [*KDE neon* Linux distribution](https://neon.kde.org/), which provides more recent versions of Qt 5 and the KDE Frameworks than are available in the `core22` software archive.
 
-The _platform snap_ makes the corresponding run-time libraries available to your snap when it is launched by your users. If the _platform snap_ isn't already present on a user's machine, then it will be installed automatically from the Snap Store automatically whenever that user tries to install a `kde-neon` extension based snap.
+The _platform snap_ makes the corresponding run-time libraries available to your snap when it is launched by your users. If the _platform snap_ isn't already present on a user's machine, then it will be installed automatically and simultaneously with the `kde-neon` extension based snap.
 
-By relying on a standalone _platform snap_, you can avoid bundling the Qt/KDE Frameworks libraries in your snap, keeping the size of your snap to a minimum. The same _platform snap_ can also be re-used by other snaps that use the `kde-neon` extension.
+By relying on a standalone _platform snap_, developers can avoid bundling the Qt/KDE Frameworks libraries in their snap, keeping the file size of the snap to a minimum. The same installation of the _platform snap_ can be used by multiple snaps that rely on the `kde-neon` extension.
 
 ## The build environment
 
-In addition to making the _build snap_ available during the snap creation process, the `kde-neon` extension defines the `PATH`, `XDG_DATA_DIRS` and `SNAPCRAFT_CMAKE_ARGS` environment variables by adding a `build-environment` section in each of your snap's build parts:
+The `kde-neon` extension defines the `PATH`, `XDG_DATA_DIRS` and `SNAPCRAFT_CMAKE_ARGS` build-time environment variables by adding a `build-environment` section to each of your snap's build parts:
 
 ```yaml
 build-environment:
@@ -101,15 +103,17 @@ You can override these defaults and/or define other build-time environment varia
 
 ## The run time environment
 
-The extension also sets various environment variables whenever your snapped applications are launched.
+The extension also sets various run-time environment variables.
 
-Most of these variables are set by a `command-chain` shell script named `desktop-launch`:
+Most of these variables are set at launch by a `command-chain` shell script named `desktop-launch`:
 
 ```yaml
 apps:
-  <each application>:
+  <app name>:
+    ...
     command-chain:
     - snap/command-chain/desktop-launch
+    ...
 ```
 
 This shell script is added to the snap by a build part named `kde-neon/sdk`:
@@ -149,7 +153,7 @@ layout:
 
 ### Hooks
 
-The extension defines a [configure hook](/t/supported-snap-hooks/3795) that run a script named `hooks-configure-desktop` upon installation of the snap, every time the snap is refreshed, and whenever the user changes a configuration option using `snap set` or `snap unset`:
+The extension defines a [configure hook](/t/supported-snap-hooks/3795) that runs a script named `hooks-configure-desktop` upon installation of the snap, every time the snap is refreshed, and whenever the user changes a configuration option using `snap set` or `snap unset`:
 
 ```yaml
 hooks:
