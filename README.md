@@ -44,15 +44,15 @@ Many of the projects that participate in the Open Documentation Academy require 
 
 The [Canonical contributor licence agreement](https://ubuntu.com/legal/contributors) is one such CLA. This [needs to be signed](https://ubuntu.com/legal/contributors/agreement) before a contribution can be considered for inclusion within one of Canonical's projects. Many GitHub repositories for Canonical projects will  automatically check whether a contributor has signed the CLA when a contribution is made.
 
-The `cla` issue label is used to help identify which tasks require a contributor to have signed the CLA. Contributions to these tasks 
+The `cla` issue label is used to help identify which tasks require a contributor to have signed a CLA.
 
 ### Time considerations
 
 We’re completely flexible when it comes to how much time a task may take a contributor. Take as little or as much time as you need.
 
-However, we do ask for potential contributors to indicate an estimated target date. This is only to enable us to better manage the task list and to ensure tasks are being actively worked on. If you need to change your estimation, please let us know - it won’t be a problem. Similarly, if you are unable to work on a task for a period of time, also let us know. A comment attached to the task is enough.
+However, we do ask that potential contributors indicate an estimated target date. This helps us to better manage the task list and to ensure tasks are being actively worked on. If you need to change your estimate, please let us know because it won’t be a problem. Similarly, let us know if you are unable to work on a task for a period of time. A comment attached to the task is enough.
 
-If there has been no activity on a task for several weeks, we'll initially reach out to the assignee before releasing that task back into the pool of unassigned tasks.
+If there has been no activity on a task for several weeks, we'll initially reach out to the assignee before releasing the task back into the pool of unassigned tasks.
 
 ### Issue labels
 
