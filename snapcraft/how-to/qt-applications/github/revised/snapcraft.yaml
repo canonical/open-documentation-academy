@@ -1,0 +1,68 @@
+name: kcalc-example
+adopt-info: build-kcalc
+grade: devel
+
+license: GPL-2.0-or-later
+website: https://github.com/snapcraft-docs/kcalc-example/
+contact: https://github.com/snapcraft-docs/kcalc-example/
+issues: https://github.com/snapcraft-docs/kcalc-example/issues/
+source-code: https://github.com/snapcraft-docs/kcalc-example/
+
+base: core22
+confinement: strict
+
+apps:
+  kcalc-example:
+    common-id: org.kde.kcalc.desktop
+    command: usr/bin/kcalc
+    command-chain:
+      - snap/command-chain/set-cursor-variables
+    extensions:
+      - kde-neon
+    plugs:
+      - audio-playback
+
+parts:
+  build-kcalc:
+    source: https://invent.kde.org/utilities/kcalc/-/archive/v23.08.5/kcalc-v23.08.5.tar.gz
+    parse-info:
+      - usr/share/metainfo/org.kde.kcalc.appdata.xml
+    build-packages:
+      - libmpfr-dev
+      - libgmp-dev
+    stage-packages:
+      - libmpfr6
+      - libgmp10
+    plugin: cmake
+    cmake-parameters:
+      - "-DCMAKE_BUILD_TYPE=Release"
+      - "-DCMAKE_INSTALL_PREFIX=/usr"
+      - "-DKDE_INSTALL_USE_QT_SYS_PATHS=ON"
+      - "-DKDE_SKIP_TEST_SETTINGS=ON"
+      - "-DINSTALL_ICONS=ON"
+      - "-DKF5DocTools_FOUND=OFF"
+
+  set-cursor-variables:
+    source: https://github.com/snapcraft-docs/kcalc-example.git
+    source-type: git
+    source-subdir: scripts
+    plugin: dump
+    organize:
+      set-cursor-variables: snap/command-chain/set-cursor-variables
+
+  sound-support:
+    plugin: nil
+    override-pull: |
+      if [ ! -e libcanberra-pulse_*.deb ]; then
+        apt-get download libcanberra-pulse:$CRAFT_ARCH_BUILD_FOR;
+      fi
+    override-build: |
+      if [ ! -e $CRAFT_PART_INSTALL/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/libcanberra-*/libcanberra-pulse.so ]; then
+        dpkg -x $CRAFT_PART_SRC/libcanberra-pulse_*.deb $CRAFT_PART_INSTALL
+      fi
+
+layout:
+  /usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/libcanberra-0.30/libcanberra-pulse.so:
+    symlink: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/libcanberra-0.30/libcanberra-pulse.so
+  /usr/share/sounds/Oxygen-Sys-App-Message.ogg:
+    symlink: $SNAP/kf5/usr/share/sounds/freedesktop/stereo/dialog-information.oga
