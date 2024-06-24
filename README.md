@@ -38,7 +38,7 @@ The first words of an issue's title will typically indicate the project it invol
 
 This list will expand as more projects get involved. We're also happy to include projects outside of Canonical.
 
-## Contributor licence agreement
+### Contributor licence agreement
 
 Many of the projects that participate in the Open Documentation Academy require that a contributor has signed a _Contributor licence agreement_, or CLA. Such an agreement will typically grant permission for the project to use a contribution while the contributor retains the copyright and the rights to modify their own work, or use it in other projects.
 
