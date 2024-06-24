@@ -40,7 +40,7 @@ This list will expand as more projects get involved. We're also happy to include
 
 ## Contributor licence agreement
 
-Many of the projects that participate in the _Academy_ require that a contributor has signed a _Contributor licence agreement_, or CLA. Such an agreement will typically grant permission for the project to use a contribution while the contributor retains the copyright and the rights to modify their own work, or use it in other projects.
+Many of the projects that participate in the Open Documentation Academy require that a contributor has signed a _Contributor licence agreement_, or CLA. Such an agreement will typically grant permission for the project to use a contribution while the contributor retains the copyright and the rights to modify their own work, or use it in other projects.
 
 The [Canonical contributor licence agreement](https://ubuntu.com/legal/contributors) is one such CLA. This [needs to be signed](https://ubuntu.com/legal/contributors/agreement) before a contribution can be considered for inclusion within one of Canonical's projects. Many GitHub repositories for Canonical projects will  automatically check whether a contributor has signed the CLA when a contribution is made.
 
