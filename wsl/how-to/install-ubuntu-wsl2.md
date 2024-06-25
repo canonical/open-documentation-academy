@@ -1,18 +1,19 @@
 # Install Ubuntu on WSL2
 *Authored by Oliver Smith ([oliver.smith@canonical.com](mailto:oliver.smith@canonical.com)) and edited by Edu Gómez Escandell ([edu.gomez.escandell@canonical.com](mailto:edu.gomez.escandell@canonical.com))*
 
-## What you will learn:
+## What you will learn
 
 * How to enable and install WSL on Windows 10 and Windows 11
-* How to install `Ubuntu 24.04 LTS` using: Microsoft Store, WSL CLI, or Winget 
+* How to install `Ubuntu 24.04 LTS` using the Microsoft Store, WSL commands or the Winget package manager 
 
 ## What you will need:
 
-* A Windows 10 or Windows 11 physical or virtual machine with all the updates installed
+* Windows 10 or 11 running on either a physical device or virtual machine 
+* All of the latest Windows updates installed
 
 ## Install WSL
 
-You can install WSL from the command line. Open a PowerShell prompt as an Administrator (we recommend using [Windows Terminal](https://github.com/microsoft/terminal)) and run:
+You can install WSL from the command line. Open a PowerShell prompt as an Administrator (we recommend using [Windows Terminal](https://github.com/microsoft/terminal?tab=readme-ov-file#installing-and-running-windows-terminal)) and run:
 ```text
 wsl --install
 ```
@@ -21,23 +22,23 @@ This command will enable the features necessary to run WSL and also install the 
 
 ## Install Ubuntu WSL
 
-WSL supports a variety of Linux distributions including the latest Ubuntu LTS release. Check out [the documentation](../reference/distributions.md) to see which one you prefer. For the rest of this tutorial we'll use `Ubuntu 24.04 LTS` as the example.
+WSL supports a variety of Linux distributions including the latest Ubuntu LTS release. Check out [the documentation](../reference/distributions.md) to see which one you prefer. We'll be using `Ubuntu 24.04 LTS` as the example.
 
-There are multiple ways of installing distros on WSL, here we show three: via the Microsoft store, WSL Command Line Interface, and Winget. The result is the same regardless of the method.
+There are multiple ways of installing distros on WSL, here we show three: Microsoft Store, WSL commands and the Winget package manager. The result is the same regardless of the method.
 
-### Method 1: Microsoft store
+### Method 1: Microsoft Store
 
 Find the distribution you prefer on the Microsoft Store and then select `Get`. 
 
 ![|624x489](https://github.com/ubuntu/WSL/blob/main/docs/guides/assets/install-ubuntu-wsl2/choose-distribution.png?raw=true)
 
-Ubuntu will then be installed on your machine. Once installed, you can either launch the application directly from the store or search for Ubuntu in your Windows search bar.
+Ubuntu will then be installed on your machine. Once installed, you can either launch the application directly from the Store or search for Ubuntu in your Windows search bar.
 
 ![|624x580](https://github.com/ubuntu/WSL/blob/main/docs/guides/assets/install-ubuntu-wsl2/search-ubuntu-windows.png?raw=true)
 
-### Method 2: WSL Command line interface
+### Method 2: WSL commands
 
-It is possible to install the same Ubuntu versions available on the Windows Store directly from the command line.
+It is possible to install the same Ubuntu versions available on the Microsoft Store directly from the command line.
 In a PowerShell terminal, you can run `wsl --list --online` to see all available distros and versions.
 
 ![image|690x388](https://github.com/ubuntu/WSL/blob/main/docs/guides/assets/install-ubuntu-wsl2/wsl-list-online.png?raw=true) 
@@ -53,7 +54,7 @@ Use `wsl -l -v` to see all your currently installed distros and the version of W
 
 ![image|690x311](https://github.com/ubuntu/WSL/blob/main/docs/guides/assets/install-ubuntu-wsl2/wsl-l-v.png?raw=true?raw=true) 
 
-### Method 3: Winget
+### Method 3: Winget package manager
 
 Open a PowerShell terminal and type:
 ```text
@@ -85,7 +86,7 @@ sudo apt full-upgrade -y
 ```
 ## Enjoy Ubuntu on WSL!
 
-That’s it! In this tutorial, we’ve shown you how to install WSL and Ubuntu on Windows 10 or 11.
+In this guide, we’ve shown you how to install WSL and Ubuntu on Windows 10 or 11 and get the latest updates.
 
 We hope you enjoy working with Ubuntu in WSL. Don’t forget to check out [our blog](https://ubuntu.com/blog) for the latest news on all things Ubuntu.
 
