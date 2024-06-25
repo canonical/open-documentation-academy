@@ -38,9 +38,33 @@ The first words of an issue's title will typically indicate the project it invol
 
 This list will expand as more projects get involved. We're also happy to include projects outside of Canonical.
 
+### Contributor licence agreement
+
+Many of the projects that participate in the Open Documentation Academy require that a contributor has signed a _Contributor licence agreement_, or CLA. Such an agreement will typically grant permission for the project to use a contribution while the contributor retains the copyright and the rights to modify their own work, or use it in other projects.
+
+The [Canonical contributor licence agreement](https://ubuntu.com/legal/contributors) is one such CLA. This [needs to be signed](https://ubuntu.com/legal/contributors/agreement) before a contribution can be considered for inclusion within one of Canonical's projects. Many GitHub repositories for Canonical projects will  automatically check whether a contributor has signed the CLA when a contribution is made.
+
+The `cla` issue label is used to help identify which tasks require a contributor to have signed a CLA.
+
+### Time considerations
+
+We’re completely flexible when it comes to how much time a task may take a contributor. Take as little or as much time as you need.
+
+However, we do ask that potential contributors indicate an estimated target date. This helps us to better manage the task list and to ensure tasks are being actively worked on. If you need to change your estimate, please let us know because it won’t be a problem. Similarly, let us know if you are unable to work on a task for a period of time. A comment attached to the task is enough.
+
+If there has been no activity on a task for several weeks, we'll initially reach out to the assignee before releasing the task back into the pool of unassigned tasks.
+
 ### Issue labels
 
 We use one or more of the following issue labels both for consistency and to indicate what might be expected from a task.
+
+#### cla 
+
+Identifies tasks that require a contributor to have signed a [CLA](#contributor-licence-agreement).
+
+#### code
+
+Used for tasks that may require some programming knowledge, or a programmatic solution.
 
 #### diátaxis
 
@@ -92,6 +116,10 @@ Review pre-existing documentation for quality, accuracy and consistency. This wo
 #### size 
 
 This is our estimation of effort and complexity. Size values range from 1 to 8, representing _least effort_ to _most effort_ respectively. These numbers follow the [Fibonacci ### sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) sequence of 1, 2, 3, 5, 8, with size 8 likely to be a significant undertaking.
+
+#### ta wanted
+
+The technical author (TA) team at Canonical wants to help projects without access to documentation experts. This label is used for such projects to mark tasks any technical author can help with.
 
 #### tutorial
 
