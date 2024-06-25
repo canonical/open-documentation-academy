@@ -41,18 +41,44 @@ Ubuntu will then be installed on your machine. Once installed, you can either la
 It is possible to install the same Ubuntu versions available on the Microsoft Store directly from the command line.
 In a PowerShell terminal, you can run `wsl --list --online` to see all available distros and versions.
 
-![image|690x388](https://github.com/ubuntu/WSL/blob/main/docs/guides/assets/install-ubuntu-wsl2/wsl-list-online.png?raw=true) 
+```text
+The following is a list of valid distributions that can be installed.
+The default distribution is denoted by '*'.
+Install using 'wsl --install -d <Distro>'.
+
+  NAME                                   FRIENDLY NAME
+* Ubuntu                                 Ubuntu
+  Debian                                 Debian GNU/Linux
+  kali-linux                             Kali Linux Rolling
+  Ubuntu-18.04                           Ubuntu 18.04 LTS
+  Ubuntu-20.04                           Ubuntu 20.04 LTS
+  Ubuntu-22.04                           Ubuntu 22.04 LTS
+  Ubuntu-24.04                           Ubuntu 24.04 LTS
+...
+
+``` 
+
+Your list may be different once new distributions become available.  
 
 You can install the version using its NAME:
 ```text
 wsl --install -d Ubuntu-24.04
 ```
 
-![image|690x388](https://github.com/ubuntu/WSL/blob/main/docs/guides/assets/install-ubuntu-wsl2/installing.png?raw=true) 
+You'll see the installation progress in the terminal.
+
+```text
+Installing: Ubuntu 24.04 LTS
+[==========================72,0%==========                 ]
+```
 
 Use `wsl -l -v` to see all your currently installed distros and the version of WSL they are using:
 
-![image|690x311](https://github.com/ubuntu/WSL/blob/main/docs/guides/assets/install-ubuntu-wsl2/wsl-l-v.png?raw=true?raw=true) 
+```text
+  NAME            STATE           VERSION
+  Ubuntu-20.04    Stopped         2
+* Ubuntu-24.04    Stopped         2
+```
 
 ### Method 3: Winget package manager
 
