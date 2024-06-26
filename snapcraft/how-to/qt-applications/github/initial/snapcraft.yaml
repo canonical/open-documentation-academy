@@ -1,0 +1,33 @@
+name: kcalc-example
+adopt-info: kcalc-build-part
+grade: devel
+
+base: core22
+confinement: devmode
+
+apps:
+  kcalc-example:
+    common-id: org.kde.kcalc.desktop
+    command: usr/bin/kcalc
+    extensions:
+      - kde-neon
+
+parts:
+  kcalc-build-part:
+    source: https://invent.kde.org/utilities/kcalc/-/archive/v23.08.5/kcalc-v23.08.5.tar.gz
+    parse-info:
+      - usr/share/metainfo/org.kde.kcalc.appdata.xml
+    build-packages:
+      - libmpfr-dev
+      - libgmp-dev
+    stage-packages:
+      - libmpfr6
+      - libgmp10
+    plugin: cmake
+    cmake-parameters:
+      - "-DCMAKE_BUILD_TYPE=Release"
+      - "-DCMAKE_INSTALL_PREFIX=/usr"
+      - "-DKDE_INSTALL_USE_QT_SYS_PATHS=ON"
+      - "-DKDE_SKIP_TEST_SETTINGS=ON"
+      - "-DINSTALL_ICONS=ON"
+      - "-DKF5DocTools_FOUND=OFF"

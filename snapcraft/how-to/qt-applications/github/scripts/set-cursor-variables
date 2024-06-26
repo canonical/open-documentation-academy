@@ -1,0 +1,31 @@
+#!/bin/bash
+
+###########################################################
+# When running on wayland, attempt to obtain cursor
+# information from org.gnome.desktop.interface on D-Bus
+###########################################################
+
+# Desktop environment notes:
+#  - KDE (at least, Plasma 5.27 on Debian 12):
+#    - sets XCURSOR_THEME and XCURSOR_SIZE and
+#    - updates org.gnome.desktop.interface
+#  - GNOME (at least, GNOME 46 on Ubuntu 24.04):
+#    - does _not_ set XCURSOR_THEME or XCURSOR_SIZE
+#    - updates org.gnome.desktop.interface
+
+if [[ -z "$DISABLE_WAYLAND" && ( -e "$XDG_RUNTIME_DIR/../$WAYLAND_DISPLAY" || -e "$XDG_RUNTIME_DIR/../wayland-0") ]]; then
+  DBUS_SERVICE="org.freedesktop.portal.Desktop"
+  DBUS_OBJECT="/org/freedesktop/portal/desktop"
+  DBUS_INTERFACE="org.freedesktop.portal.Settings"
+  DBUS_TARGET="org.gnome.desktop.interface"
+
+  # Only attempt to set XCURSOR_THEME (and XCURSOR_SIZE) if the value hasn't already been set
+  if [ ! -v XCURSOR_THEME ]; then
+    export XCURSOR_THEME="$(busctl call --user $DBUS_SERVICE $DBUS_OBJECT $DBUS_INTERFACE ReadOne ss $DBUS_TARGET cursor-theme | cut -d \" -f2)"
+  fi
+  if [ ! -v XCURSOR_SIZE ]; then
+    export XCURSOR_SIZE="$(busctl call --user $DBUS_SERVICE $DBUS_OBJECT $DBUS_INTERFACE ReadOne ss $DBUS_TARGET cursor-size | cut -d' ' -f4)"
+  fi
+fi
+
+exec "$@"
