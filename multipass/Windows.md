@@ -18,7 +18,7 @@ This tutorial will teach you how to create, customise and manage instances using
 
 <a href="#heading--install-multipass"><h2 id="heading--install-multipass">Install Multipass</h3></a>
 
-Multipass is available for Linux, macOs, and Windows. To install it on the OS of your choice, please follow the instructions given in this [how-to-guides](https://multipass.run/docs/how-to-guides). 
+Multipass is available for Linux, macOS, and Windows. To install it on the OS of your choice, please follow the instructions given in this [how-to-guides](https://multipass.run/docs/how-to-install-multipass). 
 
 This tutorial gives instructions for using Multipass on Windows.
 
@@ -40,7 +40,7 @@ After launching the application, you should see the Multipass tray icon in the l
 
 **![|429x221](https://assets.ubuntu.com/v1/8c28e82a-mp-windows-2.png)**
 
-Click on the **Multipass icon**, then select **Open Shell**. 
+Click on the Multipass icon and select **Open Shell**. 
 
 **![|423x241](https://assets.ubuntu.com/v1/33a6bf4d-mp-windows-3.png)**
 
@@ -78,7 +78,7 @@ To check for new updates run: sudo apt update
 ubuntu@primary:~$
 ```
 
-Let’s test it out. As you've just learnt, the previous step automatically mounted your `$HOME` directory in the instance. Try out a few linux commands to see what you’re working with.
+Let’s test it out. As you've just learnt, the previous step automatically mounted your `$HOME` directory in the instance. Try out a few Linux commands to see what you’re working with.
 
 ```plain
 ubuntu@primary:~$ free
@@ -110,7 +110,7 @@ In Multipass, an instance with the name "primary" is privileged. That is, it ser
 
 <a href="#heading--create-a-customised-instance"><h2 id="heading--create-a-customised-instance">Create a customised instance</h3></a>
 
-Multipass has a great feature to help you get started with creating customised instances. Open a terminal and run the `multipass find` command. The result shows a list of all of the images you can launch through Multipass currently.
+Multipass has a great feature to help you get started with creating customised instances. Open a terminal and run the `multipass find` command. The result shows a list of all images you can currently launch through Multipass.
 
 ```plain
 C:\WINDOWS\system32> multipass find
@@ -174,7 +174,7 @@ You can now launch the type of instance you need by running this command:
 
 <a href="#heading--manage-instances"><h2 id="heading--manage-instances">Manage instances</h3></a>
 
-You can confirm that the new instance has the specs you need by running `multipass info ltsInstance`
+You can confirm that the new instance has the specs you need by running `multipass info ltsInstance`.
 
 ```plain
 C:\WINDOWS\system32> multipass info ltsInstance                             
@@ -233,7 +233,7 @@ Open a browser and type in the IP address of your instance into the address bar.
 
 Just like that, you've got a web server running in a Multipass instance!
 
-You can use this web server locally for any kind of local development or testing. If however, you want to access this web server from the internet (for instance, a different computer), you need an instance that is exposed to the external network.
+You can use this web server locally for any kind of local development or testing. However, if you want to access this web server from the internet (for instance, a different computer), you need an instance that is exposed to the external network.
 
 <a href="#heading--launch-from-a-blueprint-to-run-docker-containers"><h3 id="heading--launch-from-a-blueprint-to-run-docker-containers">Launch from a Blueprint to run Docker containers</h3></a>
 
@@ -262,11 +262,11 @@ Copy the IP address starting with "10" and paste it into your browser, then add 
 
 ![|720x601](https://assets.ubuntu.com/v1/75a164a1-mp-windows-14.png)
 
-From there, select **a local Docker environment**
+From there, select **Local** to manage a local Docker environment.
 
 ![|720x460](https://assets.ubuntu.com/v1/ee3ff308-mp-windows-15.png)
 
-Inside the newly selected local Docker environment, navigate to the **table of contents**, click on **app templates**, and select **NGINX**.
+Inside the newly selected local Docker environment, locate the sidebar menu on the page and click on **app templates**, then select **NGINX**.
 
 ![](https://assets.ubuntu.com/v1/86be3eae-mp-windows-16.png)
 
@@ -276,7 +276,7 @@ From the Portainer dashboard, you can see the ports available on nginx. To verif
 
 <a href="#heading--next-steps"><h2 id="heading--next-steps">Next steps</h2></a>
 
-Congratulations! You can now use Multipass proficiently. There's more to learn about Multipass and its capabilities. Check out our [how-to guides](https://multipass.run/docs/how-to-guides) for ideas and help with your project. Our [reference page](https://multipass.run/docs/reference) contains definitions of key concepts, a complete CLI command reference, settings options, and more.
+Congratulations! You can now use Multipass proficiently. There's more to learn about Multipass and its capabilities. Check out our [how-to guides](https://multipass.run/docs/how-to-guides) for ideas and help with your project. Our [reference pages](https://multipass.run/docs/reference) contain definitions of key concepts, a complete CLI command reference, settings options, and more.
 
 Let us know what you’re able to get done with Multipass!
 
