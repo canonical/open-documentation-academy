@@ -270,7 +270,7 @@ From the Portainer dashboard, you can see the ports available on nginx. To verif
 
 <a href="#heading--next-steps"><h2 id="heading--next-steps">Next steps</h2></a>
 
-Congratulations! You can now use Multipass proficiently. There's more to learn about Multipass and its capabilities. Check out our [how-to guides](https://multipass.run/docs/how-to-guides) for ideas and help with your project. Our [reference pages](https://multipass.run/docs/reference) contain definitions of key concepts, a complete CLI command reference, settings options, and more.
+Congratulations! You can now use Multipass proficiently. There's more to learn about Multipass and its capabilities. Check out our [how-to guides](https://multipass.run/docs/how-to-guides) for ideas and help with your project. Our [reference pages](https://multipass.run/docs/reference) contain definitions of key concepts, a complete CLI command reference, settings options and more.
 
 Let us know what you’re able to get done with Multipass!
 
