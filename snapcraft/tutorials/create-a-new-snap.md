@@ -25,7 +25,7 @@ Snapcraft can be installed on various Linux distributions, as well as on macOS a
 
 This tutorial does not require any programming or specific Linux knowledge, but you will need some familiarity with the Linux command line. All the instructions are run as commands from the [Terminal](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) application.
 
-You system also needs to have at least 20GB of storage available.
+Your system also needs to have at least 20GB of storage available.
 
 <a id='heading--setup'></a>
 
@@ -78,7 +78,7 @@ To create a new YAML template for a working snap, run `snapcraft init` within th
 snapcraft init
 ```
 
-The YAML template file is called `snapcraft.yaml` and it can be found within a new `snap` sub-directory.
+The YAML template file is called `snapcraft.yaml` and you'll find it within a new `snap` sub-directory.
 
 <h3 id='heading--build-template'>1.3 Build a template snap</h3>
 
@@ -195,7 +195,7 @@ Type `exit` to quit the build environment shell.
 
 ## 3. Create an app section
 
-Using the location of the binary, and to permit access, it needs to be declared within an `app:` section of the snapcraft.yaml:
+To use the binary's location and permit access, you need to declare it within the `apps` section of your `snapcraft.yaml` file:
 
 ```yaml
 apps:
@@ -211,7 +211,7 @@ This means that when our snap is installed, typing `my-snap-name` will run the `
 
 The snap can now be rebuilt to produce what should be an installable and executable snap package.
 
-Running `snapcraft` will produce a snap package called `my-snap-name_0.1_amd64.snap` (depending on your system architecture).
+First, ensure that you have successfully exited the build environment shell by running the `exit` command. Then run the command, `snapcraft`. This will produce a snap package called `my-snap-name_0.1_amd64.snap` (depending on your system architecture).
 
 ```bash
 Created snap package my-snap-name_0.1_amd64.snap
@@ -253,16 +253,29 @@ This produces an error, and unless you know the project code, it's difficult to 
 If you're a Python developer, or reasonably good at searching the internet, it's relatively straightforward to work out that the `usb.core.NoBackendError` issue is caused by a missing `python3-usb` package. This can be added through a new `stage-packages` section for the part. Stage packages are those packages you wish to be installed alongside the application:
 
 ```yaml
+parts:
+  my-part:
+    plugin: python
+    source-type: git
+    source: https://github.com/liquidctl/liquidctl
     stage-packages:
        - python3-usb
 ```
 
-After building and installing the new snap, the error will have gone. If you had any compatible devices, you would now see output similar to the following:
+Now reset your build environment by running `snapcraft clean`. After resetting your build environment, rebuild it with the command, `snapcraft`. Then install the new snap by running:
+
+```bash
+sudo snap install ./my-snap-name_0.1_amd64.snap --dangerous --devmode
+```
+
+Running the command `my-snap-name list` should now give you an output similar to the following:
 
 ```bash
  Device #0: Corsair HX750i
  Device #1: Corsair Hydro H100i v2
 ```
+
+See [Supported devices](https://github.com/liquidctl/liquidctl#supported-devices) for the list of compatible devices.
 
 <h3 id='heading--system-access'>4.2 System access</h3>
 
