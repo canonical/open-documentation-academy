@@ -268,14 +268,14 @@ Now reset your build environment by running `snapcraft clean`. After resetting y
 sudo snap install ./my-snap-name_0.1_amd64.snap --dangerous --devmode
 ```
 
-Running the command `my-snap-name list` should now give you an output similar to the following:
+If you have any supported devices, running the command `my-snap-name list` should now give you an output similar to the following:
 
 ```bash
  Device #0: Corsair HX750i
  Device #1: Corsair Hydro H100i v2
 ```
 
-See [Supported devices](https://github.com/liquidctl/liquidctl#supported-devices) for the list of compatible devices.
+See [Supported devices](https://github.com/liquidctl/liquidctl#supported-devices) for the list of supported devices.
 
 <h3 id='heading--system-access'>4.2 System access</h3>
 
