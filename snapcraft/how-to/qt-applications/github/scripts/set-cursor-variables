@@ -24,7 +24,7 @@ if [[ -z "$DISABLE_WAYLAND" && ( -e "$XDG_RUNTIME_DIR/../$WAYLAND_DISPLAY" || -e
     export XCURSOR_THEME="$(busctl call --user $DBUS_SERVICE $DBUS_OBJECT $DBUS_INTERFACE ReadOne ss $DBUS_TARGET cursor-theme | cut -d \" -f2)"
   fi
   if [ ! -v XCURSOR_SIZE ]; then
-    export XCURSOR_SIZE="$(busctl call --user $DBUS_SERVICE $DBUS_OBJECT $DBUS_INTERFACE ReadOne ss $DBUS_TARGET cursor-size | cut -d' ' -f4)"
+    export XCURSOR_SIZE="$(busctl call --user $DBUS_SERVICE $DBUS_OBJECT $DBUS_INTERFACE ReadOne ss $DBUS_TARGET cursor-size | cut -d' ' -f3)"
   fi
 fi
 
