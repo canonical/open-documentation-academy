@@ -26,7 +26,7 @@ The square brackets in the Ubuntu WSL docs currently contain image dimensions, s
 Any alt text should fit the following criteria:
 
 - Describe the content of the image clearly and in as few words as possible
-- Preferably be one sentence in length with no or minimal punctuation
+- Preferably be one sentence in length with minimal punctuation
 - Avoid repetition and include only the essential information once
 - Avoid unecessary words, such as "image of..." (the user will know it's an image)
 
@@ -35,9 +35,9 @@ An example is an image of a terminal that contains a lot of text.
 You would not reproduce all of that text but instead attempt to
 explain what it is and what it does:
 
-> Bash snippet showing the updating of packages
+> Bash snippet showing the updating of packages.
 
-> Log of output showing successful running of script
+> Log of output showing successful running of script.
 
 # Table of contents
 
