@@ -161,6 +161,6 @@ As an example, alt text for the image above could be: `Install page for Visual S
 
 [Link to documentation page](https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/guides/install-ubuntu-wsl2/)
 
-![|624x489](https://github.com/ubuntu/WSL/blob/main/docs/guides/assets/install-ubuntu-wsl2/choose-distribution.png?raw=true)
+![Installation page for Ubuntu 24.04 LTS on the Microsoft store](https://github.com/ubuntu/WSL/blob/main/docs/guides/assets/install-ubuntu-wsl2/choose-distribution.png?raw=true)
 
-![|624x580](https://github.com/ubuntu/WSL/blob/main/docs/guides/assets/install-ubuntu-wsl2/search-ubuntu-windows.png?raw=true)
+![Search results fpr Ubuntu 24.04 LTS on Windows search bar](https://github.com/ubuntu/WSL/blob/main/docs/guides/assets/install-ubuntu-wsl2/search-ubuntu-windows.png?raw=true)
