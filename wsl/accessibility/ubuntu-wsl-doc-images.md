@@ -91,29 +91,29 @@ As an example, alt text for the image above could be: `Install page for Visual S
 
 [link to documentation page](https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/tutorials/dotnet-systemd/)
 
-![|624x153](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/templates.png?raw=true)
+![Selecting Bot Framework Echo Bot from Dotnet new --list](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/templates.png?raw=true)
 
-![|624x357](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/welcome-to-dotnet.png?raw=true)
+![Bash snippets confirming that Echo bot was installed and setup correctly](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/welcome-to-dotnet.png?raw=true)
 
-![|624x347](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/your-bot-is-ready.png?raw=true)
+![Windows desktop showing the Echo bot app running at localhost:3978](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/your-bot-is-ready.png?raw=true)
 
-![|624x411](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/bot-framework-emulator.png?raw=true)
+![Bot Framework Emulator homepage](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/bot-framework-emulator.png?raw=true)
 
-![|624x357](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/ipconfig.png?raw=true)
+![ipconfig command output showing network adapter details, including IPv4 addresses for Wi-Fi and WSL.](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/ipconfig.png?raw=true)
 
-![|624x411](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/emulator-settings.png?raw=true)
+![Bot Emulator settings page](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/emulator-settings.png?raw=true)
 
-![|624x411](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/open-a-bot.png?raw=true)
+![Bot configuration page](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/open-a-bot.png?raw=true)
 
-![|624x411](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/start-chatting.png?raw=true)
+![Live chat with Echo bot](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/start-chatting.png?raw=true)
 
-![|624x381](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/program-cs.png?raw=true)
+![Results of running "systemctl status echoes.service" on terminal](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/program-cs.png?raw=true)
 
 ![|624x77](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/systemctl-status-inactive.png?raw=true)
 
 ![|624x401](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/systemctl-status-running.png?raw=true)
 
-![|624x411](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/start-chatting-service.png?raw=true)
+![Live chat with Echo bot](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/start-chatting-service.png?raw=true)
 
 ## Enabling GPU acceleration with the NVIDIA CUDA platform
 
