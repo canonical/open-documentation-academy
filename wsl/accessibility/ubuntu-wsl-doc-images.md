@@ -71,21 +71,21 @@ As an example, alt text for the image above could be: `Install page for Visual S
 
 ![Bash snippet showing the installation of VS Code Server's required dependencies](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/vscode/downloading-vscode-server.png?raw=true)
 
-![Screenshot of a Windows desktop showing a terminal running "npm start", a Visual Studio Code window with project files, and a web browser displaying 'Hello World' and 'Tutorial complete!' at http://localhost:10001](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/vscode/hello-world.png?raw=true)
+![Windows desktop showing a terminal running "npm start", a Visual Studio Code window with project files, and a web browser displaying 'Hello World' and 'Tutorial complete!' at http://localhost:10001](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/vscode/hello-world.png?raw=true)
 
 ## Windows and Ubuntu Interoperability
 
 [Link to full documentation page](https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/tutorials/interop/)
 
-![|624x347](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/interop/jupyter.png?raw=true)
+![Jupyter Notebook running in a web browser at http://localhost:8888, showing an empty notebook list](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/interop/jupyter.png?raw=true)
 
-![Jupyter Notebook: A Beginner's Tutorial|624x251](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/interop/jupyter-python.jpg?raw=true)
+![Jupyter interface showing the creation of a new Python 3 notebook. The 'New' button is clicked, revealing a dropdown menu with 'Python 3' highlighted](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/interop/jupyter-python.jpg?raw=true)
 
-![|624x469](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/interop/jupyter-script.png?raw=true)
+![Python script in a Jupyter notebook](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/interop/jupyter-script.png?raw=true)
 
-![|624x352](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/interop/ubuntu-home.png?raw=true)
+![Screenshot of Windows file explorer](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/interop/ubuntu-home.png?raw=true)
 
-![|624x389](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/interop/spreadsheet.png?raw=true)
+![Windows desktop showing terminal, PowerShell, and LibreOffice Calc with file type statistics table and pie chart](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/interop/spreadsheet.png?raw=true)
 
 ## Run a .NET Echo Bot as a systemd service on Ubuntu WSL
 
