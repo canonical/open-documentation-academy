@@ -149,11 +149,11 @@ As an example, alt text for the image above could be: `Install page for Visual S
 
 [link to documentation page](https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/tutorials/data-science-and-engineering/)
 
-![|624x373](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/data-science-engineering/octave.png?raw=true)
+![Windows desktop showing a terminal running "octave --gui" and the Octave GUI](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/data-science-engineering/octave.png?raw=true)
 
-![|570x225](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/data-science-engineering/save-file.png?raw=true)
+![Octave GUI showing the "Save and Run button" for the juliatest.m file](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/data-science-engineering/save-file.png?raw=true)
 
-![|579x540](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/data-science-engineering/julia-fractal.png?raw=true)
+![A Julia fractal](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/data-science-engineering/julia-fractal.png?raw=true)
 
 # Howtos
 
