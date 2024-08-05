@@ -41,14 +41,17 @@ explain what it is and what it does:
 
 # Table of contents
 
+- [Introduction](#introduction)
+- [Image accessibility and alt text](#image-accessibility-and-alt-text)
+- [Table of contents](#table-of-contents)
 - [Tutorials](#tutorials)
-    - [Working with Visual Studio Code](#working-with-visual-studio-code) 
-    - [Windows and Ubuntu Interoperability](#windows-and-ubuntu-interoperability)
-    - [Run a .NET Echo Bot as a systemd service on Ubuntu WSL](#run-a-.NET-Echo-Bot-as-a-systemd-service-on-Ubuntu-WSL)
-    - [Enabling GPU acceleration with the NVIDIA CUDA platform](#enabling-GPU-acceleration-with-the-NVIDIA-CUDA-platform)
-    - [Use WSL for data science and engineering](#use-WSL-for-data-science-and-engineering)
+  - [Working with Visual Studio Code](#working-with-visual-studio-code)
+  - [Windows and Ubuntu Interoperability](#windows-and-ubuntu-interoperability)
+  - [Run a .NET Echo Bot as a systemd service on Ubuntu WSL](#run-a-net-echo-bot-as-a-systemd-service-on-ubuntu-wsl)
+  - [Enabling GPU acceleration with the NVIDIA CUDA platform](#enabling-gpu-acceleration-with-the-nvidia-cuda-platform)
+  - [Use WSL for data science and engineering](#use-wsl-for-data-science-and-engineering)
 - [Howtos](#howtos)
-    - [Install Ubuntu on WSL2](#install-Ubuntu-on-WSL2)
+  - [Install Ubuntu on WSL2](#install-ubuntu-on-wsl2)
 
 # Tutorials
 
@@ -56,19 +59,19 @@ explain what it is and what it does:
 
 [Link to full documentation page](https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/tutorials/vscode/) 
 
-![|624x483](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/vscode/msstore.png?raw=true)
+![Installation page for Visual Studio Code on the Microsoft Store](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/vscode/msstore.png?raw=true)
 
 As an example, alt text for the image above could be: `Install page for Visual Studio Code on the Microsoft Store`.
 
-![|624x353](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/vscode/download-vs-code.png?raw=true)
+![Visual Studio Code download page showing download options for Windows, Linux (.deb and .rpm packages), and Mac](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/vscode/download-vs-code.png?raw=true)
 
-![|624x492](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/vscode/aditional-tasks.png?raw=true)
+![Visual Studio Code's installation "Additional Tasks" Steps with the "Add to PATH" and "Register Code as an editor for supported file types" options checked](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/vscode/aditional-tasks.png?raw=true)
 
-![|624x469](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/vscode/remote-extension.png?raw=true)
+![Installation page for the Remote Development Visual Studio Code extension](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/vscode/remote-extension.png?raw=true)
 
-![|624x321](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/vscode/downloading-vscode-server.png?raw=true)
+![Bash snippet showing the installation of VS Code Server's required dependencies](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/vscode/downloading-vscode-server.png?raw=true)
 
-![|624x351](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/vscode/hello-world.png?raw=true)
+![Screenshot of a Windows desktop showing a terminal running "npm start", a Visual Studio Code window with project files, and a web browser displaying 'Hello World' and 'Tutorial complete!' at http://localhost:10001](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/vscode/hello-world.png?raw=true)
 
 ## Windows and Ubuntu Interoperability
 
