@@ -107,11 +107,11 @@ As an example, alt text for the image above could be: `Install page for Visual S
 
 ![Live chat with Echo bot](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/start-chatting.png?raw=true)
 
-![Results of running "systemctl status echoes.service" on terminal](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/program-cs.png?raw=true)
+![](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/program-cs.png?raw=true)
 
-![|624x77](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/systemctl-status-inactive.png?raw=true)
+![Results of running "systemctl status echoes.service" on terminal](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/systemctl-status-inactive.png?raw=true)
 
-![|624x401](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/systemctl-status-running.png?raw=true)
+![Results of running "sudo systemctl" on terminal](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/systemctl-status-running.png?raw=true)
 
 ![Live chat with Echo bot](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/dotnet-systemd/start-chatting-service.png?raw=true)
 
@@ -119,31 +119,31 @@ As an example, alt text for the image above could be: `Install page for Visual S
 
 [link to documentation page](https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/tutorials/gpu-cuda/#)
 
-![|624x283](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/install-drivers.png?raw=true)
+![Install support for Linux GUI apps page on WSL documentation](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/install-drivers.png?raw=true)
 
-![|624x136](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/downloads-folder.png?raw=true)
+![Windows file explorer showing the downloaded NVIDIA GPU driver for WSL](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/downloads-folder.png?raw=true)
 
-![|358x312](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/nvidia-allow-changes.png?raw=true)
+![Windows Package Installer confirmation page for NVIDIA Package Launcher](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/nvidia-allow-changes.png?raw=true)
 
-![|369x175](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/default-dir.png?raw=true)
+![Default directory confirmation page for NVIDIA Display Driver](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/default-dir.png?raw=true)
 
-![|368x168](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/please-wait-install.png?raw=true)
+![NVIDIA Display Driver installation progress screen](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/please-wait-install.png?raw=true)
 
-![|541x276](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/splash-screen.png?raw=true)
+![NVIDIA Graphics Driver startup page](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/splash-screen.png?raw=true)
 
-![|542x412](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/license.png?raw=true)
+![NVIDIA software license agreement](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/license.png?raw=true)
 
-![|536x397](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/installation-options.png?raw=true)
+![NVIDIA Graphics Driver installation options with "Express" checked](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/installation-options.png?raw=true)
 
-![|542x404](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/installing.png?raw=true)
+![NVIDIA Virtual Host controller installation progress](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/installing.png?raw=true)
 
-![|544x406](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/install-finished.png?raw=true)
+![NVIDIA Graphics Driver installation success page](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/install-finished.png?raw=true)
 
-![|544x559](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/done-done.png?raw=true)
+![Terminal output showing successful installation of NVIDIA CUDA toolkit on Ubuntu](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/done-done.png?raw=true)
 
-![|624x135](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/make.png?raw=true)
+![Terminal output showing the successful compilation of a CUDA sample application](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/make.png?raw=true)
 
-![|548x599](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/device-query.png?raw=true)
+![Terminal output showing the results of running the deviceQuery sample application](https://github.com/ubuntu/WSL/blob/main/docs/tutorials/assets/gpu-cuda/device-query.png?raw=true)
 
 ## Use WSL for data science and engineering
 
