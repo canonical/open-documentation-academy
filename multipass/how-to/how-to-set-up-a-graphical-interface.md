@@ -15,7 +15,7 @@ The graphical desktop can be viewed in various ways. In this document, we descri
 
 The images used by Multipass do not come with a graphical desktop installed. For this reason, a desktop environment must be installed (here we use `ubuntu-desktop` but there are as many other options as flavors of Ubuntu exist), along with the RDP server (we will use `xrdp` but there are also other options such as `freerdp`). 
 
-To do this, first you need to choose a Multipass instance. List your instances:
+To do this, you need to log into a running Multipass instance. Start by listing your instances:
 
 ```plain
 multipass list
@@ -28,7 +28,7 @@ Name                    State             IPv4             Image
 headbanging-squid       Running           10.49.93.209     Ubuntu 22.04 LTS
 ```
 
-Next log in to the running Multipass instance:
+Next open a shell into the running instance:
 
 ```plain
 multipass shell headbanging-squid
@@ -51,10 +51,10 @@ You will be asked to enter and re-enter a password.
 
 You are done on the server side!
 
-Now, quit the Ubuntu shell on the instance with the `logout` command and find out in the host the IP address to connect to. The IP address is in the output of `multipass list` from the first step:
+Now, quit the Ubuntu shell on the running instance with the `exit` command, and take note of the IP address to connect to. The instance's IP address can be found in the output of `multipass list` from the first step above, or you can use the `multipass info` command as well.
 
 ```plain
-$ multipass list
+multipass info headbanging-squid
 Name                    State             IPv4             Image
 headbanging-squid       Running           10.49.93.209     Ubuntu 22.04 LTS
 ```
