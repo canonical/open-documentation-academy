@@ -64,8 +64,8 @@ Name:           headbanging-squid
 State:          Running
 Snapshots:      0
 IPv4:           10.49.93.209
-Release:        Ubuntu 24.04 LTS
-Image hash:     2e0c90562af1 (Ubuntu 24.04 LTS)
+Release:        Ubuntu 22.04 LTS
+Image hash:     2e0c90562af1 (Ubuntu 22.04 LTS)
 CPU(s):         4
 Load:           0.00 0.00 0.00
 Disk usage:     1.8GiB out of 5.7GiB
