@@ -15,30 +15,43 @@ The graphical desktop can be viewed in various ways. In this document, we descri
 
 The images used by Multipass do not come with a graphical desktop installed. For this reason, a desktop environment must be installed (here we use `ubuntu-desktop` but there are as many other options as flavors of Ubuntu exist), along with the RDP server (we will use `xrdp` but there are also other options such as `freerdp`). 
 
-To do this, first you need to log in to the running Multipass instance:
+To do this, first you need to choose a Multipass instance. List your instances:
 
 ```plain
-$ multipass shell headbanging-squid
+multipass list
+```
+
+Sample output:
+
+```plain
+Name                    State             IPv4             Image
+headbanging-squid       Running           10.49.93.209     Ubuntu 22.04 LTS
+```
+
+Next log in to the running Multipass instance:
+
+```plain
+multipass shell headbanging-squid
 ```
 
 Once inside the instance, run the following commands to install `ubuntu-desktop` and `xrdp`:
 
 ```plain
-$ sudo apt update
-$ sudo apt install ubuntu-desktop xrdp
+sudo apt update
+sudo apt install ubuntu-desktop xrdp
 ```
 
 Then, we need a user with a password in order to log in. One possibility is setting a password for the default `ubuntu` user:
 
 ```plain
-$ sudo passwd ubuntu
+sudo passwd ubuntu
 ```
 
 You will be asked to enter and re-enter a password. 
 
 You are done on the server side!
 
-Now, quit the Ubuntu shell on the instance with the `logout` command and find out in the host the IP address to connect to:
+Now, quit the Ubuntu shell on the instance with the `logout` command and find out in the host the IP address to connect to. The IP address is in the output of `multipass list` from the first step:
 
 ```plain
 $ multipass list
@@ -61,7 +74,7 @@ On Linux, there are applications such as Remmina to visualize the desktop (make 
 To directly launch the client, run the following command:
 
 ```plain
-$ remmina -c rdp://10.49.93.209
+remmina -c rdp://10.49.93.209
 ```
 
 The system will ask for a username (`ubuntu`) and the password set above, and then the Ubuntu desktop on the instance will be displayed.
@@ -101,7 +114,7 @@ We have the possibility here to be a bit more secure than on Windows, by using a
 To do that, copy your public key, stored in `~/.ssh/id_rsa.pub`, to the list of authorized keys of the instance, into the file `~/.ssh/authorized_keys` (remember to replace the example instance name with yours):
 
 ```plain
-$ multipass exec rocking-squirrel -- bash -c "echo `cat ~/.ssh/id_rsa.pub` >> ~/.ssh/authorized_keys"
+multipass exec rocking-squirrel -- bash -c "echo `cat ~/.ssh/id_rsa.pub` >> ~/.ssh/authorized_keys"
 ```
 
 If the file `~/.ssh/id_rsa.pub` does not exist, it means that you need to create your SSH keys. Use `ssh-keygen` to create them and then run the previous command again.
@@ -109,14 +122,14 @@ If the file `~/.ssh/id_rsa.pub` does not exist, it means that you need to create
 Check the IP address of the instance, using `multipass info rocking-squirrel`. Finally, log in to the instance using X forwarding using the command (replace `xx.xx.xx.xx` with the IP address obtained above):
 
 ```plain
-$ ssh -X ubuntu@xx.xx.xx.xx
+ssh -X ubuntu@xx.xx.xx.xx
 ```
 
 Test the setting running a program of your choice on the instance; for example:
 
 ```plain
-$ sudo apt -y install x11-apps
-$ xlogo &
+sudo apt -y install x11-apps
+xlogo &
 ```
 
 ![xlogo on Linux|420x455](upload://etvJU6k1tfuZ0QsKd4TZM1ogsgR.png) 
@@ -148,14 +161,14 @@ An icon will show up in the dock: you are done with the X server!
 To configure the client (that is, the Multipass instance) you will need the host IP address, which can be obtained with the console command `ipconfig`. Then start the instance and set the `DISPLAY` environment variable to the server display on the host IP (replace `xx.xx.xx.xx` with the IP address obtained above):
 
 ```plain
-$ export DISPLAY=xx.xx.xx.xx:0.0
+export DISPLAY=xx.xx.xx.xx:0.0
 ```
 
 You are done, and you can now test forwarding running a program of your choice on the instance; for example:
 
 ```plain
-$ sudo snap install firefox
-$ firefox &
+sudo snap install firefox
+firefox &
 ```
 
 ![Firefox running on the Multipass instance|690x388](upload://iy5xIwIRyMXjYqyhefIfdDoXnAi.jpeg)
