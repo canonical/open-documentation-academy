@@ -128,12 +128,12 @@ We have the possibility here to be a bit more secure than on Windows, by using a
 To do that, copy your public key, stored in `~/.ssh/id_rsa.pub`, to the list of authorized keys of the instance, into the file `~/.ssh/authorized_keys` (remember to replace the example instance name with yours):
 
 ```plain
-multipass exec rocking-squirrel -- bash -c "echo `cat ~/.ssh/id_rsa.pub` >> ~/.ssh/authorized_keys"
+multipass exec headbanging-squid -- bash -c "echo `cat ~/.ssh/id_rsa.pub` >> ~/.ssh/authorized_keys"
 ```
 
 If the file `~/.ssh/id_rsa.pub` does not exist, it means that you need to create your SSH keys. Use `ssh-keygen` to create them and then run the previous command again.
 
-Check the IP address of the instance, using `multipass info rocking-squirrel`. Finally, log in to the instance using X forwarding using the command (replace `xx.xx.xx.xx` with the IP address obtained above):
+Check the IP address of the instance, using `multipass info headbanging-squid` Finally, log in to the instance using X forwarding using the command (replace `xx.xx.xx.xx` with the IP address obtained above):
 
 ```plain
 ssh -X ubuntu@xx.xx.xx.xx
