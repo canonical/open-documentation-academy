@@ -55,8 +55,22 @@ Now, quit the Ubuntu shell on the running instance with the `exit` command, and 
 
 ```plain
 multipass info headbanging-squid
-Name                    State             IPv4             Image
-headbanging-squid       Running           10.49.93.209     Ubuntu 22.04 LTS
+```
+
+Sample output:
+
+```plain
+Name:           headbanging-squid
+State:          Running
+Snapshots:      0
+IPv4:           10.49.93.209
+Release:        Ubuntu 24.04 LTS
+Image hash:     2e0c90562af1 (Ubuntu 24.04 LTS)
+CPU(s):         4
+Load:           0.00 0.00 0.00
+Disk usage:     1.8GiB out of 5.7GiB
+Memory usage:   294.2MiB out of 3.8GiB
+Mounts:         --
 ```
 
 In this example, we will use the IP address `10.49.93.209` to connect to the RDP server on the instance.
