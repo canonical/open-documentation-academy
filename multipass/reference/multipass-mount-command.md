@@ -6,7 +6,12 @@ Please don't copy it blindly, first update the URL passed to the form with the c
 
 > See also: [Mount](/t/28470), [How to share data with an instance](/t/27189), [`umount`](/t/27214), [ID mapping](/t/45986).
 
-The `multipass mount` command maps a local directory from the host to an instance, with the possibility to specify the [mount](/t/28470) type (classic or native) and define group or user [ID mappings](/t/45986).
+The `multipass mount` command maps a local directory from the host to an instance, with the possibility to specify the [mount](/t/28470) type (classic or native) and define group or user [ID mappings](/t/45986). Here's the syntax for mapping a local directory to your virtual machine using the classic mount:
+
+```shell
+multipass mount --type=classic /host/path instance:/instance/path
+```
+The `classic` mounts use technology built into multipass and allows for higher compatibility. However, it sacrifices performance. The `native` mounts on the other hand use hypervisor and/or platform specific mounts to offer better performance but has [limited compatibility](https://multipass.run/docs/mount#native-mounts).
 
 Use the `multipass umount` command to undo the mapping.
 
