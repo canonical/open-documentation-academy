@@ -14,6 +14,8 @@ multipass mount --type=classic /host/path <instance-name>:/instance/path
 ```
 See also [How to share data with an instance](/t/27189) for examples of how you can use the `multipass mount` command to share data between your host and an instance.
 
+The `classic` mounts use technology built into multipass and allows for higher compatibility. However, it sacrifices performance. The `native` mounts on the other hand use hypervisor and/or platform specific mounts to offer better performance but has [limited compatibility](https://multipass.run/docs/mount#native-mounts).
+
 Use the `multipass umount` command to undo the mapping.
 
 ---
