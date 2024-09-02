@@ -1,12 +1,20 @@
 <!-- New feedback link at the top of each page!
-Please don't copy it blindly, first update the URL passed to the form with the current page URL 
+Please don't copy it blindly, first update the URL passed to the form with the current page URL
 -->
 
-> *Errors or typos? Topics missing? Hard to read? <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0XZDU9sbOCiljceh3rO_rkp6vazy2ZsIWgx4gsvl_Sec4Ig/viewform?usp=pp_url&entry.317501128=https://multipass.run/docs/mount-command" target="_blank">Let us know</a> or <a href="https://github.com/canonical/multipass/issues/new/choose" target="_blank">open an issue on GitHub</a>.*
+> _Errors or typos? Topics missing? Hard to read? <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0XZDU9sbOCiljceh3rO_rkp6vazy2ZsIWgx4gsvl_Sec4Ig/viewform?usp=pp_url&entry.317501128=https://multipass.run/docs/mount-command" target="_blank">Let us know</a> or <a href="https://github.com/canonical/multipass/issues/new/choose" target="_blank">open an issue on GitHub</a>._
 
 > See also: [Mount](/t/28470), [How to share data with an instance](/t/27189), [`umount`](/t/27214), [ID mapping](/t/45986).
 
 The `multipass mount` command maps a local directory from the host to an instance, with the possibility to specify the [mount](/t/28470) type (classic or native) and define group or user [ID mappings](/t/45986).
+
+For example, here's the syntax for mapping a local directory to your virtual machine using the classic mount:
+
+```shell
+multipass mount --type=classic /host/path <instance-name>:/instance/path
+```
+
+See also [How to share data with an instance](/t/27189) for examples of how you can use the `multipass mount` command to share data between your host and an instance.
 
 Use the `multipass umount` command to undo the mapping.
 
