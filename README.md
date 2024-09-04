@@ -20,20 +20,22 @@ Issues are identified and shared by participating projects at Canonical who cont
 
 The first words of an issue's title will typically indicate the project it involved. These include the following:
 
-- [Charmed OpenStack](https://ubuntu.com/openstack/docs): our traditional enterprise cloud solution
-- [MicroStack](https://microstack.run/docs): our next generation enterprise cloud solution
-- [Juju](https://juju.is/docs):  open source orchestration engine
+- [Anbox Cloud](https://anbox-cloud.io/docs): Solution offering scalable Android in the cloud
 - [Canonical Kubernetes](https://ubuntu.com/kubernetes/docs): the reference platform for Kubernetes on all major public clouds
+- [Charmed OpenStack](https://ubuntu.com/openstack/docs): our traditional enterprise cloud solution
+- [Juju](https://juju.is/docs):  open source orchestration engine
 - [LXD](https://documentation.ubuntu.com/lxd/en/latest/): open source container and VM management at any scale
 - [Landscape](https://ubuntu.com/landscape/docs): Ubuntu systems management, monitoring and administration platform
 - [Launchpad](https://documentation.ubuntu.com/launchpad/en/latest/): software development lifecycle and collaboration platform
 - [MAAS](https://maas.io/docs): bare metal cloud with on-demand servers
+- [MicroStack](https://microstack.run/docs): our next generation enterprise cloud solution
 - [Multipass](https://discourse.ubuntu.com/t/multipass-documentation/8294): tool to generate cloud-style Ubuntu virtual machines
 - [Netplan](https://github.com/canonical/netplan): network configuration for various backends
 - [Our Sphinx and RST starter pack](https://github.com/canonical/sphinx-docs-starter-pack): our open source template for building modern documentation
 - [Snap and Snapcraft](https://snapcraft.io/docs): Linux app packages and the build tools for desktop, cloud and IoT
 - [Ubuntu Developer Guide](https://github.com/canonical/ubuntu-for-developers-docs): guide for developers using Ubuntu Desktop as a development platform
 - [ubuntu-image](https://github.com/canonical/ubuntu-image): Tool for generating bootable Ubuntu images
+- [Ubuntu on public cloud](https://documentation.ubuntu.com/public-cloud/en/latest/): Optimised Ubuntu images for partner clouds
 - [Ubuntu Packaging Guide](https://github.com/canonical/ubuntu-packaging-guide): manual for Ubuntu package maintainers
 - [Ubuntu WSL](https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/): Ubuntu terminal environment on Windows with the Windows Subsystem for Linux (WSL)
 
