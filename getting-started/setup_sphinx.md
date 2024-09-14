@@ -114,6 +114,10 @@ It's a good idea to open a second Ubuntu tab in your Terminal Window so that you
 
 ## DRAFT
 
+Draft HowTo for:
+1. Deploying the Documentation starter pack
+1. Generating and serving HTML from Markdown, reStructuredText and AsciiDoc
+
 ```bash
 multipass launch --cpus 2 --memory 4G --disk 15G --name sphinx
 
