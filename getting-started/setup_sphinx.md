@@ -111,3 +111,112 @@ You can close the running server at any time by pressing `Ctrl` + `C` in the win
 
 It's a good idea to open a second Ubuntu tab in your Terminal Window so that you can work in one tab while the documentation can be served in the other. You can do this by clicking on the down arrow next to the currently open tab, and clicking "Ubuntu" (if you're using WSL). 
 
+
+## DRAFT
+
+```bash
+multipass launch --cpus 2 --memory 4G --disk 15G --name sphinx
+
+multipass list
+
+multipass shell sphinx
+
+python3 --version
+
+pip --version
+
+sudo apt install python3-pip python3.12-venv # I think this gets installed in the venv python3-sphinx
+
+git clone https://github.com/canonical/sphinx-docs-starter-pack.git academy
+
+# Note, I never use the `https` endpoint when cloning, as all of my GitHub repos require the `ssh` endpoint. But, in a Multipass machine I don't always copy my ssh keys over, and so I cannot use the `ssh` endpoint. If you are running this on the machine where you normally interact with GitHub, then use the `ssh` or `gh` API endpoint.
+
+# git clone git@github.com:canonical/sphinx-docs-starter-pack academy
+# gh repo clone canonical/sphinx-docs-starter-pack academy
+
+cd academy
+
+python3 -m venv .venv
+
+make
+```
+
+Running `make` with no parameter lists the supported parameters:
+
+```bash
+ -------------------------------------------------------------
+ * watch, build and serve the documentation:  make run
+ * only build:                                make html
+ * only serve:                                make serve
+ * clean built doc files:                     make clean-doc
+ * clean full environment:                    make clean
+ * check links:                               make linkcheck
+ * check spelling:                            make spelling
+ * check spelling (without building again):   make spellcheck
+ * check inclusive language:                  make woke
+ * check accessibility:                       make pa11y
+ * check style guide compliance:              make vale
+ * check style guide compliance on target:    make vale TARGET=*
+ * other possible targets:                    make <TAB twice>
+ -------------------------------------------------------------
+ ```
+
+```bash
+make html
+```
+
+Runnaing `make html` will initialize the environment before generating HTML output based on the `.rst` files included in the Canonical Sphinx starter pack. Selected parts of the output are shown here:
+
+```bash
+make -f Makefile.sp sp-html
+make[1]: Entering directory '/home/ubuntu/academy'
+python3 -m venv .sphinx/venv
+. .sphinx/venv/bin/activate; python3 .sphinx/build_requirements.py
+... setting up virtualenv
+python3 -m venv .sphinx/venv
+
+...
+
+writing output... [100%] readme
+generating indices... genindex done
+writing additional pages... search done
+dumping search index in English (code: en)... done
+dumping object inventory... done
+build succeeded.
+
+The HTML pages are in _build.
+make[1]: Leaving directory '/home/ubuntu/academy'
+```
+
+The first time `make html` is run the environment is set up. Some of the packages that are installed in the Python virtual environment (`venv`) are required by Sphinx, and some are optional packages specified in the Sphinx `conf.py`.
+
+> Note:
+>
+> The Starter Pack supports serving the generated HTML with the `make run` command. This works fine if you are running Sphinx on your local machine, but if you are following this guide and running Sphinx in Multipass you should export some options for Sphinx (skip this if you are using remote desktop or X windows with Multipass):
+>
+> ```bash
+> export SPHINXOPTS="--host 0.0.0.0 --port=8000"
+> ```
+
+```bash
+make run
+```
+
+
+Get the IP Address of your Multipass instance
+```bash
+multipass list
+```
+
+The output provides you with the IP Address:
+
+```
+Name                    State             IPv4             Image
+sphinx                  Running           192.168.77.3     Ubuntu 24.04 LTS
+```
+
+### Open a browser
+
+Use the IP Address from the output of `multipass list` and the port number 8000. Using the above output as an example:
+
+http://192.168.77.3:8000
