@@ -92,7 +92,7 @@ Now that we are inside the new folder, we need to find the "address" for the rep
 
 Now, we can click on the green button that says `< > Code`, click on the "Local" tab, and then on the HTTPS sub-tab. Copy the URL that's shown in the box below that. 
 
-![clone the repository](clone_repo.png)
+![clone the repository](images/clone_repo.png)
 
 We can then return to our terminal window and clone the repository - the command always looks something like this:
 
