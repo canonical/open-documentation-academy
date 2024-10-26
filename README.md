@@ -61,15 +61,15 @@ If there has been no activity on a task for several weeks, we'll initially reach
 
 We use one or more of the following issue labels both for consistency and to indicate what might be expected from a task.
 
-#### cla 
+#### cla
 
 Identifies tasks that require a contributor to have signed a [CLA](#contributor-licence-agreement).
 
-#### code
+#### https://github.com/canonical/open-documentation-academy/labels/code
 
 Used for tasks that may require some programming knowledge, or a programmatic solution.
 
-#### diátaxis
+#### https://github.com/canonical/open-documentation-academy/labels/diátaxis
 
 Revise a document to better conform to a [Diátaxis](https://diataxis.fr/) type:
 
@@ -80,55 +80,55 @@ Revise a document to better conform to a [Diátaxis](https://diataxis.fr/) type:
 
 This may require a document to be split, edited, or sometimes re-written.
 
-#### edit
+#### https://github.com/canonical/open-documentation-academy/labels/edit
 
 Edit pre-existing documentation for consistency, accuracy, style and application.
 
-#### explanation
+#### https://github.com/canonical/open-documentation-academy/labels/explanation
 
 Create or revise a document to better reflect an understanding-oriented [explanation](https://diataxis.fr/explanation/).
 
-#### good first issue
+#### https://github.com/canonical/open-documentation-academy/labels/good%20first%20issue
 
 An ideal task to start with. Marking issues with this label is a widely adopted [GitHub convention](https://github.com/topics/good-first-issue).
 
-#### help wanted
+#### https://github.com/canonical/open-documentation-academy/labels/help%20wanted
 
 Another [GitHub convention](https://github.com/topics/help-wanted) to indicate that a project welcomes community help with an issue. 
 
-#### how-to
+#### https://github.com/canonical/open-documentation-academy/labels/how-to
 
 Create or revise a document to better reflect a [how-to guide](https://diataxis.fr/how-to-guides/) to achieve a specific goal.
 
-#### new
+#### https://github.com/canonical/open-documentation-academy/labels/new
 
 Adding new or missing documentation for a specific tool, feature, or function.
 
-#### oda-admin
+#### https://github.com/canonical/open-documentation-academy/labels/oda-admin
 
 Tasks relating to the admin of the Open Documentation Academy (ODA) project.
 
-#### reference
+#### https://github.com/canonical/open-documentation-academy/labels/reference
 
 Create or revise a document to better reflect a technical description to use as [reference](https://diataxis.fr/reference/) material.
 
-#### review
+#### https://github.com/canonical/open-documentation-academy/labels/review
 
 Review pre-existing documentation for quality, accuracy and consistency. This work may require small updates to the original documentation and/or the creation of sub-tasks to address any detected and substantial shortcomings.
 
-#### size 
+#### https://github.com/canonical/open-documentation-academy/labels/size%201 https://github.com/canonical/open-documentation-academy/labels/size%202 https://github.com/canonical/open-documentation-academy/labels/size%203 https://github.com/canonical/open-documentation-academy/labels/size%205 https://github.com/canonical/open-documentation-academy/labels/size%208
 
 This is our estimation of effort and complexity. Size values range from 1 to 8, representing _least effort_ to _most effort_ respectively. These numbers follow the [Fibonacci ### sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) sequence of 1, 2, 3, 5, 8, with size 8 likely to be a significant undertaking.
 
-#### ta wanted
+#### https://github.com/canonical/open-documentation-academy/labels/ta%20wanted
 
 The technical author (TA) team at Canonical wants to help projects without access to documentation experts. This label is used for such projects to mark tasks any technical author can help with.
 
-#### tutorial
+#### https://github.com/canonical/open-documentation-academy/labels/tutorial
 
 Develop, write, edit or update a [tutorial](https://diataxis.fr/tutorials/). Tutorials are often the hardest kinds of documentation to write or update because they primarily require good teaching skills and perception, before you even start writing.
 
-#### update
+#### https://github.com/canonical/open-documentation-academy/labels/update
 
 Update potentially outdated instructions, commands, or version numbers. These tasks might include release notes, version numbers, new command line arguments and features, and even complete overhauls when a major release occurs.
 
