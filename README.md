@@ -61,7 +61,7 @@ If there has been no activity on a task for several weeks, we'll initially reach
 
 We use one or more of the following issue labels both for consistency and to indicate what might be expected from a task.
 
-#### cla
+#### https://github.com/canonical/open-documentation-academy/labels/cla
 
 Identifies tasks that require a contributor to have signed a [CLA](#contributor-licence-agreement).
 
