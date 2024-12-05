@@ -69,7 +69,7 @@ Identifies tasks that require a contributor to have signed a [CLA](#contributor-
 
 Used for tasks that may require some programming knowledge, or a programmatic solution.
 
-#### https://github.com/canonical/open-documentation-academy/labels/diátaxis
+#### https://github.com/canonical/open-documentation-academy/labels/di%C3%A1taxis
 
 Revise a document to better conform to a [Diátaxis](https://diataxis.fr/) type:
 
