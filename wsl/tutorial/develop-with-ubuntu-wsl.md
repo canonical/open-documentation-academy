@@ -84,7 +84,7 @@ To install Visual Studio Code, visit the Microsoft Store and search for Visual S
 
 Then click **Install**.
 
-![Installation page for Visual Studio Code on the Microsoft Store.](https://github.com/ubuntu/wsl/blob/main/docs/guides/assets/vscode/msstore.png?raw=true)
+![Installation page for Visual Studio Code on the Microsoft Store.](https://github.com/ubuntu/wsl/blob/main/docs/tutorials/assets/vscode/msstore.png?raw=true)
 
 Alternatively, you can install Visual Studio Code from the web link [here](https://code.visualstudio.com/Download).
 
