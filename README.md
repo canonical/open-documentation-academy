@@ -139,9 +139,9 @@ If you're new to GitHub and working on the command line, you may want to start o
 
 ### Community forum
 
-Our community forum is the hub for all things Open Documentation Academy. It includes our _Getting started_ guide and links to our weekly _Documentation office hours_, alongside  meeting notes, updates, external links and discussions.
+Our community forum is the hub for all things Open Documentation Academy. It includes our _Getting started_ guide and links to our weekly _Documentation office hours_, alongside meeting notes, updates, external links and discussions.
 
-<https://discourse.ubuntu.com/c/open-documentation-academy>
+https://discourse.ubuntu.com/c/community/open-documentation-academy/166
 
 ### Synchronous chat
 
