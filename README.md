@@ -20,6 +20,7 @@ Issues are identified and shared by participating projects at Canonical who cont
 
 The first words of an issue's title will typically indicate the project it involved. These include the following:
 
+- [ADSys](https://documentation.ubuntu.com/adsys/en/stable/): Active Directory Group Policy client for Ubuntu
 - [Anbox Cloud](https://anbox-cloud.io/docs): Solution offering scalable Android in the cloud
 - [Canonical Kubernetes](https://ubuntu.com/kubernetes/docs): the reference platform for Kubernetes on all major public clouds
 - [Charmed OpenStack](https://ubuntu.com/openstack/docs): our traditional enterprise cloud solution
