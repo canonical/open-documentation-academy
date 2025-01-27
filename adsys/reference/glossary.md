@@ -1,0 +1,13 @@
+# Glossary of terms
+
+<!--
+NOTE: Examples included for illustration
+Pay particular attention to Ubuntu- or Linux-specific
+concepts, tools or packages that a Windows users might
+not be familiar with.
+-->
+
+* AppArmor: ...
+* Polkit: ...
+* sudo: ...
+* ...
