@@ -57,7 +57,7 @@ In the above example, the part named `grv` will be built after the part named `l
 Each plugin defines the default actions that happen during a step. This behavior can be changed in two ways.
 
 - By using `override-<step-name>` in `snapcraft.yaml`. See [Overriding steps](/t/scriptlets/4892) for more details.
-- By using a local plugin.  This can inherit the parent plugin or scaffolding from the original. See [Local plugins](/t/writing-local-plugins/5125) for more details.
+- By using a local plugin.  This can inherit the parent plugin or scaffolding from the original. See [Local plugins](/t/writing-local-plugins/5125) for more details. Please note that using a local plugin hasn't been supported for recent bases and it will need a core20 or lower.  
 
 See [Parts environment variables](/t/parts-environment-variables/12271) for a list of part-specific environment variables that can be accessed to help build a part.
 
@@ -75,9 +75,9 @@ See [Parts environment variables](/t/parts-environment-variables/12271) for more
 |--|--|--|
 | `CRAFT_PART_SRC` | **`parts/<part-name>/src`** | the location of the source during the *pull* step |
 | `CRAFT_PART_BUILD` | **`parts/<part-name>/build`** | the working directory during the *build* step |
-| `CRAFT_PART_INSTALL`| **`parts/<part-name>/install`** | contains the results of the *build* step and the stage packages. |
-| `CRAFT_STAGE` | **`stage`** | shared by all parts, this directory contains the development libraries, headers, and other components (e.g.; pkgconfig files) that need to be accessible from other parts |
-| `CRAFT_PRIME` | **`prime`** | shared by all parts, this directory holds the final components for the resulting snap. |
+| `CRAFT_PART_INSTALL`| **`parts/<part-name>/install`** | contains the results of the *build* step and the stage packages |
+| `CRAFT_STAGE` | **`stage`** | shared by all parts, this directory contains the contents of each part's `CRAFT_PART_INSTALL`. It can contain the development libraries, headers, and other components (e.g.; pkgconfig files) that need to be accessible from other parts |
+| `CRAFT_PRIME` | **`prime`** | shared by all parts, this directory holds the final components for the resulting snap |
 
 <!--
 | Step | Explanation | Source directory | Result directory |

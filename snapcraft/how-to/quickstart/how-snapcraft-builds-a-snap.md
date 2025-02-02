@@ -7,10 +7,10 @@ The Snapcraft tool can perform a variety of operations, including:
 
 These operations translate into practical tasks like:
 
-* It can build snaps locally or send remote tasks to Launchpad.
-* It allows the developer to register and log into the Snap Store.
-* It can upload snaps to the Snap Store.
-* It can promote snaps to different channels.
+* Builds snaps locally or sends remote tasks to Launchpad.
+* Allows the developer to register and log into the Snap Store.
+* Uploads snaps to the Snap Store.
+* Promotes snaps to different channels.
 
 The list of available global options and commands can be checked with one of:
 
@@ -41,8 +41,9 @@ A generated template file contains just enough data to build, split across three
 
 <h3 id='heading--definitions'>Main definitions inside snapcraft.yaml</h3>
 
-There is no one way for how a snap ought to be assembled. However, most `snapcraft.yaml` files have the same common elements, including a number of mandatory declarations. Below is a short list of these keys, which will be further explained in the Examples sections later in the tutorial.
+There is no one way for how a snap ought to be assembled. However, most `snapcraft.yaml` files have the same common elements, including a number of mandatory declarations. To learn more about the supported keys, including which ones one are mandatory or optional, please refer to the [Snapcraft.yaml schema](/t/snapcraft-yaml-schema/4276).
 
+Below is a short list of these keys, which will be further explained in the Examples sections later in the tutorial:
 * **Metadata** - describes the snap functionality and provides identifiers by which the snap can be cataloged and searched in the Snap Store.
 * **Security confinement** - describes the level of security of the snap.
 * **Base** - describes which set of libraries the snap will use for its functionality. The base also defines the operating system version for the snap build instance in the virtual machine or container launched by Snapcraft. For instance, base: core18 means that Snapcraft will launch an Ubuntu 18.04 virtual machine or container, the set of tools and libraries used inside the snap will originate from the Ubuntu 18.04 repository archives, and the snap applications will “think” they are running on top of an Ubuntu 18.04 system, regardless of what the actual underlying Linux distribution is.
@@ -52,12 +53,12 @@ There is no one way for how a snap ought to be assembled. However, most `snapcra
 It is important to note several additional details:
 
 * A snap may contain one or more parts.
-* A snap may contain one or more applications
+* A snap may contain none, one or more applications
 * Parts can be pre-assembled binaries or they may be compiled as part of the build process.
 * The parts section of the `snapcraft.yaml` file uses Snapcraft build system or language-specific plugins to simplify the build process.
 * The parts section may also include a list of [build packages](/t/build-and-staging-dependencies/11451) (build-packages) that will be used to create the snap applications but will not be included in the final snap. For instance, gcc or make.
-
-The parts section may also include a list of [stage packages](/t/build-and-staging-dependencies/11451) (stage-packages) that will be used by the snap’s applications at runtime, e.g.: python-bcrypt. These will be obtained from the repository archives in the build instance.
+* The parts section may also include a list of [stage packages](/t/build-and-staging-dependencies/11451) (stage-packages) that will be used by the snap’s applications at runtime, e.g.: python-bcrypt. These will be obtained from the repository archives in the build instance.
+* If you need to pull packages from different *apt* sources, see [Snapcraft package repositories](/t/snapcraft-package-repositories/15475).
 
 <h2 id='heading--output'>Snapcraft build output</h2>
 
