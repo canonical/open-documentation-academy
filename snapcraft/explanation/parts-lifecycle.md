@@ -105,15 +105,15 @@ Note that each lifecycle step depends on the completion of the previous step for
 ```
 
 ```text
-Execute: pull A
-Execute: pull B
-Execute: pull C
-Execute: build A
-Execute: build B
-Execute: build C
-Execute: stage A
-Execute: stage B
-Execute: stage C
+Pulling A
+Pulling B
+Pulling C
+Building A
+Building B
+Building C
+Staging A
+Staging B
+Staging C
 ...
 ```
 
@@ -132,15 +132,18 @@ Execute: stage C
 ```
 
 ```text
-Execute: pull C
-Execute: pull A
-Execute: pull B
-Execute: build C
-Execute: stage C 
-Execute: build A
-Execute: build B
-Execute: stage A
-Execute: stage B
+Pulling C
+Pulling A
+Pulling B
+Building C
+Skipping pull for C (already ran)
+Skipping build for C (already ran)
+Staging C (required to build 'A')
+Building A
+Building B
+Skipping stage for C (already ran)
+Staging A
+Staging B
 ...
 ```
 
