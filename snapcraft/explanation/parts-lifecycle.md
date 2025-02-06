@@ -11,6 +11,7 @@ When creating more advanced snaps or troubleshooting build issues, a more thorou
 - [Directories](#heading--directories)
 - [Overriding a step](#heading--overriding)
 - [Processing order and dependencies](#heading--processing-order)
+- [Lifecycle processing diagram](#heading--processing-diagram)
 
 ---
 <h3 id='heading--lifecycle'>Lifecycle<sup><a href=#heading--lifecycle>⚓</a></sup></h3>
@@ -148,3 +149,7 @@ Staging B
 ```
 
 In the above example, the part named `A` is built after the part named `C` has been successfully built _and_ staged.
+
+<h3 id='heading--processing-diagram'>Lifecycle processing diagram<sup><a href=#heading--processing-diagram>⚓</a></sup></h3>
+
+![Diagram explaining the lifecycle processing order for building a snap](./lifecycle-processing-diagram.png)
