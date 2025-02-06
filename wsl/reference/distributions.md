@@ -4,6 +4,7 @@ Our flagship distribution (distro) is Ubuntu. It is the default option when you 
 
 Each of these flavours corresponds to a different application on the Microsoft Store, and once installed, they'll create different flavors in your WSL. 
 
+## Ubuntu Variants
 These are the variants of the default Ubuntu flavor we develop and maintain:
 
 - [Ubuntu](https://apps.microsoft.com/detail/9PDXGNCFSCZV?hl=en-us&gl=US) ships the latest stable LTS release of Ubuntu. When new LTS versions are released, Ubuntu can be upgraded once the first point release is available.
