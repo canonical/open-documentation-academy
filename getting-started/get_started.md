@@ -11,15 +11,21 @@ The GitHub documentation is rather good, if you get stuck or need any explanatio
 
 ## Getting your environment set up
 
-Where you start in this series will depend on whether you're using a Windows machine, or an Ubuntu one. If you're using Windows, start on Part 1. If you are running Ubuntu, or have a dual-boot system where one of your options is Ubuntu, feel free to skip Part 1 and go straight to Part 2. 
+If you're using a Windows machine, start by following these instructions:
 
-1. [Getting started using Windows](start_with_WSL.md)
-2. [Install and configure git](install_git.md)
-3. [Working with git on the command line](using_git.md)
+  * [Getting started using Windows](start_with_WSL.md).
 
-## Optional steps
+Continue as follows whether you are using Windows or Ubuntu.
 
-1. [Set up Sphinx](setup_sphinx.md)
-   This applies if you are working on a project that uses Sphinx to render the documentation.
-1. [Command line cheat sheet](CLI_basics.md)
-   This reference will help remind you of the basic commands needed to work with files on the command line.
+1. [Install and configure git](install_git.md)
+1. [Working with git on the command line](using_git.md)
+
+If you are working on a project that uses Sphinx to render the documentation, continue with:
+
+  * [Set up Sphinx](setup_sphinx.md)
+
+## Reference ##
+
+This reference will remind you of the basic commands needed to work with files on the command line.
+
+  * [Command line cheat sheet](CLI_basics.md)
