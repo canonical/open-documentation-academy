@@ -34,5 +34,5 @@ These naming conventions are summarised in the table below:
 
 :::{note}
 The kernel used in WSL environments is maintained by Microsoft.
-Bug reports and support requests for the WSL kernel should be direct to the official repository for the WSL kernel.
+Bug reports and support requests for the WSL kernel should be directed to the [official repository for the WSL kernel](https://github.com/microsoft/WSL2-Linux-Kernel).
 :::
