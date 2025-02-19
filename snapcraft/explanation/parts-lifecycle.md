@@ -18,16 +18,16 @@ When creating more advanced snaps or troubleshooting build issues, a more thorou
 
 A part goes through the following five steps:
 
-1. **Pull**: downloads or otherwise retrieves the components needed to build the part. 
+1. **Pull**: downloads or otherwise retrieves the components needed to build the part.
     * You can use the [`source-*`](/t/snapcraft-parts-metadata/8336#heading--source) keywords of a part to specify which components to retrieve. For instance, if `source` points to a Git repository, the pull step will clone that repository.
-1. **Build**: constructs the part from the previously pulled components. 
-    * The [`plugin`](/t/snapcraft-plugins/4284) of a part specifies how it is constructed. The [`meson`](/t/the-meson-plugin/8623) plugin, for example, executes `meson` and `ninja` to compile source code. 
+1. **Build**: constructs the part from the previously pulled components.
+    * The [`plugin`](/t/snapcraft-plugins/4284) of a part specifies how it is constructed. The [`meson`](/t/the-meson-plugin/8623) plugin, for example, executes `meson` and `ninja` to compile source code.
     * Each part is built in a separate directory, but it can use the contents of the staging area if it specifies a dependency on other parts using the `after` keyword. See [Processing order and dependencies](#heading--processing-order) for more information.
     * To rename or move files, you can use the [`organize`](/t/snapcraft-yaml-schema/4276#p-21225-organize-79) keyword.
-1. **Stage**: copies the built components into the staging area. 
+1. **Stage**: copies the built components into the staging area.
     * This is the first time all the different parts that make up the snap are actually placed in the same directory. If multiple parts provide the same file with differing contents, you will get a conflict. You can avoid these conflicts by using the [`stage`](/t/snapcraft-parts-metadata/8336#heading--stage) keyword to enable or block files coming from the part. You can also use this keyword to filter out files that are not required in the snap itself, for example build files specific to a single part.
-1. **Prime**: copies the staged components into the priming area. 
-    * This is very similar to the stage step, but files go into the priming area instead of the staging area. The `prime` step exists because the staging area might still contain files that are required for the build but not for the snap. For example, if you have a part that downloads and installs a compiler, then you stage this part so other parts can use the compiler during building. You can then use the `prime` filter keyword to make sure that it doesn't get copied to the priming area, so it's not taking up space in the snap. 
+1. **Prime**: copies the staged components into the priming area.
+    * This is very similar to the stage step, but files go into the priming area instead of the staging area. The `prime` step exists because the staging area might still contain files that are required for the build but not for the snap. For example, if you have a part that downloads and installs a compiler, then you stage this part so other parts can use the compiler during building. You can then use the `prime` filter keyword to make sure that it doesn't get copied to the priming area, so it's not taking up space in the snap.
     * To apply specific permissions to files, you can use the `permissions` keyword.
     * Some extra checks are also run during this step to ensure that all dependencies are satisfied for a proper run time. If confinement was set to `classic`, then files will be scanned and, if needed, patched to work with this confinement mode.
 1. **Pack**: takes the entire contents of the `prime` directory and packs it into [a snap](/t/the-snap-format/698).
@@ -89,7 +89,7 @@ By default, `snapcraft` runs the same lifecycle step of all parts before moving 
 
 The ordering rules are as follows:
 - Parts are ordered alphabetically by name.
-- When a part requires another part (using the ``after`` keyword), the required part will go through the build and stage steps before the initial part can run its build step. 
+- When a part requires another part (using the ``after`` keyword), the required part will go through the build and stage steps before the initial part can run its build step.
 
 Note that each lifecycle step depends on the completion of the previous step for that part, so to reach a desired step, all prior steps need to have successfully run. Renaming or adding parts and modifying or removing ``after`` keywords can change that order.
 
@@ -125,7 +125,7 @@ Staging C
     A:
       plugin: go
       after:
-        - C 
+        - C
     C:
       plugin: go
     B:
