@@ -2,7 +2,7 @@
 
 Each part is composed of five steps, known as the "lifecycle".
 
-See [Part lifecycle](/t/parts-lifecycle/12231) and [Parts environment variables](/t/parts-environment-variables/12271) to learn more about the Parts lifeycle and its environment variables.
+See [Part lifecycle](/t/parts-lifecycle/12231) and [Parts environment variables](/t/parts-environment-variables/12271) to learn more about the Parts lifecycle and its environment variables.
 
 | Step | Command | Purpose | Directory  | Path
 | ----------- | ----------- | ----------- | ----------- | ----------- |
