@@ -1,8 +1,6 @@
 # Parts lifecycle
 
-Each part is composed of five steps, known as the "lifecycle".
-
-See [Part lifecycle](/t/parts-lifecycle/12231) and [Parts environment variables](/t/parts-environment-variables/12271) to learn more about the Parts lifecycle and its environment variables.
+Each part is composed of five steps, known as the *lifecycle*.
 
 | Step | Command | Purpose | Directory  | Path
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -11,3 +9,5 @@ See [Part lifecycle](/t/parts-lifecycle/12231) and [Parts environment variables]
 | **Stage** | `snapcraft stage [<part-name>]` | Copies the built components into the staging area. | The built components are put in CRAFT_**STAGE**. | **`stage`** |
 | **Prime** | `snapcraft prime [<part-name>]` | Copies the staged components into the priming area. | The staged components are put in CRAFT_**PRIME**. | **`prime`** |
 | **Pack** | `snapcraft pack or snapcraft` | Takes the contents of the prime directory and packs it into a snap. | The snap is put in CRAFT_PROJECT_**DIR**. | The path to the current project’s subtree in the filesystem. |
+
+See [Part lifecycle](/t/parts-lifecycle/12231) and [Parts environment variables](/t/parts-environment-variables/12271) to learn more about the Parts lifecycle and its environment variables.

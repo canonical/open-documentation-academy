@@ -2,11 +2,7 @@
 
 Snapcraft is a powerful tool used for building snaps. Building a snap involves going through one or more parts. Each part follows an ordered series of five steps, which forms the *lifecycle*, ensuring a coherent and reproducible build process.
 
-This document aims to help anyone who seeks to build a snap and understand the inner workings of parts—including their steps, directories, commands, and dependencies.
-
-Parts, alongside [plugins](/t/snapcraft-plugins/4284), are a key component in any [Snapcraft](/t/snapcraft-overview/8940) project.
-
-See [Adding parts](/t/adding-parts/11473) for a general overview of what parts are and how to use them, [Scriptlets](https://forum.snapcraft.io/t/scriptlets/4892) for details on how they can be scripted outside of _snapcraft.yaml_, and <!--TO DO: Path to be added when the page is created--> [Parts lifecycle]() reference for the summarised information of this page.
+This document aims to help anyone who seeks to build a snap and understand the inner workings of parts—including their steps, commands, directories, and dependencies.
 
 - [Lifecycle](#heading--lifecycle)
 - [Commands](#heading--commands)
@@ -61,8 +57,6 @@ When running through its lifecycle steps, a part will use different working dire
 | `CRAFT_PRIME` | **`prime`** | shared by all parts, this directory holds the final components after the *prime* step |
 | `CRAFT_PROJECT_DIR` | path to the current project's subtree in the filesystem. | path to the resulting snap after the *pack* step |
 
-See [Parts environment variables](/t/parts-environment-variables/12271) for more details.
-
 <!--
 | Step | Explanation | Source directory | Result directory |
 |--|--|--|--|
@@ -78,8 +72,6 @@ See [Parts environment variables](/t/parts-environment-variables/12271) for more
 Each plugin defines the default actions that happen during a step. This behavior can be changed in two ways:
 - By using `override-<step-name>` in `snapcraft.yaml`. See [Overriding steps](/t/scriptlets/4892) for more details.
 - By using a local plugin.  This can inherit the parent plugin or scaffolding from the original. See [Local plugins](/t/writing-local-plugins/5125) for more details. Please note that using a local plugin has been deprecated in `base: core20` and fully removed in `base: core22`.
-
-See [Parts environment variables](/t/parts-environment-variables/12271) for a list of part-specific environment variables that can be accessed to help build a part.
 
 <h3 id='heading--processing-order'>Processing order and dependencies<sup><a href=#heading--processing-order>⚓</a></sup></h3>
 
@@ -151,3 +143,13 @@ In the above example, the part named `A` is built after the part named `C` has b
 <h3 id='heading--processing-diagram'>Lifecycle processing diagram<sup><a href=#heading--processing-diagram>⚓</a></sup></h3>
 
 ![Diagram explaining the lifecycle processing order for building a snap](./lifecycle-processing-diagram.png)
+
+# Further reading
+
+If you want to learn more about the Snapcraft ecosystem, see the following resources:
+* [Snapcraft](/t/snapcraft-overview/8940) for an overview of Snapcraft.
+* [Adding parts](/t/adding-parts/11473) to understand what parts are and how to use them.
+* [Parts environment variables](/t/parts-environment-variables/12271) for a list of part-specific environment variables that can be accessed to help build a part.
+* [Snapcraft plugins](/t/snapcraft-plugins/4284) to learn more about this essential component of any part.
+* [Scriptlets](https://forum.snapcraft.io/t/scriptlets/4892) for more details on how to override steps.
+* [Parts lifecycle reference]() for the summarised information of this page.
