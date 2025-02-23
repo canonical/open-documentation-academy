@@ -59,10 +59,6 @@ When running through its lifecycle steps, a part will use different working dire
 | `CRAFT_PRIME` | **`prime`** | shared by all parts, this directory holds the final components after the *prime* step |
 | `CRAFT_PROJECT_DIR` | path to the current project's subtree in the filesystem. | path to the resulting snap after the *pack* step |
 
-Please note that directories are specified by their environment variables:
-- **Snapcraft 7+**: environment variables start with `CRAFT_`
-- **Snapcraft 6, and earlier**: variables start with `SNAPCRAFT_` but are otherwise identical
-
 See [Parts environment variables](/t/parts-environment-variables/12271) for more details.
 
 <!--
