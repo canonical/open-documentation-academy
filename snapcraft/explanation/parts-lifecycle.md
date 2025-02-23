@@ -1,10 +1,12 @@
-# Parts lifecycle
+# About the parts lifecycle
+
+Snapcraft is a powerful tool used for building snaps. Building a snap involves going through one or more parts. Each part follows an ordered series of five steps, which forms the *lifecycle*, ensuring a coherent and reproducible build process.
+
+This document aims to help anyone who seeks to build a snap and understand the inner workings of parts—including their steps, directories, commands, and dependencies.
 
 Parts, alongside [plugins](/t/snapcraft-plugins/4284), are a key component in any [Snapcraft](/t/snapcraft-overview/8940) project.
 
 See [Adding parts](/t/adding-parts/11473) for a general overview of what parts are and how to use them, [Scriptlets](https://forum.snapcraft.io/t/scriptlets/4892) for details on how they can be scripted outside of _snapcraft.yaml_, and <!--TO DO: Path to be added when the page is created--> [Parts lifecycle]() reference for the summarised information of this page.
-
-When creating more advanced snaps or troubleshooting build issues, a more thorough understanding of these steps and the components surrounding them may be needed.
 
 - [Lifecycle](#heading--lifecycle)
 - [Commands](#heading--commands)
