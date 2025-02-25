@@ -1,8 +1,9 @@
 # Explanation
 
 ```{toctree}
+:titlesonly:
+:glob:
 :maxdepth: 1
 
-what-is-coda.md
-
+About the Academy <about>
 ```

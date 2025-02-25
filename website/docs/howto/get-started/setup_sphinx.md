@@ -1,4 +1,4 @@
-# Getting started with Sphinx
+# Get started with Sphinx
 
 If your repository uses Sphinx to create nicely rendered documentation, you will need to set up Sphinx on your machine.
 This requires a small chain of steps that are needed to install other things, so you'll need to run through these steps in this order. 

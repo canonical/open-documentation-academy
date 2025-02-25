@@ -1,16 +1,16 @@
-# Resources
+# Links and resources
 
 ## Canonical documentation practice
 
 - [Canonical style guide](https://docs.ubuntu.com/styleguide/en/): guidelines for documenting Canonical products
 - [Diátaxis](https://diataxis.fr/): a systematic approach to documentation used at Canonical
 
-## Canonical Open Documentation Academy
+## Open Documentation Academy
 
 - [GitHub Repository](https://github.com/canonical/open-documentation-academy): the home of CODA
 - [Issue tracker](https://github.com/canonical/open-documentation-academy/issues): where to find and create CODA issues
 
-## Canonical Open Documentation Hour
+## Documentation Community Hour
 
 - [Schedule](https://discourse.ubuntu.com/t/open-documentation-hour-schedule/45291): upcoming presentations and discussions
 - [Index](https://discourse.ubuntu.com/t/open-documentation-hour-recording-index/45289): full list of all recorded sessions

@@ -1,4 +1,4 @@
-# Set up your working environment
+# Set up WSL on Windows 
 
 This page is intended for Windows users who want to contribute more substantial changes to documentation (or on a more regular basis) using the Ubuntu command line. For quick corrections to a page, it's perfectly fine to use the GitHub web interface instead.
 
