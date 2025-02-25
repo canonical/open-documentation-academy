@@ -38,9 +38,9 @@ Each of these lifecycle steps can be run from the command line, and the command 
 1. `snapcraft build [<part-name>]`
 1. `snapcraft stage [<part-name>]`
 1. `snapcraft prime [<part-name>]`
-1. `snapcraft pack` or `snapcraft`
+1. `snapcraft pack`
 
-Note that each command also executes the previous lifecycle steps, so `snapcraft` executes all the lifecycle steps chained together.
+Note that each command also executes the previous lifecycle steps, so `snapcraft pack` executes all the lifecycle steps chained together.
 
 To access the part environment at any stage, add the `--shell` argument. For example, `snapcraft prime --shell` will run up to the *prime* step and open a shell. See [Iterating over a build](/t/iterating-over-a-build/12143) for more details.
 
@@ -55,7 +55,7 @@ When running through its lifecycle steps, a part will use different working dire
 | `CRAFT_PART_INSTALL`| **`parts/<part-name>/install`** | contains the results of the *build* step and the stage packages. It is also the directory where the `organize` event renames the built files |
 | `CRAFT_STAGE` | **`stage`** | shared by all parts, this directory contains the contents of each part's `CRAFT_PART_INSTALL` after the *stage* step. It can contain development libraries, headers, and other components (e.g. pkgconfig files) that need to be accessible from other parts |
 | `CRAFT_PRIME` | **`prime`** | shared by all parts, this directory holds the final components after the *prime* step |
-| `CRAFT_PROJECT_DIR` | path to the current project's subtree in the filesystem. | path to the resulting snap after the *pack* step |
+| `CRAFT_PROJECT_DIR` | path to the current project's subtree in the filesystem | used to access resources from the project's subtree, such as an icon or version file |
 
 <!--
 | Step | Explanation | Source directory | Result directory |
