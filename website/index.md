@@ -29,7 +29,8 @@ The Open Documentation Academy is an open source project that welcomes community
 * [How to get support](https://ubuntu.com/support/community-support)
 * [Join the Discourse forum](https://discourse.ubuntu.com/c/community/open-documentation-academy/166)
 * [Interactive chat on Matrix.org](https://matrix.to/#/#documentation:ubuntu.com)
-* [Community engagement commitment](explanation/community-engagement)
+<!-- TODO: create this file or delete the link -->
+<!-- * [Community engagement commitment](explanation/community-engagement) -->
 
 ![Open Documentation Academy booth](https://assets.ubuntu.com/v1/1a3c2549-20250218_0001_01.jpg)
 The Open Documentation Academy is sponsored by [Canonical Ltd](https://canonical.com/).

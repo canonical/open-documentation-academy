@@ -56,4 +56,4 @@ Using `sudo` will prompt you for a password. This is the same password you enter
 
 When asked if you want to continue, type `y` (not case sensitive).
 
-You're now ready to move on to the next stage! [Install and configure git](install_git.md).
+You're now ready to move on to the next stage! [Install and configure git](using_git.md).

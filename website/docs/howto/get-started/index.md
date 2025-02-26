@@ -34,7 +34,7 @@ To create and then open an empty file, if you use `code <file name>` directly wi
 
 If you're using a Windows machine, start by following these instructions:
 
-- [Set up WSL on Windows](start_with_WSL).
+- [Set up WSL on Windows](using_wsl.md).
 
 If you are working on a project that uses Sphinx to render the documentation, continue with:
   
