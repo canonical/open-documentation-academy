@@ -7,8 +7,8 @@ issues to new contributors.
 <!-- NOTE: the grid can be adjusted to a standard 2-by-2 if we have a fourth section -->
 ````{grid} 1 1 2 2
 
-```{grid-item-card} [Tutorials](tutorial/index)
-:link: tutorial/index
+```{grid-item-card} [Tutorials](index)
+:link: index
 :link-type: doc
 
 **Tutorials** contributing to open-source documentation through the Academy
@@ -46,7 +46,7 @@ issues to new contributors.
 :hidden:
 :maxdepth: 2
 
-Tutorials <tutorial/index>
+Tutorials <self>
 How-to guides <howto/index>
 Explanation <explanation/index>
 Reference <reference/index>

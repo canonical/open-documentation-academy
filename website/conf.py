@@ -186,7 +186,10 @@ redirects = {}
 #
 # TODO: Remove or adjust the ACME entry after you update the contributing guide
 
-linkcheck_ignore = ["http://127.0.0.1:8000", "https://github.com/canonical/ACME/*"]
+linkcheck_ignore = [
+    "http://127.0.0.1:8000",
+    "https://matrix.to/#/#documentation:ubuntu.com",
+]
 
 
 # A regex list of URLs where anchors are ignored by 'make linkcheck'

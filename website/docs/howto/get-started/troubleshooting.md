@@ -27,4 +27,4 @@ If the `wsl --install` command returns the message "This operation timed out", y
     ```shell
     wsl --set-default-version 2
     ```
-5. Once you have completed the above steps, open your Microsoft Store and search for "Ubuntu". It's advisable to install the latest version. After the installation, you should launch the app. It'll automatically connect to your WSL and you should be able to follow the [next steps](./start_with_WSL.md) without errors.
+5. Once you have completed the above steps, open your Microsoft Store and search for "Ubuntu". It's advisable to install the latest version. After the installation, you should launch the app. It'll automatically connect to your WSL and you should be able to follow the [next steps](using_wsl.md) without errors.

@@ -344,7 +344,7 @@ To make sure your branch is up to date with the remote branch, then switch to th
 git checkout main
 ```
 
-Then, you can use `git branch` to double check the name of the branch (and to confirm that you're on the main branch!), then delete your PR's branch with:
+Then, you can use `git branch` to double check the name of the branch (and to confirm that you're on the main branch!), then delete the branch for your PR with:
 
 ```bash
 git branch -d <your branch name>

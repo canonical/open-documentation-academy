@@ -47,14 +47,14 @@ Anyone is welcome to participate, and that doesn't always mean working on docume
 
 ## Stay in touch
 
-If you’d like to ask us questions outside of our public forums, feel free to email us at docsacademy@canonical.com.
+If you’d like to ask us questions outside of our public forums, feel free to email us at [docsacademy@canonical.com](mailto:docsacademy@canonical.com).
 
-Subscribe to our calendar: [Documentation events](https://calendar.google.com/calendar/u/0?cid=Y19mYTY4YzE5YWEwY2Y4YWE1ZWNkNzMyNjZmNmM0ZDllOTRhNTIwNTNjODc1ZjM2ZmQ3Y2MwNTQ0MzliOTIzZjMzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20).
+You can also:
 
-Participate in our discussion forum here on the Ubuntu Community Hub:
-[https://discourse.ubuntu.com/c/community/open-documentation-academy/166](https://discourse.ubuntu.com/c/community/open-documentation-academy/166).
+* Subscribe to our calendar for [documentation events](https://calendar.google.com/calendar/u/0?cid=Y19mYTY4YzE5YWEwY2Y4YWE1ZWNkNzMyNjZmNmM0ZDllOTRhNTIwNTNjODc1ZjM2ZmQ3Y2MwNTQ0MzliOTIzZjMzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20).
 
-Chat to us on Matrix at [https://matrix.to/#/#documentation:ubuntu.com](https://matrix.to/#/#documentation:ubuntu.com).
+* Participate in our [discussion forum here on the Ubuntu Community Hub](https://discourse.ubuntu.com/c/community/open-documentation-academy/166).
 
-Follow our progress online through Mastodon:
-[https://fosstodon.org/@CanonicalDocumentation](https://fosstodon.org/@CanonicalDocumentation).
+* Chat to us on [Matrix](https://matrix.to/#/#documentation:ubuntu.com).
+
+* Follow our progress online through [Mastodon](https://fosstodon.org/@CanonicalDocumentation).
