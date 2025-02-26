@@ -1,4 +1,31 @@
 # Leave a blank line at the end of this file to support concatenation
+ADSys
+Anbox
+AsciiDoc
+backends
+bootable
+Ctrl
+docsacademy
+freesewing
+https
+IoT
+JIRA
+lifecycle
+MAAS
+mentorship
+MicroStack
+Multipass
+Netplan
+OpenStack
+ODA
+onboarding
+rebase
+rebasing
 repo
 repos
+PRs
+RST
+scalable
+Snapcraft
+WSL
 
