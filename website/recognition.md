@@ -1,14 +1,14 @@
 # Recognition
 
-Helping people to make their first contributions to open source projects, a key objective of the Open Documentation Academy is to recognise the value of such contributions meaningful ways.
+Helping people to make their first contributions to open source projects, a key objective of the Open Documentation Academy is to recognise the value of such contributions in meaningful ways.
 
-As such, the Academy is committed to recognising significant contributions in the following ways:
+As such, the Academy is committed to recognising significant contributors in the following ways:
 
-- With an easy-to-share link to contributions
+- With an easy-to-share link to their contributions
 - Credit for contributions in their respective projects
-- An awarded entry in our _Contributor register_
+- An awarded entry in our _Contributor award register_
 
-Most, but not all, contributions are tracked through the [Open Documentation Academy](https://github.com/canonical/open-documentation-academy/graphs/contributors) GitHub repository. 
+Most contributions are tracked through the [Open Documentation Academy](https://github.com/canonical/open-documentation-academy/graphs/contributors) GitHub repository. 
 
 ## Contributor award register
 
