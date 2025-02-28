@@ -6,10 +6,12 @@ AsciiDoc
 backends
 bootable
 Ceph
+CLA
 Ctrl
 DITA
 docsacademy
 freesewing
+golang
 howto
 https
 IoT
@@ -33,5 +35,6 @@ repos
 RST
 scalable
 Snapcraft
+SSL
 WSL
 
