@@ -16,6 +16,7 @@ howto
 https
 IoT
 JIRA
+KDE
 LaTeX
 lifecycle
 MAAS
@@ -37,4 +38,3 @@ scalable
 Snapcraft
 SSL
 WSL
-
