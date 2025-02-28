@@ -1,6 +1,8 @@
 # Writing resources
 
-General writing tips, advice and principles.
+General writing tips, advice and principles to help with the formulation, maintenance and management of technical documentation.
+
+This section is currently under development. If you'd like to contribute, please see our [task list](https://github.com/canonical/open-documentation-academy/issues) or consider proposing your own suggestions.
 
 ````{grid} 1 1 2 2
 
@@ -8,15 +10,15 @@ General writing tips, advice and principles.
 :link: index
 :link-type: doc
 
-**Tutorials** contributing to open-source documentation through the Academy
+**Tutorials** are learning-oriented and practical, helping the reader understand a concept or acquire a skill.
 ```
 
-
-```{grid-item-card} [How-to guides](howto/index)
-:link: howto/index
+```{grid-item-card} [How-to guides](index)
+:link: index
 :link-type: doc
 
-**Step-by-step guides** for working with with the most common tools and processes
+**How-to guides** are goal-oriented, directing the reader's action towards a specific objective. 
+
 ```
 
 ````
@@ -28,33 +30,23 @@ General writing tips, advice and principles.
 :link: reference/index
 :link-type: doc
 
-**Information and resources** for contributors and for technical writers
+**Information and resources** with a clear application, well organised and described precisely.
 ```
 
-```{grid-item-card} [Explanation](explanation/index)
-:link: explanation/index
+```{grid-item-card} [Explanation](index)
+:link: index
 :link-type: doc
 
-**Explanations** of key concepts, tools and processes
+**Explanations** deepen a reader's understanding of a subject or an area of knowledge. They're reflective rather than active.
+
 ```
 
 ````
+
 ```{toctree}
 :hidden:
 :maxdepth: 2
 
-Tutorials <self>
-How-to guides <howto/index>
-Explanation <explanation/index>
 Reference <reference/index>
 
-```
-
-```{toctree}
-:hidden:
-:maxdepth: 3
-
-howto/index
-explanation/index
-reference/index
 ```
