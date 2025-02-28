@@ -14,7 +14,7 @@ This section is currently under development. If you'd like to contribute, please
 ```
 
 ```{grid-item-card} [How-to guides](index)
-:link: howto/index
+:link: index
 :link-type: doc
 
 **How-to guides** are goal-oriented, directing the reader's action towards a specific objective. 
@@ -34,7 +34,7 @@ This section is currently under development. If you'd like to contribute, please
 ```
 
 ```{grid-item-card} [Explanation](index)
-:link: explanation/index
+:link: index
 :link-type: doc
 
 **Explanations** deepen a reader's understanding of a subject or an area of knowledge. They're reflective rather than active.
