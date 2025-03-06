@@ -4,16 +4,18 @@ The easiest way to access your Ubuntu development environment in WSL is by using
 
 ## What you will learn
 
-* How to install WSL and Ubuntu on WSL from the terminal
-* How to set up Visual Studio Code for remote development with Ubuntu on WSL
-* How to create a basic Node.js webserver on Ubuntu using Visual Studio Code
-* How to preview HTML served from an Ubuntu WSL instance in a native browser on Windows
+- How to install WSL and Ubuntu on WSL from the terminal
+- How to set up Visual Studio Code for remote development with Ubuntu on WSL
+- How to create a basic Node.js webserver on Ubuntu using Visual Studio Code
+- How to preview HTML served from an Ubuntu WSL instance in a native browser on Windows
 
 ## What you will need
 
-* A PC with Windows 10 or 11
+- A PC with Windows 10 or 11
 
 ## Install Ubuntu on WSL2
+
+To begin installing Ubuntu on WSL2, the first step is to set up Windows Subsystem for Linux (WSL) on your machine. Once WSL is enabled, you'll install Ubuntu and verify the setup by running some basic Linux commands. This process will get you up and running with a fully functional Linux environment right on your Windows system.
 
 ### Install WSL
 
@@ -32,7 +34,7 @@ WSL supports a variety of Ubuntu releases. Check our [reference on the distribut
 There are multiple ways of installing Ubuntu on WSL, here we focus on using the terminal.
 For other installation methods, refer to your dedicated guide:
 
-* [Install Ubuntu on WSL2](https://documentation.ubuntu.com/wsl/en/latest/guides/install-ubuntu-wsl2/)
+- [Install Ubuntu on WSL2](https://documentation.ubuntu.com/wsl/en/latest/guides/install-ubuntu-wsl2/)
 
 In a PowerShell terminal, run `wsl --list --online` to see all available distros and versions:
 
@@ -51,9 +53,9 @@ Install using 'wsl --install -d <Distro>'.
   Ubuntu-24.04                           Ubuntu 24.04 LTS
 ...
 
-``` 
+```
 
-Your list may be different once new distributions become available.  
+Your list may be different once new distributions become available.
 
 You can install a version using a NAME from the output, for example:
 
@@ -76,6 +78,79 @@ Use `wsl -l -v` to see all your currently installed distros and the version of W
 * Ubuntu-24.04    Stopped         2
 ```
 
+### Running basic Linux commands on WSL
+
+After installation, you should run some basic commands to confirm your installation and get familiar with the Linux environment. You can run some of the commands listed below:
+
+1. **pwd**: This will display the full path of your current location in WSL
+
+2. **mkdir myFirstFolder**: This will create a directory (folder on windows) called **myFirstFolder**
+
+## Creating and viewing files in your WSL development environment
+
+WSL allows you to create files and folders from the terminal interface, just like Linux. Let's see how to create files in WSL and interact with the files in a native Windows app such as the file explorer.
+
+### Create an HTML file in WSL
+
+First, you should create a new directory (call it **ubuntuWSL** for this tutorial) to save your file. Use the `mkdir` command we saw earlier:
+
+```{code-block} text
+$ mkdir ubuntuWSL
+```
+
+Next, you should navigate into the new directory:
+
+```{code-block} text
+$ cd ubuntuWSL
+```
+
+After you complete the step above, you can create an HTML file by using `nano`. `nano` is a command-line text editor and it comes pre-installed with Ububtu WSL. You can use it to quickly create and edit files right from your terminal. Type this command to create a `index.html` file from the terminal:
+
+```{code-block} text
+$ nano index.html
+```
+
+The command above will open a text editor in your WSL instance. Paste this HTML snippet into the editor:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+```
+
+Type `ctrl + s` to save your file and the `ctrl + x` to exit the edtior.
+To confirm that your file contains actual HTML, type `cat index.html`. You should see the content of your HTML file displayed on the terminal.
+
+### Browse your WSL files in Windows explorer
+
+Interacting with files and folders from the terminal can be daunting, especially for a Windows user. It is possible to interact with your files in WSL from Windows explorer by typing the command below:
+
+```{code-block} text
+$ explorer.exe .
+```
+
+The command will open up your current folder in Windows explorer.
+
+### Serving static HTML in WSL with Python
+
+Python is a programming language that comes pre-installed with Ubuntu in WSL. You can use it for multiple things, including serving HTML files to your browser. In your command like, type ths following command:
+
+```{code-block} python
+$ python3 -m http.server
+```
+
+Next, visit `http://localhost:8000/` to see your HTML document displayed on the browser:
+
+![HTML web page displaying "hello world" in bold text](media/html-web-page-displaying-hello-world-in-bold-text.png)
+
+You can exit the server by typing `ctrl +c`
+
 ## Install Visual Studio Code on Windows
 
 One of the advantages of WSL is that it can interact with the native Windows version of Visual Studio Code using its remote development extension.
@@ -86,11 +161,11 @@ Then click **Install**.
 
 ![Installation page for Visual Studio Code on the Microsoft Store.](https://github.com/ubuntu/wsl/blob/main/docs/tutorials/assets/vscode/msstore.png?raw=true)
 
-Alternatively, you can install Visual Studio Code from the web link [here](https://code.visualstudio.com/Download).
+Alternatively, you can install Visual Studio Code [from the web link](https://code.visualstudio.com/Download).
 
 ![Visual Studio Code download page showing download options for Windows, Linux, and Mac.](https://github.com/ubuntu/wsl/blob/main/docs/tutorials/assets/vscode/download-vs-code.png?raw=true)
 
-During installation, under the 'Additional Tasks' step, ensure the `Add to PATH` option is checked.
+During installation, under the 'Additional Tasks' step, ensure you check the `Add to PATH` option.
 
 ![Visual Studio Code's "Additional Tasks" setup dialog with the "Add to Path" and "Register Code as an editor for supported file types" options checked.](https://github.com/ubuntu/wsl/blob/main/docs/tutorials/assets/vscode/aditional-tasks.png?raw=true)
 
@@ -100,38 +175,17 @@ Once the installation is complete, open Visual Studio Code.
 
 Navigate to the `Extensions` menu in the sidebar and search for `Remote Development`.
 
-This is an extension pack that allows you to open any folder in a container, remote machine, or in WSL. Alternatively, you can just install `Remote - WSL`.
+This is an extension pack that allows you to open any folder in a container, remote machine, or in WSL. Alternatively, you can just install `Remote - WSL` via the terminal.
 
 ![Installation page for the Remote Development Visual Studio Code extension.](https://github.com/ubuntu/wsl/blob/main/docs/tutorials/assets/vscode/remote-extension.png?raw=true)
 
-Once installed we can test it out by creating an example local web server with Node.js
+Once installed we can test it out by creating an example local web server with Python.
 
-## Install Node.js and create a new project
+## Create a new Python project
 
-Open your WSL Ubuntu terminal and ensure everything is up to date by typing:
+Python is a programming languages that comes pre-installed with WSL so you don't need to install it like you would on native Windows. We'll build a simple web server with Python to demonstrate how to work with WSL from windows.
 
-```{code-block} text
-$ sudo apt update
-```
-
-Then:
-
-```{code-block} text
-$ sudo apt upgrade
-```
-
-Entering your password and pressing `Y` when prompted.
-
-Next, install Node.js and npm:
-
-```{code-block} text
-$ sudo apt-get install nodejs
-$ sudo apt install npm
-```
-
-Press `Y` when prompted.
-
-Now, create a new folder for our server.
+Open your WSL Ubuntu terminal and create a new folder for our server:
 
 ```{code-block} text
 $ mkdir serverexample/
@@ -155,54 +209,103 @@ The first time you do this, it will trigger a download for the necessary depende
 
 Once complete, your native version of Visual Studio Code will open the folder.
 
+### Creating a virtual environment and installing dependencies
+
+In Visual Studio Code, type `ctrl + j` to open up a terminal with a WSL instance. We'll create our virtual environment and install necessary packages here.
+
+Inside your terminal type this command:
+
+```{code-block} text
+$ python3 -m venv env
+```
+
+Now, activate the virtual environment with this command:
+
+```{code-block} text
+source env/bin/activate
+```
+
+After you type the command, you will notice that `(env)` appears before your prompt. This means your virtual environment is active.
+
+Now, you can install the necessary dependencies for the project. In this tutorial, we'll only use Flask. Type this command in your terminal:
+
+```{code-block} text
+$ pip install flask
+```
+
+If you face issues, try using `pip3` instead of `pip`.
+
+Once Flask is installed, we can build our basic web server with it.
+
 ## Creating a basic web server
 
-In Visual Studio Code, create a new `package.json` file and add the following text ([original example](https://learn.microsoft.com/en-gb/archive/blogs/cdndevs/visual-studio-code-and-local-web-server#3-add-a-packagejson-file-to-the-project-folder))
+We'll create a basic web server that takes the user's name as input and returns a greeting message.
 
-```{code-block} json
-{
-    "name": "Demo",
-    "version": "1.0.0",
-    "description": "demo project.",
-    "scripts": {
-        "lite": "lite-server --port 10001",
-        "start": "npm run lite"
-    }, 
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "lite-server": "^1.3.1"
-    }
-}
+In Visual Studio Code, create a file called `app.py` and paste this code into it:
+
+```{code-block} python
+from flask import Flask, request, render_template
+
+app = Flask(__name__)
+
+@app.route("/", methods=["GET", "POST"])
+def home():
+    name = None
+    if request.method == "POST":
+        name = request.form.get("name")
+    return render_template("index.html", name=name)
+
+if __name__ == "__main__":
+    app.run(debug=True)
 ```
 
-Save the file and then, in the same folder, create a new one called `index.html`
+The code above defines a single route that listens for a POST request and returns an HTML template.
+Save the file and close it.
 
-Add the following text, then save and close:
+Now create a folder called `templates`. Inside it, create a file called `index.html`. You should paste the code below into the file:
 
 ```{code-block} html
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Greeting App</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2>Enter your name:</h2>
+      <form method="post">
+        <input type="text" name="name" required />
+        <button type="submit">Submit</button>
+      </form>
+      {% if name %}
+      <h3>Hello, {{ name }}!</h3>
+      {% endif %}
+    </div>
+  </body>
+</html>
 ```
 
-Now return to your Ubuntu terminal (or use the Visual Studio Code terminal window) and type the following to install a server defined by the above specifications detailed in `package.json`:
+The HTML above simply contains a form to take user input and displays a greeting with their name if they enter it.
+
+Now save your files and type this command in your terminal:
 
 ```{code-block} text
-$ npm install
+$ python3 app.py
 ```
 
-Finally, type the following to launch the web server:
+Next, navigate to `http://127.0.0.1:5000/` in your browser. You should see the image below. Type in your name and confirm that it returns a greeting.
 
-```{code-block} text
-$ npm start
-```
+![HTML web page in a browser that displays a form with a submit button, and single input, asking for the user's name.](media/html-webpage-that-displays-a-form-asking-for-the-users-name.png)
 
-You can now navigate to `localhost:10001` in your native Windows web browser by using `CTRL+LeftClick` on the terminal links.
-
-![Windows desktop showing a web server being run from a terminal with "npm start", A Visual Studio Code project with a "hello world" html file, and a web browser showing the "hello world" page being served on local host.](https://github.com/ubuntu/wsl/blob/main/docs/tutorials/assets/vscode/hello-world.png?raw=true)
-
-That’s it!
-
-By using Ubuntu on WSL you’re able to take advantage of the latest Node.js packages available on Linux as well as the more streamlined command line tools.
+That's it! You have successfully created a web server inside WSL and displayed it in a Wiindows native browser.
 
 ## Enjoy Ubuntu on WSL!
 
@@ -212,7 +315,7 @@ We hope you enjoy using Ubuntu inside WSL. Don’t forget to check out our other
 
 ### Further Reading
 
-* [Install Ubuntu on WSL2](../howto/install-ubuntu-wsl2.md)
-* [Microsoft WSL Documentation](https://learn.microsoft.com/en-us/windows/wsl/)
-* [Setting up WSL for Data Science](https://ubuntu.com/blog/wsl-for-data-scientist)
-* [Ask Ubuntu](https://askubuntu.com/)
+- [Install Ubuntu on WSL2](../howto/install-ubuntu-wsl2.md)
+- [Microsoft WSL Documentation](https://learn.microsoft.com/en-us/windows/wsl/)
+- [Setting up WSL for Data Science](https://ubuntu.com/blog/wsl-for-data-scientist)
+- [Ask Ubuntu](https://askubuntu.com/)
