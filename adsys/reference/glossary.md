@@ -119,7 +119,7 @@ Ubiquity installer
 visudo
   A command used to safely edit the sudoers file, which controls user permissions for executing commands with elevated privileges.
 
-Ubuntu Pro
+[Ubuntu Pro](https://ubuntu.com/pro)
   A premium service from Canonical that provides extended security updates (ESM), compliance tools, and enterprise support for Ubuntu systems.
 
 Winbind
