@@ -105,7 +105,7 @@ SSSD (System Security Services Daemon)
   A service that manages authentication and authorization with identity providers like Active Directory or LDAP. [SSSD is used with ADSys](https://documentation.ubuntu.com/adsys/en/stable/explanation/adsys-ref-arch/) for managing authentication and policies.
 
 sudo
-  A command that allows users to run programs with elevated (superuser) privileges.
+  A command that allows users to run programs with elevated (superuser) privileges on Linux systems.
 
 systemd
   A modern system and service manager for Linux, responsible for initializing and managing system processes.
