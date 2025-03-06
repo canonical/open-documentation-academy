@@ -23,7 +23,7 @@ ADSys
 [adsysctl](https://documentation.ubuntu.com/adsys/en/latest/reference/adsysctl-cli/)
   A command-line utility for interacting with the ADSys service in Ubuntu.
 
-Adwatchd
+[Adwatchd](https://documentation.ubuntu.com/adsys/en/latest/reference/adwatchd/)
   A daemon that monitors and enforces compliance with Active Directory policies on Ubuntu systems, helping ensure settings are consistently applied.
 
 apt (Advanced Package Tool)
