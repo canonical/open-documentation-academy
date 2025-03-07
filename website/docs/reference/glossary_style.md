@@ -5,7 +5,7 @@ A supplement to the [Canonical Documentation Style Guide](https://docs.ubuntu.co
 ## Glossary entry
 A glossary entry explains what is meant by a term.
 
-**product** <br />
+**product** <br> 
 A unit of software or hardware that is offered to a market to meet a need.
 
 ### A use of a term
@@ -26,19 +26,19 @@ The guidelines under *Good definitions* demonstrate that a term can be defined i
 
 To reduce the number of ambiguous terms, try to use appropriately-specific terms.
 
-**core** <br />
+**core** <br>
 The working memory of a computer.
 
-**core file** <br />
+**core file** <br>
 A file created when an application crashes. The file reflects the state of the application at the time of the crash, including the values in working memory ([core](https://www.example.com)).
 
-**Ubuntu Core** <br />
+**Ubuntu Core** <br>
 A minimal version of the Linux operating system designed to be embedded in devices that have stringent resource or performance constraints, such as [IoT](https://www.example.com) devices.
 
 It is rare that a technical term has multiple senses, so the following example is artificial.
 
-**cloud** <br />
-1. A resource shared among customers and accessed via networking that contains, for example, storage and computing capacity. <br />
+**cloud** <br>
+1. A resource shared among customers and accessed via networking that contains, for example, storage and computing capacity. <br>
 2. A mass of material suspended in a gas or liquid that scatters light.
 
 ### Structure of more-complex definitions
@@ -53,7 +53,7 @@ An optional informal description may be followed by a more-formal definition and
 
 An abbreviation can be expanded at the beginning of the gloss.
 
-**DNS** <br />
+**DNS** <br>
 **Domain Name System**. A system that translates human-readable domain names (canonical.com) to their IP addresses (185.125.190.20).
 
 ### References to other terms
