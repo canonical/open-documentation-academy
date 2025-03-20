@@ -15,8 +15,7 @@ The easiest way to access your Ubuntu development environment in WSL is by using
 
 ## Install Ubuntu on WSL2
 
-To begin installing Ubuntu on WSL2, the first step is to set up Windows Subsystem for Linux (WSL) on your machine. Once WSL is enabled, you'll install Ubuntu and verify the setup by running some basic Linux commands. This process will get you up and running with a fully functional Linux environment right on your Windows system.
-
+The Windows Subsystem for Linux (WSL) must first be installed on your machine before you can use Ubuntu on WSL.
 ### Install WSL
 
 Open a PowerShell prompt as an Administrator and run:
