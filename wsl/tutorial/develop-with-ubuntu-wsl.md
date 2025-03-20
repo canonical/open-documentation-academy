@@ -150,7 +150,7 @@ Now click [http://localhost:8000/](http://localhost:8000/) and your HTML will op
 
 To exit the server, type`ctrl + c` from within the Ubuntu terminal.
 
-## Install Visual Studio Code on Windows
+## Remote development in Ubuntu with Visual Studio Code
 
 One of the advantages of WSL is that it can interact with the native Windows version of Visual Studio Code using its remote development extension.
 
