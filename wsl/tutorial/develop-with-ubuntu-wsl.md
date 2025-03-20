@@ -144,7 +144,7 @@ Python is a programming language that comes pre-installed with Ubuntu in WSL. Yo
 $ python3 -m http.server
 ```
 
-Next, visit `http://localhost:8000/` to see your HTML document displayed on the browser:
+Now click [http://localhost:8000/](http://localhost:8000/) and your HTML will open in your default Windows browser.
 
 ![HTML web page displaying "hello world" in bold text](media/html-web-page-displaying-hello-world-in-bold-text.png)
 
