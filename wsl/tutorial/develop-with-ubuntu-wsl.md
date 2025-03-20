@@ -148,7 +148,7 @@ Now click [http://localhost:8000/](http://localhost:8000/) and your HTML will op
 
 ![HTML web page displaying "hello world" in bold text](media/html-web-page-displaying-hello-world-in-bold-text.png)
 
-You can exit the server by typing `ctrl +c`
+To exit the server, type`ctrl + c` from within the Ubuntu terminal.
 
 ## Install Visual Studio Code on Windows
 
