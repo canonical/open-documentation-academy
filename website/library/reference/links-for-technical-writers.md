@@ -20,7 +20,7 @@
 - [Google Style Guides](https://google.github.io/styleguide/): guides on style for languages from AngularJS to Vim script.
 - [Diátaxis](https://diataxis.fr/): a systematic approach to technical documentation authoring.
 - [Introduction to DITA](https://docs.oasis-open.org/dita/dita/v1.3/errata02/os/complete/part3-all-inclusive/archSpec/base/introduction-to-dita.html#introduction-to-dita): an open standard and architecture for technical information.
-- [Technical Writing Resources](https://developers.google.com/tech-writing/resources): resources and style guides from Google for developerss.
+- [Technical Writing Resources](https://developers.google.com/tech-writing/resources): resources and style guides from Google for developers.
 - [What is a Technical Writer Style Guide? With Examples](https://document360.com/blog/technical-writer-style-guide/): guide with style examples from Document360.
 
 ## Frameworks
