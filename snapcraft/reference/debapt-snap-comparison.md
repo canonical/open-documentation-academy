@@ -1,6 +1,6 @@
 # APT/deb - snap Comparison
 
-This comparison table provides an overview of the key differences between the ^APT/deb^ and ^snap^ package management approaches. It covers a wide range of features, including package format, installation, dependencies, security, updates, rollback, data storage, and the overall experience for both package builders and maintainers, and end-users.  
+This comparison table provides an overview of the key differences between the *APT/deb* and *snap* package management approaches. It covers a wide range of features, including package format, installation, dependencies, security, updates, rollback, data storage, and the overall experience for both package builders and maintainers, and end-users.  
 
 | **Feature** | **APT/deb Package Management** | **snap Package Management** |
 |---|---|---|
