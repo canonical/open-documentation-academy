@@ -5,13 +5,14 @@ AngularJS
 AsciiDoc
 backends
 bootable
+Center
 Ceph
 CLA
+Coursera
 Ctrl
 DDNS
 DIT
 DITA
-DNS
 DNS
 docsacademy
 DTLS
@@ -20,6 +21,7 @@ Fiber
 freesewing
 GnuTLS
 golang
+Hackmamba
 howto
 https
 IoT
@@ -49,6 +51,7 @@ RST
 scalable
 Snapcraft
 specialized
+specializes
 SSL
 TLS
 WSL
