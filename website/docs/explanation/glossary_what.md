@@ -54,28 +54,32 @@ Cross-references help readers navigate among related terms.
 
 If the gloss for a term discusses a second term, the second term should be linked.
 
-**DDNS* <br />
-**Dynamic Domain Name System**. A service that automatically updates {term}`DNS` records when the underlying IP address changes (aka, dynamic IP).
+<!-- {term}`DNS` replaced by *DNS* -->
+<!-- other terms: LDAP, SSL, TLS, DTLS -->
+
+
+**DDNS** <br />
+**Dynamic Domain Name System**. A service that automatically updates (term-ref) *DNS* records when the underlying IP address changes (aka, dynamic IP).
 
 #### A term that provides depth or broader context
 
 When a concept that provides depth or broader context is used in a gloss, it can be linked using "See".
 
 **DIT** <br />
-**Directory Information Tree**. In directory services (See {term}`LDAP`), a hierarchical tree-like structure used to organize and store information.
+**Directory Information Tree**. In directory services (See (term-ref) *LDAP*), a hierarchical tree-like structure used to organize and store information.
 
 #### A related topic
 
 A collection of related topics can be provided at the end of the gloss.
 
 **GnuTLS** <br />
-**GNU’s Not Unix Transport Layer Security**. A GNU software package that secures data in transit by implementing the {term}`SSL`, {term}`TLS`, and {term}`DTLS` protocols.
+**GNU’s Not Unix Transport Layer Security**. A GNU software package that secures data in transit by implementing the (term-ref) *SSL*, (term-ref) *TLS*, and (term-ref) *DTLS* protocols.
 
 Related topic(s): [GnuTLS (Ubuntu Server documentation)](https://documentation.ubuntu.com/server/explanation/crypto/gnutls/#), [GnuTLS (official site)](https://www.gnutls.org/), Cryptography, Web services, OpenLDAP.
 
 ## Advanced features
 
-In this treatement, the features considered basic are those focused on meaning.
+In this treatment, the features considered basic are those focused on meaning.
 
 There is an additional realm of glossary features that are focused on terminology management. Sometimes the origin of a term, or the pronunciation, or an alternate form, or some other aspect of the term is of great interest.
 

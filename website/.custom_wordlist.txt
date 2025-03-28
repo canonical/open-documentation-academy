@@ -8,9 +8,17 @@ bootable
 Ceph
 CLA
 Ctrl
+DDNS
+DIT
 DITA
+DNS
+DNS
 docsacademy
+DTLS
+FC
+Fiber
 freesewing
+GnuTLS
 golang
 howto
 https
@@ -18,6 +26,7 @@ IoT
 JIRA
 KDE
 LaTeX
+LDAP
 lifecycle
 MAAS
 MDX
@@ -27,7 +36,10 @@ Multipass
 Netplan
 ODA
 onboarding
+OpenLDAP
 OpenStack
+organize
+prized
 PRs
 rebase
 rebasing
@@ -36,5 +48,8 @@ repos
 RST
 scalable
 Snapcraft
+specialized
 SSL
+TLS
 WSL
+
