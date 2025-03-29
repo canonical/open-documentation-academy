@@ -38,3 +38,7 @@ scalable
 Snapcraft
 SSL
 WSL
+Hackmamba
+Coursera
+specializes
+Center
