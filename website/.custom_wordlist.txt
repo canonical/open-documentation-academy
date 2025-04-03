@@ -8,8 +8,11 @@ bootable
 Center
 Ceph
 CLA
+connectionless
 Coursera
 Ctrl
+Datagram
+datagram
 DDNS
 DIT
 DITA
@@ -31,6 +34,7 @@ LaTeX
 LDAP
 lifecycle
 MAAS
+md
 MDX
 mentorship
 MicroStack
@@ -47,12 +51,14 @@ rebase
 rebasing
 repo
 repos
+reStructured
 RST
+rST
 scalable
 Snapcraft
 specialized
 specializes
 SSL
 TLS
+UDP
 WSL
-

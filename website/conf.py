@@ -209,7 +209,6 @@ linkcheck_anchors_ignore_for_url = [r"https://github\.com/.*"]
 
 # myst_enable_extensions = set()
 
-
 # Custom Sphinx extensions; see
 # https://www.sphinx-doc.org/en/master/usage/extensions/index.html
 
