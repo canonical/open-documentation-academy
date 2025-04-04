@@ -23,7 +23,7 @@ import ast
 #
 # TODO: Update with the official name of your project or product
 
-project = "CODA"
+project = "Open Documentation Academy"
 author = "Canonical Ltd."
 
 
