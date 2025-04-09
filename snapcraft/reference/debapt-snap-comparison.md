@@ -24,7 +24,7 @@ These tables provide a comparison between the APT/deb and snap package managemen
 | **Feature** | **APT/deb Package Management** | **snap Package Management** |
 |---|---|---|
 | **Build Tools** | `dpkg-deb`, `debuild`, `lintian` | `snapcraft` |
-| **Metadata** | Control files, postinst, prerm scripts | `snapcraft.yaml`, confinement settings |
+| **Metadata** | `control.tar`, control file | `snap.yaml`, confinement settings |
 | **Dependencies Management** | Specified in control file, manually resolved | Bundled within the snap |
 | **Testing and Validation** | Manual testing, deb helper tools | Snapcraft tools, automated testing |
 | **Distribution Process** | Upload to Debian repositories | Upload to Snap Store |
