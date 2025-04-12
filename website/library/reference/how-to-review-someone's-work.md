@@ -9,21 +9,16 @@ When it comes to peer reviews, it can get confusing and overwhelming at times be
 ### Content Review
 
 * **Overall structure and flow**:
-  * Are the steps in the correct order?
-  * Will the user be able to understand the steps?
-  * Have all the terms been defined at the first use?
+  * Are the steps presented in a logical sequence that guides the user effectively?
+  * Is the language simple for the user to understand?
+  * Have all the terms been clearly defined?
 * **Accuracy and completeness**:
-  * Are all the steps accurate?
-  * Are there any steps missing or unclear?
-  * If you run through the document from start to finish, does it work?
+  * Does the document present any information that could be unclear or misleading to the user?
+  * Are all steps accurate and free from mistakes?
+  * Do the steps' code snippets work when followed?
 
 ### Clarity and Readability
 
-* **Wording and clarity**:
-  * Is everything well worded?
-  * Are important details missing? 
-  * Can anything be made shorter?
-  * Does the tone suit the message?
 * **Formatting and consistency**:
   * Are headings and subheadings used consistently?
   * Are lists and tables used effectively?
@@ -43,9 +38,9 @@ When it comes to peer reviews, it can get confusing and overwhelming at times be
 * **Links and references**:
   * Are all links working correctly?
   * Are references properly cited?
-* **Code and examples**:
-  * Do code snippets work as expected?
-  * Are examples relevant and effective?
+* **Examples**:
+  * Do the real-world examples effectively enhance the understanding of the documentation's topic?
+  * Do the real-world examples resonate with the user?
 
 ## Conclusion
 
