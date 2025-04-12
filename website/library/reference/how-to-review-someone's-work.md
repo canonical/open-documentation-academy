@@ -21,7 +21,7 @@ When it comes to peer reviews, it can get confusing and overwhelming at times be
 
 * **Wording and clarity**:
   * Is everything well worded?
-  * Are there any unclear bits?
+  * Are important details missing? 
   * Can anything be made shorter?
   * Does the tone suit the message?
 * **Formatting and consistency**:
