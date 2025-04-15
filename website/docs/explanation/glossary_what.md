@@ -60,7 +60,7 @@ When a concept that provides depth or broader context is used in a gloss, it can
 
 ```{glossary}
 DIT
- **Directory Information Tree**. In directory services (See :term:`LDAP`), a hierarchical tree-like structure used to organize and store information.
+ **Directory Information Tree**. In directory services (See {term}`LDAP`), a hierarchical tree-like structure used to organize and store information.
 ```
 
 A collection of related topics can be provided at the end of the gloss.
