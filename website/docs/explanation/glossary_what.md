@@ -78,7 +78,7 @@ GnuTLS
 
 In this treatment, the features considered basic are those focused on meaning.
 
-There is a further realm of glossary features that are focused on terminology management. Sometimes the origin of a term, or the pronunciation, or an alternate form, or some other aspect of the term is of great interest.
+There is a further realm of more specialized glossary features. Sometimes the origin of a term, or the pronunciation, or an alternate form, or some other aspect of the term is of great interest.
 
 Advanced features can be introduced in glossaries by imitating the features of entries in authoritative dictionaries.
 
