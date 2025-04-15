@@ -53,7 +53,7 @@ If the gloss for a term discusses a second term, the second term should be linke
 ```{glossary}
 DDNS
  **Domain Name System**.
- A service that automatically updates :term:`DNS` records when the underlying IP address changes (aka, dynamic IP).
+ A service that automatically updates {term}`DNS` records when the underlying IP address changes (aka, dynamic IP).
 ```
 
 When a concept that provides depth or broader context is used in a gloss, it can be linked using "See".
