@@ -84,10 +84,9 @@ Advanced features can be introduced in glossaries by imitating the features of e
 
 ## Appendix 1: Mechanics
 
-This document is written in the following hierarchy of languages (high to low):
-* Markedly Structured Text ([MyST](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html#syntax-glossaries))
-* reStructured Text (rST)
-* Markdown (md)
+This document is written in Markedly Structured Text ([MyST](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html#syntax-glossaries)).
+
+Glossaries can also be produced using [reStructured Text (rST)](https://sublime-and-sphinx-guide.readthedocs.io/en/latest/glossary.html).
 
 A reference to a term is coded as follows: ::
 
