@@ -113,7 +113,7 @@ datagram
  A datagram can be routed from source to destination without relying on earlier or subsequent transfers.
 
 DTLS
- **Datagram Transport Layer Security**. A protocol that provides security for :term:`datagram`-based communication, such as UDP.
+ **Datagram Transport Layer Security**. A protocol that provides security for {term}`datagram`-based communication, such as UDP.
  DTLS offers security features similar to TLS, but is adapted because datagram protocols are connectionless.
 
 LDAP
