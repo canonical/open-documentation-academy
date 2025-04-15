@@ -92,7 +92,7 @@ A reference to a term is coded as follows:
 
 `{term}`referenced_term``
 
-A complex glossary entry is coded as follows: ::
+A complex glossary entry is coded as follows:
 
   ```{glossary}
   GnuTLS_example
