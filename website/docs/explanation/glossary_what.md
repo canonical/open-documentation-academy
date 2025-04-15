@@ -88,7 +88,7 @@ This document is written in Markedly Structured Text ([MyST](https://myst-parser
 
 Glossaries can also be produced using [reStructured Text (rST)](https://sublime-and-sphinx-guide.readthedocs.io/en/latest/glossary.html).
 
-A reference to a term is coded as follows: ::
+A reference to a term is coded as follows:
 
 `{term}`referenced_term``
 
