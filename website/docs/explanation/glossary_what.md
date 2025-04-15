@@ -12,7 +12,7 @@ Simplicity is prized. A glossary entry should aim to make the reader one step mo
 ### Definition
 
 A definition is a statement of fact that conveys the meaning of a term. 
-A definition that consists of a simple phrase or sentence may be all the explanation that is needed.
+A definition that consists of a simple phrase or sentence may be all the explanation that is needed. For example:
 
 ```{glossary}
 core
