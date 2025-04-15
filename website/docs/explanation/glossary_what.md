@@ -21,7 +21,7 @@ core
 
 ### Abbreviation
 
-If the term is an abbreviation, the gloss starts with its expansion. The abbreviation is explained briefly after its expansion.
+If the term is an abbreviation, the gloss starts with the expanded form of the term. The abbreviation is explained briefly after this expansion. For example:
 
 ```{glossary}
 DNS
