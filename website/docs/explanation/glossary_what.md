@@ -68,7 +68,7 @@ A collection of related topics can be provided at the end of the gloss. These co
 ```{glossary}
 GnuTLS
  **GNU’s Not Unix Transport Layer Security**.
- A GNU software package that secures data in transit by implementing the :term:`SSL`, :term:`TLS`, and :term:`DTLS` protocols.
+ A GNU software package that secures data in transit by implementing the {term}`SSL`, {term}`TLS`, and {term}`DTLS` protocols.
 
  Related topic(s): [GnuTLS (Ubuntu Server documentation)](https://documentation.ubuntu.com/server/explanation/crypto/gnutls/#), [GnuTLS (official site)](https://www.gnutls.org/), Cryptography, Web services, OpenLDAP.
 
