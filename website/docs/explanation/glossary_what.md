@@ -91,7 +91,7 @@ This document is written in the following hierarchy of languages (high to low):
 
 A reference to a term is coded as follows: ::
 
-  :term:`referenced_term`
+`{term}`referenced_term``
 
 A complex glossary entry is coded as follows: ::
 
