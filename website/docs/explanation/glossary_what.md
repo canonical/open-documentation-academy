@@ -63,7 +63,7 @@ DIT
  **Directory Information Tree**. In directory services (See {term}`LDAP`), a hierarchical tree-like structure used to organize and store information.
 ```
 
-A collection of related topics can be provided at the end of the gloss.
+A collection of related topics can be provided at the end of the gloss. These could link elsewhere in the documentation, or to external resources.
 
 ```{glossary}
 GnuTLS
