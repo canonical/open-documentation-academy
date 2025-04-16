@@ -68,40 +68,42 @@ A collection of related topics can be provided at the end of the gloss. These co
 ```{glossary}
 GnuTLS
  **GNU’s Not Unix Transport Layer Security**.
- A GNU software package that secures data in transit by implementing the {term}`SSL`, {term}`TLS`, and {term}`DTLS` protocols.
+ A GNU software package that secures data in transit by implementing the
+ {term}`SSL`, {term}`TLS`, and {term}`DTLS` protocols.
 
- Related topic(s): [GnuTLS (Ubuntu Server documentation)](https://documentation.ubuntu.com/server/explanation/crypto/gnutls/#), [GnuTLS (official site)](https://www.gnutls.org/), Cryptography, Web services, OpenLDAP.
+ Related topic(s): [GnuTLS (Ubuntu Server documentation)](https://documentation.ubuntu.com/server/explanation/crypto/gnutls/#),
+ [GnuTLS (official site)](https://www.gnutls.org/),
+ Cryptography, Web services, OpenLDAP.
 
 ```
 
-## Advanced features
+## Dictionary features
 
-In this treatment, the features considered basic are those focused on meaning.
-
-There is a further realm of more specialized glossary features. Sometimes the origin of a term, or the pronunciation, or an alternate form, or some other aspect of the term is of great interest.
-
-Advanced features can be introduced in glossaries by imitating the features of entries in authoritative dictionaries.
+Glossary entries tend to be simpler than full dictionary entries. Some glossary entries, however, may include dictionary features such as the origin of a term, or the pronunciation, or an alternate form, or some other specialized aspect of the term that is of great interest.
 
 ## Appendix 1: Mechanics
 
-This document is written in Markedly Structured Text ([MyST](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html#syntax-glossaries)).
+This document is written in Markedly Structured Text
+([MyST](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html#syntax-glossaries)).
 
 Glossaries can also be produced using [reStructured Text (rST)](https://sublime-and-sphinx-guide.readthedocs.io/en/latest/glossary.html).
 
 A reference to a term is coded as follows:
 
-`{term}`referenced_term``
+    `{term}`referenced_term
 
-A complex glossary entry is coded as follows:
+A complex glossary entry is coded as follows ("..." indicates omitted characters):
 
-  ```{glossary}
-  GnuTLS_example
-   **GNU’s Not Unix Transport Layer Security**.
-   A GNU software package that secures data in transit by implementing the {term}`SSL`, {term}`TLS`, and {term}`DTLS` protocols.
+    ```{glossary}
+    GnuTLS_example
+    **GNU’s Not Unix Transport Layer Security**.
+    A GNU software package that secures data in transit by implementing the
+    {term}`SSL`, {term}`TLS`, and {term}`DTLS` protocols.
 
-   Related topic(s): [GnuTLS (Ubuntu Server documentation)](https://documentation.ubuntu.com/server/explanation/crypto/gnutls/#), [GnuTLS (official site)](https://www.gnutls.org/), Cryptography, Web services, OpenLDAP.
-
-  ```
+    Related topic(s): [GnuTLS (Ubuntu Server doc...)](https://doc.../gnutls/#),
+    [GnuTLS (official site)](https://www.gnutls.org/),
+    Cryptography, Web services, OpenLDAP.
+    ```
 
 ## Appendix 2: Locally-defined terms
 
