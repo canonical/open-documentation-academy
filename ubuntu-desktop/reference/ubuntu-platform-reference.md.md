@@ -14,4 +14,4 @@ Ubuntu is available on multiple platforms. Relevant features, use cases and docu
 
 ### Notes
 
-- **Flavors**: Beyond these main editions, there are official [Ubuntu flavors](https://ubuntu.com/desktop/flavours) (e.g., Kubuntu, Xubuntu, Ubuntu MATE, Ubuntu Budgie, Ubuntu Studio) each featuring a different desktop environment or specialized toolset.
+- **Flavors**: There are also official [Ubuntu flavors](https://ubuntu.com/desktop/flavours) (e.g., Kubuntu, Xubuntu, Ubuntu MATE, Ubuntu Budgie, Ubuntu Studio), each featuring a different desktop environment or specialized toolset.
