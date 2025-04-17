@@ -1,6 +1,8 @@
 # How to be a great peer reviewer
 
-When you first start your technical writing journey, one of the many important skills you'll need to learn is how to do is peer reviews. It's a skill that will not only teach you how to collaborate with other technical writers and other people who interact with documentation, but it will also help you to become a better technical writer in the long run.
+The goal of reviewing is to make sure the content is accurate and the strongest version of itself—for now. Online documentation will change, so it’s important to stay focused as you write.
+
+One key skill to build early in your technical writing journey is peer reviewing. It helps you collaborate effectively with other writers and stakeholders, and it strengthens your own writing over time.
 
 ## Tips for doing effective Peer Reviews
 
@@ -42,6 +44,5 @@ When it comes to peer reviews, it can get confusing and overwhelming at times be
   * Do the real-world examples effectively enhance the understanding of the documentation's topic?
   * Do the real-world examples resonate with the user?
 
-## Conclusion
 
-The end goal of reviewing is to make sure that the work is a) correct/accurate, and b) the best version of itself (for now). The nature of online documentation is that it's 100% going to change at some point, so it's important to keep a good eye on the work as it's being written
+
