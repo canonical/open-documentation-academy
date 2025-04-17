@@ -2,7 +2,7 @@
 
 The goal of reviewing is to make sure the content is accurate and the strongest version of itself—for now. Online documentation will change, so it’s important to stay focused as you write.
 
-One key skill to build early in your technical writing journey is peer reviewing. It helps you collaborate effectively with other writers and stakeholders, and it strengthens your own writing over time.
+One key skill to build early in your technical writing journey is peer reviewing. Offering your perspective to other writers can help make the content clearer and more useful for readers. Reviewing also helps you collaborate effectively with other writers and stakeholders, and it strengthens your own writing over time.
 
 ## Tips for doing effective Peer Reviews
 
