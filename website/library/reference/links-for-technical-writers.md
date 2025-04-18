@@ -34,7 +34,7 @@
 - [API The Docs](https://apithedocs.org/podcast): podcast about API documentation and developer portals.
 - [CherryLeaf](https://www.cherryleaf.com/podcast/): podcast on technical writing skills and interviews with technical writers.
 - [The Not-Boring Tech Writer](https://thenotboringtechwriter.com/): podcast about the complexities of technical writing.
-_ [I'd Rather Be Writing](https://idratherbewriting.com/podcasts/): podcast about technical writing trends and best.practices
+- [I'd Rather Be Writing](https://idratherbewriting.com/podcasts/): podcast about technical writing trends and best.practices
 
 ## Style and structure
 
