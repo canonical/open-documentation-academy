@@ -1,0 +1,56 @@
+This page explains how audio works on Ubuntu desktop from the hardware layer to the application layer.
+
+## The hardware layer
+
+When you use applications that play or record audio, they get the audio input from hardware like microphones and return audio output using speakers.
+
+This is made possible using sound cards, which translate digital signals into the analog sound waves you hear through speakers or headphones, and vice versa for microphones.
+
+Once the hardware is in place, Linux uses audio kernel drivers to interact with the sound cards. Early Linux distributions (pre-2.6 kernel) used OSS (Open Sound System), which was the first standardized audio kernel driver that allowed programs to play and record audio. However, due to its limitations and because it was partially “closed source,” it was replaced by ALSA.
+
+## Advanced Linux Sound Architecture (ALSA)
+
+ALSA was created as a replacement for OSS to address its limitations as the default audio kernel driver for Linux machines. It’s an open-source driver that provides audio and MIDI (Musical Instrument Digital Interface**)** functionality.
+
+It featured efficient support for all types of audio interfaces, from consumer sound cards to professional multichannel audio interfaces, and a user-space library (`alsa-lib`) to simplify application programming—things OSS didn't have. It also supported programs that expected the older Open Sound System (OSS) API for backward compatibility purposes.
+
+However, ALSA has some limitations. Only one application could play audio simultaneously unless extra software (like Dmix) were configured. Other limitations of ALSA include poor support for hotplug devices (like USB headphones), and a lack of a user-friendly GUI and per-application volume controls.
+
+To address ALSA’s limitation, sound servers were introduced to Linux machines.
+
+## Sound servers
+
+A sound server is an intermediary between an application (Firefox, VLC) and ALSA.
+
+### PulseAudio
+
+From Ubuntu 8.04 to Ubuntu 21.04, PulseAudio was the default sound server. This solved most of the limitations associated with using ALSA directly, such as software mixing, per-app volume, and device hotplugging. It also introduced new features such as stream routing, which allowed you to send a stream to speakers and then move it to headphones.
+
+However, PulseAudio was not a perfect solution. Its latency made it unsuitable for real-time tasks like music production. It also came with a complex configuration and occasional reliability issues, which sometimes made it unpredictable.
+
+### Jack Audio Connection Kit (JACK)
+
+JACK (Jack Audio Connection Kit) was introduced to solve problems PulseAudio couldn't solve. It wasn't a replacement for PulseAudio but an alternative for pro users. It was a real-time, low-latency sound server for pro use cases like music production, recording studios, and live performances.
+
+JACK and PulseAudio didn’t work well together; you either ran one or the other. Running both simultaneously required manual bridging using tools like `jack2` + `pulseaudio-module-jack`. JACK was also very difficult to set up, making it difficult to use for casual users.
+
+### Pipewire
+
+Pipewire, a unified sound server, was introduced in 2018 as the default sound server on Ubuntu Desktop 22.10 to solve the issues associated with using either PulseAudio or JACK. It is a drop-in replacement for PulseAudio but offers the same low latency and routing provided by JACK.
+
+It also has built-in compatibility layers for apps expecting PulseAudio (`pipewire-pulse`) and JACK (`pipewire-jack`), ensuring they work with minimal configuration. 
+
+With PipeWire, applications that previously needed bridges to work together can now operate seamlessly in one ecosystem. However, it's still under active development, and depending on the setup, some issues, like Bluetooth instability or complex resampling scenarios, may arise.
+
+## Audio on applications
+
+On Ubuntu desktop (22.10), when an application wants to play or record audio, it interacts directly with Pipewire. If the application initially expected a PulseAudio or a JACK interface, Pipewire would provide such using the appropriate compatibility layer. Pipewire, in turn, communicates with ALSA to send or receive audio. ALSA then handles the low-level interaction with the sound card.
+
+Some applications can also talk to ALSA directly; for example, `aplay` and `arecord` (command-line tools) use ALSA directly. Some music production apps (like Ardour or Reaper) can talk directly to ALSA *or* JACK to reduce latency.
+
+## Resources
+
+- [The ALSA Project](https://www.alsa-project.org/wiki/Main_Page)
+- [Pipewire](https://pipewire.org/)
+- [PulseAudio](https://wiki.archlinux.org/title/PulseAudio)
+- [Jack Audio Connection Kit](https://jackaudio.org/)
