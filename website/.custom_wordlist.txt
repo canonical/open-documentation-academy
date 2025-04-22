@@ -1,10 +1,12 @@
 # Leave a blank line at the end of this file to support concatenation
+# Please make sure new entries are added in alphabetical order
 ADSys
 Anbox
 AngularJS
 AsciiDoc
 backends
 bootable
+capitalization
 Center
 Ceph
 CLA
@@ -62,7 +64,3 @@ SSL
 TLS
 UDP
 WSL
-Hackmamba
-Coursera
-specializes
-Center
