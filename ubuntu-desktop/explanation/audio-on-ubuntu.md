@@ -1,26 +1,36 @@
+# How does Audio on Ubuntu Desktop work
+
 This page explains how audio works on Ubuntu desktop from the hardware layer to the application layer.
 
 ## The hardware layer
 
 When you use applications that play or record audio, they get the audio input from hardware like microphones and return audio output using speakers.
 
-This is made possible using sound cards, which translate digital signals into the analog sound waves you hear through speakers or headphones, and vice versa for microphones.
+This is made possible through sound cards, which translate digital signals into the analog sound waves you hear through speakers or headphones, and vice versa for microphones. This process involves DAC (Digital-to-Analog Conversion) for output and ADC (Analog-to-Digital Conversion) for input.
 
-Once the hardware is in place, Linux uses audio kernel drivers to interact with the sound cards. Early Linux distributions (pre-2.6 kernel) used OSS (Open Sound System), which was the first standardized audio kernel driver that allowed programs to play and record audio. However, due to its limitations and because it was partially “closed source,” it was replaced by ALSA.
+Linux uses audio device drivers to interact with the sound cards. These device drivers require a kernel-level interface to transfer/receive the digital audio stream to/from applications.
+
+Early Linux distributions (pre-2.6 kernel) used OSS (Open Sound System), the first standardized kernel-level interface that allowed applications to play and record audio. However, due to its limitations and because it was partially proprietary software, OSS was replaced by ALSA.
 
 ## Advanced Linux Sound Architecture (ALSA)
 
-ALSA was created as a replacement for OSS to address its limitations as the default audio kernel driver for Linux machines. It’s an open-source driver that provides audio and MIDI (Musical Instrument Digital Interface**)** functionality.
+ALSA was created as a replacement for OSS to address its limitations as the default audio kernel-level interface for Linux machines. It’s an open-source driver that provides audio and MIDI (Musical Instrument Digital Interface**)** functionality.
 
-It featured efficient support for all types of audio interfaces, from consumer sound cards to professional multichannel audio interfaces, and a user-space library (`alsa-lib`) to simplify application programming—things OSS didn't have. It also supported programs that expected the older Open Sound System (OSS) API for backward compatibility purposes.
+ALSA interacts with audio hardware primarily through specialized device drivers provided by the Linux kernel. Its role is to abstract hardware complexity to make it easier for user-space applications to communicate with audio hardware. To achieve this, it includes specific kernel modules for different audio hardware. Upon booting, these modules automatically detect audio devices connected to the system, such as professional soundcards, USB audio devices, and HDMI/DisplayPort audio output.
 
-However, ALSA has some limitations. Only one application could play audio simultaneously unless extra software (like Dmix) were configured. Other limitations of ALSA include poor support for hotplug devices (like USB headphones), and a lack of a user-friendly GUI and per-application volume controls.
+Then, it creates special device files under `/dev/snd/` that represent audio devices. For example, `/dev/snd/pcm*` (for playback/capture), `/dev/snd/control*` (hardware mixer controls), and `/dev/snd/midi*` (MIDI interfaces).
 
-To address ALSA’s limitation, sound servers were introduced to Linux machines.
+When an application wants to play audio, it sends the audio data through the ALSA API (`libasound`), it passes through ALSA libraries and plugins, is processed by kernel drivers, moved via DMA (Direct Memory Access) to the hardware, converted into an analog signal by the DAC (Digital to Analog Coverter), and ultimately reaches your speakers or headphones.
+
+![ALSA only flow on Ubuntu](../assets/explanation/audio-on-ubuntu/alsa-flow.jpg)
+
+ALSA featured efficient support for all types of audio interfaces, from consumer sound cards to professional multichannel audio interfaces, and a user-space library (`alsa-lib`) to simplify application programming—things OSS didn't have. It also supported programs that expected the older Open Sound System (OSS) API for backward compatibility.
+
+However, ALSA had a major limitation: only one application could play audio simultaneously unless extra software (like Dmix) were configured. Additionally, it had poor support for hotplug devices (like USB headphones), and a lack of a user-friendly GUI and per-application volume controls. To address ALSA’s limitation, sound servers were introduced to Linux machines.
 
 ## Sound servers
 
-A sound server is an intermediary between an application (Firefox, VLC) and ALSA.
+A sound server is an intermediary between an application (Firefox, VLC) and ALSA that manages audio streams from multiple applications, mixes them in real time, and forwards the mixed output to ALSA, which then communicates with the hardware. Ubuntu has seen a few sound servers, including PulseAudio, JACK, and Pipewire.
 
 ### PulseAudio
 
@@ -46,9 +56,11 @@ With PipeWire, applications that previously needed bridges to work together can 
 
 On Ubuntu desktop (22.10), when an application wants to play or record audio, it interacts directly with Pipewire. If the application initially expected a PulseAudio or a JACK interface, Pipewire would provide such using the appropriate compatibility layer. Pipewire, in turn, communicates with ALSA to send or receive audio. ALSA then handles the low-level interaction with the sound card.
 
+![How audio works on ubuntu](../assets/explanation/audio-on-ubuntu/alsa-flow.jpg)
+
 Some applications can also talk to ALSA directly; for example, `aplay` and `arecord` (command-line tools) use ALSA directly. Some music production apps (like Ardour or Reaper) can talk directly to ALSA *or* JACK to reduce latency.
 
-## Resources
+## Additional Resources
 
 - [The ALSA Project](https://www.alsa-project.org/wiki/Main_Page)
 - [Pipewire](https://pipewire.org/)
