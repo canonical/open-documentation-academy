@@ -1,17 +1,22 @@
 # Leave a blank line at the end of this file to support concatenation
+# Please make sure new entries are added in alphabetical order
 ADSys
 Anbox
 AngularJS
 AsciiDoc
 backends
 bootable
+capitalization
+Center
 Ceph
 CLA
+Coursera
 Ctrl
 DITA
 docsacademy
 freesewing
 golang
+Hackmamba
 howto
 https
 IoT
@@ -36,9 +41,6 @@ repos
 RST
 scalable
 Snapcraft
+specializes
 SSL
 WSL
-Hackmamba
-Coursera
-specializes
-Center
