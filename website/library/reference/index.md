@@ -5,6 +5,6 @@
 
 Links for technical writers <links-for-technical-writers>
 how-to-review-someones-work 
-how-to-implement-peer-reviewers-feedback
+How to implement peer reviewers feedback <how-to-implement-peer-reviewers-feedback>
 
 ```
