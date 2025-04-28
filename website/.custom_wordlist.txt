@@ -36,7 +36,7 @@ OpenStack
 PRs
 Prioritize 
 categorizing
-prioritize 
+prioritize
 rebase
 rebasing
 repo
