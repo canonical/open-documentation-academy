@@ -43,6 +43,3 @@ When it comes to peer reviews, it can get confusing and overwhelming at times be
 * **Examples**:
   * Do the real-world examples effectively enhance the understanding of the documentation's topic?
   * Do the real-world examples resonate with the user?
-
-
-
