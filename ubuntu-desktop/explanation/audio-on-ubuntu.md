@@ -46,7 +46,7 @@ JACK and PulseAudio didn’t work well together; you either ran one or the other
 
 ### Pipewire
 
-Pipewire, a unified sound server, was introduced in 2018 as the default sound server on Ubuntu Desktop 22.10 to solve the issues associated with using either PulseAudio or JACK. It is a drop-in replacement for PulseAudio but offers the same low latency and routing provided by JACK.
+Pipewire, which provides a unified sound server, was introduced in 2018 as the default sound server on Ubuntu Desktop 22.10 to solve the issues associated with using either PulseAudio or JACK. It is a drop-in replacement for PulseAudio but offers the same low latency and routing provided by JACK.
 
 It also has built-in compatibility layers for apps expecting PulseAudio (`pipewire-pulse`) and JACK (`pipewire-jack`), ensuring they work with minimal configuration. 
 
@@ -54,7 +54,7 @@ With PipeWire, applications that previously needed bridges to work together can 
 
 ## Audio on applications
 
-On Ubuntu desktop (22.10), when an application wants to play or record audio, it interacts directly with Pipewire. If the application initially expected a PulseAudio or a JACK interface, Pipewire would provide such using the appropriate compatibility layer. Pipewire, in turn, communicates with ALSA to send or receive audio. ALSA then handles the low-level interaction with the sound card.
+On Ubuntu desktop (22.10 and later), when an application wants to play or record audio, it interacts directly with Pipewire. If the application initially expected a PulseAudio or a JACK interface, Pipewire would provide such using the appropriate compatibility layer. Pipewire, in turn, communicates with ALSA to send or receive audio. ALSA then handles the low-level interaction with the sound card.
 
 ![How audio works on ubuntu](../assets/explanation/audio-on-ubuntu/alsa-flow.jpg)
 
