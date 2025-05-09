@@ -18,7 +18,7 @@ Interestingly, Ubuntu Desktop comes in [different flavors](https://ubuntu.com/de
 A desktop environment consists of different independent components that are customizable. Sometimes, a Linux user may choose to run only one component rather than the entire desktop environment to save memory. Anyway, some of these components are:
 
 1. Windows manager: This manages a window that pops up when you open a terminal or any application at all.
-1. User app: These are default application that comes within the desktop environment.
+1. User app: These are default applications in the desktop environment.
 1. File manager: This is a UI environment for interacting with files.
 
 ## Applications
