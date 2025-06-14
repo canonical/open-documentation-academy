@@ -65,7 +65,7 @@ It's still under active development. Depending on the setup, issues including Bl
 
 ## Audio on applications
 
-On Ubuntu desktop (22.10 and later), when an application wants to play or record audio, it interacts directly with Pipewire. If the application initially expected a PulseAudio or a JACK interface, Pipewire would provide such using the appropriate compatibility layer. Pipewire, in turn, communicates with ALSA to send or receive audio. ALSA then handles the low-level interaction with the sound card.
+On Ubuntu desktop (22.10 and later), when an application plays or records audio, it interacts directly with Pipewire. If the application attemps to connect with a PulseAudio or a JACK interface, Pipewire provides an appropriate compatibility layer. Pipewire, in turn, communicates with ALSA to send or receive audio. ALSA then handles the low-level interaction with the sound card.
 
 ![How audio works on ubuntu](../assets/explanation/audio-on-ubuntu/alsa-flow.jpg)
 
