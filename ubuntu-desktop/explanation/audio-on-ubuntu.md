@@ -14,7 +14,7 @@ Early Linux distributions (pre-2.6 kernel) used OSS (Open Sound System), the fir
 
 ## Advanced Linux Sound Architecture (ALSA)
 
-ALSA was created as a replacement for OSS to address its limitations as the default audio kernel-level interface for Linux machines. It’s an open-source driver that provides audio and MIDI (Musical Instrument Digital Interface**)** functionality.
+ALSA was created as a replacement for OSS to address its limitations as the default audio kernel-level interface for Linux machines. It’s an open-source driver that provides audio and MIDI (Musical Instrument Digital Interface) functionality.
 
 ALSA interacts with audio hardware primarily through specialized device drivers provided by the Linux kernel. Its role is to abstract hardware complexity to make it easier for user-space applications to communicate with audio hardware. To achieve this, it includes specific kernel modules for different audio hardware. Upon booting, these modules automatically detect audio devices connected to the system, such as professional soundcards, USB audio devices, and HDMI/DisplayPort audio output.
 
