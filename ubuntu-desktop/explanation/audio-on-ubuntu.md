@@ -69,7 +69,7 @@ On Ubuntu desktop (22.10 and later), when an application wants to play or record
 
 ![How audio works on ubuntu](../assets/explanation/audio-on-ubuntu/alsa-flow.jpg)
 
-Some applications can also talk to ALSA directly; for example, `aplay` and `arecord` (command-line tools) use ALSA directly. Some music production apps (like Ardour or Reaper) can talk directly to ALSA *or* JACK to reduce latency.
+Some applications can also talk to ALSA directly; for example, `aplay` and `arecord` (command-line tools). Some, like Ardour and Reaper, can be configured to use ALSA or JACK directly to reduce latency. This is critical in music production, where the creator needs quick feedback as they produce and refine sounds.
 
 ## Additional Resources
 
