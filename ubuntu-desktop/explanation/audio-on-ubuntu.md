@@ -59,7 +59,9 @@ Pipewire, which provides a unified sound server, was introduced in 2018 as the d
 
 It also has built-in compatibility layers for apps expecting PulseAudio (`pipewire-pulse`) and JACK (`pipewire-jack`), ensuring they work with minimal configuration. 
 
-With PipeWire, applications that previously needed bridges to work together can now operate seamlessly in one ecosystem. However, it's still under active development, and depending on the setup, some issues, like Bluetooth instability or complex resampling scenarios, may arise.
+With PipeWire, applications that previously needed bridges to work together can now operate seamlessly in one ecosystem.
+
+It's still under active development. Depending on the setup, issues including Bluetooth instability or complex resampling scenarios may arise.
 
 ## Audio on applications
 
