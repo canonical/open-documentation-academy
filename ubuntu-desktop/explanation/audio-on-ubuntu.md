@@ -49,7 +49,7 @@ However, PulseAudio was not a perfect solution. Its latency made it unsuitable f
 
 ### Jack Audio Connection Kit (JACK)
 
-JACK (Jack Audio Connection Kit) was introduced to solve problems PulseAudio couldn't solve. It wasn't a replacement for PulseAudio but an alternative for pro users. It was a real-time, low-latency sound server for pro use cases like music production, recording studios, and live performances.
+JACK (Jack Audio Connection Kit) was introduced to solve problems PulseAudio couldn't solve. It was a real-time, low-latency sound server for use in music production, recording studios, and live performances.
 
 JACK and PulseAudio didn’t work well together; you either ran one or the other. Running both simultaneously required manual bridging using tools like `jack2` + `pulseaudio-module-jack`. JACK was also very difficult to set up, making it difficult to use for casual users.
 
