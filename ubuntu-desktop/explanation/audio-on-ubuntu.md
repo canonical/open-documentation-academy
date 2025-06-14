@@ -37,7 +37,9 @@ However, ALSA had a major limitation: only one application could play audio simu
 
 ## Sound servers
 
-A sound server is an intermediary between an application (Firefox, VLC) and ALSA that manages audio streams from multiple applications, mixes them in real time, and forwards the mixed output to ALSA, which then communicates with the hardware. Ubuntu has seen a few sound servers, including PulseAudio, JACK, and Pipewire.
+A sound server is an intermediary between an application (Firefox, VLC) and ALSA that manages audio streams from multiple applications, mixes them in real time, and forwards the mixed output to ALSA, which then communicates with the hardware. 
+
+Ubuntu can run several different sound servers, including PulseAudio, JACK, and Pipewire.
 
 ### PulseAudio
 
