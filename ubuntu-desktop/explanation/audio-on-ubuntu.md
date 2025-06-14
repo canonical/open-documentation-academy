@@ -20,7 +20,14 @@ ALSA interacts with audio hardware primarily through specialized device drivers 
 
 Then, it creates special device files under `/dev/snd/` that represent audio devices. For example, `/dev/snd/pcm*` (for playback/capture), `/dev/snd/control*` (hardware mixer controls), and `/dev/snd/midi*` (MIDI interfaces).
 
-When an application wants to play audio, it sends the audio data through the ALSA API (`libasound`), it passes through ALSA libraries and plugins, is processed by kernel drivers, moved via DMA (Direct Memory Access) to the hardware, converted into an analog signal by the DAC (Digital to Analog Coverter), and ultimately reaches your speakers or headphones.
+An application playing audio involves the audio data being:
+
+* Sent through the ALSA API (`libasound`)
+* Passed through ALSA libraries and plugins
+* Processed by kernel drivers
+* Moved by DMA (Direct Memory Access) to the hardware
+* Converted into an analog signal by the DAC (Digital to Analog Coverter)
+* Played through speakers or headphones
 
 ![ALSA only flow on Ubuntu](../assets/explanation/audio-on-ubuntu/alsa-flow.jpg)
 
