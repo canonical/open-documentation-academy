@@ -31,7 +31,7 @@ An application playing audio involves the audio data being:
 
 ![ALSA only flow on Ubuntu](../assets/explanation/audio-on-ubuntu/alsa-flow.jpg)
 
-ALSA featured efficient support for all types of audio interfaces, from consumer sound cards to professional multichannel audio interfaces, and a user-space library (`alsa-lib`) to simplify application programming—things OSS didn't have. It also supported programs that expected the older Open Sound System (OSS) API for backward compatibility.
+ALSA featured efficient support for all types of audio interfaces, from consumer sound cards to professional multichannel audio interfaces, and a user-space library (`alsa-lib`) to simplify application programming — things OSS didn't have. It also supported programs that expected the older Open Sound System (OSS) API for backward compatibility.
 
 However, ALSA had a major limitation: only one application could play audio simultaneously unless extra software (like Dmix) were configured. Additionally, it had poor support for hotplug devices (like USB headphones), and a lack of a user-friendly GUI and per-application volume controls. To address ALSA’s limitation, sound servers were introduced to Linux machines.
 
