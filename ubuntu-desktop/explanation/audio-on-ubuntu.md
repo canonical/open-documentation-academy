@@ -55,7 +55,7 @@ JACK and PulseAudio didn’t work well together. Running both simultaneously req
 
 ### Pipewire
 
-Pipewire, which provides a unified sound server, was introduced in 2018 as the default sound server on Ubuntu Desktop 22.10 to solve the issues associated with using either PulseAudio or JACK. It is a drop-in replacement for PulseAudio but offers the same low latency and routing provided by JACK.
+Pipewire, which provides a unified sound server, was introduced in 2018 and became the default sound server on Ubuntu Desktop 22.10 to solve the issues associated with using either PulseAudio or JACK. It is a drop-in replacement for PulseAudio but offers the same low latency and routing provided by JACK.
 
 It also has built-in compatibility layers for apps expecting PulseAudio (`pipewire-pulse`) and JACK (`pipewire-jack`), ensuring they work with minimal configuration. 
 
