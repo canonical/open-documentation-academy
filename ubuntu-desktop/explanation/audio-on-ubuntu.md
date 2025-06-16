@@ -43,7 +43,7 @@ Ubuntu can run several different sound servers, including PulseAudio, JACK, and 
 
 ### PulseAudio
 
-From Ubuntu 8.04 to Ubuntu 21.04, PulseAudio was the default sound server. This solved most of the limitations associated with using ALSA directly, such as software mixing, per-app volume, and device hotplugging. It also introduced new features such as stream routing, which allowed you to send a stream to speakers and then move it to headphones.
+From Ubuntu 8.04 to Ubuntu 22.10, PulseAudio was the default sound server. This solved most of the limitations associated with using ALSA directly, such as software mixing, per-app volume, and device hotplugging. It also introduced new features such as stream routing, which allowed you to send a stream to speakers and then move it to headphones.
 
 However, PulseAudio was not a perfect solution. Its latency made it unsuitable for real-time tasks like music production. It also came with a complex configuration and occasional reliability issues, which sometimes made it unpredictable.
 
