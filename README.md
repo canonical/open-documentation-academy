@@ -38,7 +38,7 @@ The first words of an issue's title will typically indicate the project it invol
 - [Ubuntu Developer Guide](https://github.com/canonical/ubuntu-for-developers-docs): guide for developers using Ubuntu Desktop as a development platform
 - [ubuntu-image](https://github.com/canonical/ubuntu-image): Tool for generating bootable Ubuntu images
 - [Ubuntu on public cloud](https://documentation.ubuntu.com/public-cloud/en/latest/): Optimised Ubuntu images for partner clouds
-- [Ubuntu Packaging Guide](https://github.com/canonical/ubuntu-packaging-guide): manual for Ubuntu package maintainers
+- [Ubuntu Project Documentation](https://github.com/ubuntu/ubuntu-project-docs): manual for contributors to the Ubuntu Linux distribution
 - [Ubuntu Server documentation](https://github.com/canonical/ubuntu-server-documentation): Official documentation for the Ubuntu Server distribution
 - [Ubuntu WSL](https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/): Ubuntu terminal environment on Windows with the Windows Subsystem for Linux (WSL)
 
