@@ -8,7 +8,6 @@
 
 ## Community
 
-- [Google Season of Docs](https://developers.google.com/season-of-docs): support for open source projects to improve their documentation.
 - [The Good Docs Project](https://www.thegooddocsproject.dev/): volunteers empowering developers to create good documentation.
 - [Top 5 Technical Writing Communities of 2024](https://hackmamba.io/blog/2024/03/top-5-technical-writing-communities-of-2024/): list of 2024's top 5 technical writing communities according to Hackmamba.
 - [Write the Docs](https://www.writethedocs.org/): a global community of people who care about documentation.
