@@ -434,7 +434,7 @@ If you don't see `systemd`, it means `systemd` is not enabled. Follow these step
 If you want to stop this behaviour, you can use this command:
 
 ```text
-$ sudo systemctl stop python-http-server.service
+$ sudo systemctl disable python-http-server.service
 ```
 
 Now, if you visit [http://localhost:3000/](http://localhost:3000/) in your browser, you should find an error page.
