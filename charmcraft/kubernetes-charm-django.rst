@@ -143,7 +143,7 @@ Now, run the Django app to verify that it works:
     Specifying ``0.0.0.0:8000`` allows for traffic outside of the Multipass VM.
 
     When you run the command for the first time, you will get a warning about unapplied migrations.
-    You can ignore this warning for now, as we are currently not performing any database operations. We will set this up in later sections.
+    You can ignore this warning for now, as we are currently not performing any database operations. We will set up a database in a later section.
 
 Now we need the private IP address of the Multipass VM. Outside of the
 Multipass VM, run:
