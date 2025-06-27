@@ -233,7 +233,7 @@ During installation, under the 'Additional Tasks' step, ensure you check the `Ad
 
 ![Visual Studio Code's "Additional Tasks" setup dialog with the "Add to Path" and "Register Code as an editor for supported file types" options checked.](https://github.com/ubuntu/wsl/blob/main/docs/tutorials/assets/vscode/aditional-tasks.png?raw=true)
 
-Open VSCode, navigate to the `Extensions` menu in the sidebar and find the `Remote Development` from MicroSoft.
+Open VSCode, navigate to the `Extensions` menu in the sidebar and find the `Remote Development` extension from Microsoft.
 
 ![Installation page for the Remote Development Visual Studio Code extension.](https://github.com/ubuntu/wsl/blob/main/docs/tutorials/assets/vscode/remote-extension.png?raw=true)
 
@@ -362,7 +362,7 @@ The following indicates that systemd is enabled on boot:
 systemd=true
 ```
 
-### Create a systemd service to server your web page
+### Create a systemd service to automatically serve your web page
 
 First, you need to create a service for `systemd` to run.
 
