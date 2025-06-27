@@ -181,6 +181,8 @@ $ explorer.exe .
 
 The command will open the current folder (indicated by `.`) by calling the Windows Explorer executable.
 
+If you opened `webTest`, you should see the `index.html` file that you created.
+
 ```{note}
 At any point, you can also find Ubuntu file systems under Linux in Windows Explorer; for example,
 the `webTest` folder can be found at `Linux > Ubuntu > home > yourusername > webTest`.
