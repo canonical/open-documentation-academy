@@ -211,9 +211,11 @@ Now click [http://localhost:8000/](http://localhost:8000/) and "Hello world" sho
 ![HTML web page displaying "hello world" in bold text](media/html-web-page-displaying-hello-world-in-bold-text.png)
 
 You can edit the HTML file to see the changes in real-time. With the server
-still running, open a second instance of the same Ubuntu distro. In that second
-instance, edit the text in `index.html`, save the file and refresh the browser
-to see the change.
+still running, open a second instance of the same Ubuntu distro.
+
+In that second instance, open the file for editing with `nano index.html` and
+make a small change. Save the file and refresh the browser to confirm the
+change.
 
 You can stop the server by pressing `ctrl + c` from within the terminal where it is running.
 
