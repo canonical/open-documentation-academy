@@ -77,7 +77,7 @@ distributions like Debian, from which Ubuntu is derived.
 You can install a version using a NAME from the output, for example:
 
 ```{code-block} text
-> wsl --install -d Ubuntu-24.04
+> wsl --install Ubuntu-24.04
 ```
 
 You will then see an indicator of the installation progress in the terminal:
@@ -94,20 +94,17 @@ At any time, you can run `wsl -l -v` to see all your currently installed WSL dis
   Ubuntu-20.04    Stopped         2
 * Ubuntu-24.04    Stopped         2
 ```
+After installation, your new Ubuntu instance will open.
 
 ### Log in to Ubuntu and run commands
 
-Open Windows Terminal and click `ctrl+shift+space` to display the Command Line Interfaces (CLIs) available on your machine.
-This includes any installed WSL distros.
-
-![Windows terminal showing different cli options](media/windows-terminal-showing-different-cli-options.png)
-
-Choose an Ubuntu distro and wait for it to boot.
-After booting, you will be asked for a username and password.
-Once entered, you will see a welcome message beginning with:
+Enter a username and password for the instance and
+you will be greeted with a welcome message:
 
 ```{code-block} text
 Welcome to Ubuntu...
+...
+...
 ```
 
 You can now confirm that you're in a Linux environment by running:
