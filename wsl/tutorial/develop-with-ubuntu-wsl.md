@@ -406,26 +406,26 @@ First, you need to create a service for `systemd` to run.
 4.  Enable the service to start at boot:
 
     ```
-    $ sudo systemctl enable python-http-server.service
+    $ sudo systemctl enable py-server.service
     ```
 
     You should see the following result:
 
     ```text
-    Created symlink /etc/systemd/system/multi-user.target.wants/python-http-server.service → /etc/systemd/system/
-    python-http-server.service.
+    Created symlink /etc/systemd/system/multi-user.target.wants/py-server.service → /etc/systemd/system/
+    py-server.service.
     ```
 
 5.  Start the service with this command:
 
     ```text
-    $ sudo systemctl start python-http-server.service
+    $ sudo systemctl start py-server.service
     ```
 
 6.  Check that the service is running:
 
     ```text
-    $ sudo systemctl status python-http-server.service
+    $ sudo systemctl status py-server.service
     ```
 
 Now restart your Ubuntu on WSL instance. Once you reopen the terminal, your web
@@ -435,7 +435,7 @@ page should already be running when you visit
 If you want to stop serving the web page, close Ubuntu or stop the service in the Ubuntu terminal:
 
 ```text
-$ sudo systemctl stop python-http-server.service
+$ sudo systemctl stop py-server.service
 ```
 
 ## Move files between Windows and Ubuntu
