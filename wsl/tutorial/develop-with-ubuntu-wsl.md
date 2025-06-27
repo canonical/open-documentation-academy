@@ -39,7 +39,10 @@ This command will enable the features necessary to run WSL and also install the 
 
 ### Install Ubuntu on WSL
 
-WSL supports a variety of Ubuntu releases. Check our [reference on the distributions](https://documentation.ubuntu.com/wsl/en/latest/reference/distributions/) for more information.
+WSL supports multiple Ubuntu releases, and you can install several Ubuntu
+instances on your machine at the same time. For more information about
+available distributions, see our [reference
+guide](https://documentation.ubuntu.com/wsl/en/latest/reference/distributions/).
 
 At any one time, multiple instances of Ubuntu on WSL can be installed on the same machine.
 
