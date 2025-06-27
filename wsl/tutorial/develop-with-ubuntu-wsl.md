@@ -375,7 +375,7 @@ First, you need to create a service for `systemd` to run.
     The `sudo` is necessary to give you elevated priviliges and
     you will need to type in your password before the file opens.
 
-2.  Paste the following into the editor:
+2.  Paste the following into the editor, taking care to modify `User` and `WorkingDirectory` as appropriate:
 
     ```text
     [Unit]
