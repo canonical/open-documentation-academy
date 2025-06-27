@@ -87,13 +87,6 @@ Installing: Ubuntu 24.04 LTS
 [==========================72.0%==========                 ]
 ```
 
-At any time, you can run `wsl -l -v` to see all your currently installed WSL distros, whether they are running and the version of WSL that they are using:
-
-```{code-block} text
-  NAME            STATE           VERSION
-  Ubuntu-20.04    Stopped         2
-* Ubuntu-24.04    Stopped         2
-```
 After installation, your new Ubuntu instance will open.
 
 ### Log in to Ubuntu and run commands
@@ -465,6 +458,31 @@ The image can then be used in your HTML:
 
 ```html
 <img src="image.png">
+```
+
+## Removing your instance
+
+You can check what instances you have installed currently with:
+
+```{code-block} text
+> wsl -l -v
+```
+
+This outputs the installed WSL distros, whether they are running, and the
+version of WSL that they are using:
+
+```{code-block} text
+  NAME            STATE           VERSION
+  Ubuntu-20.04    Stopped         2
+* Ubuntu-24.04    Stopped         2
+```
+
+Confirm that the instance you want to remove is `Stopped`.
+
+Then remove it with the following command:
+
+```{code-block} text
+> wsl --unregister Ubuntu-24.04
 ```
 
 ## Enjoy Ubuntu on WSL!
