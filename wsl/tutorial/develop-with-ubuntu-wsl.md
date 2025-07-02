@@ -335,7 +335,7 @@ We have been manually starting our server each time. What if we want the server
 to always run when we open the Ubuntu instance with our web project?
 
 A tool called `systemd` in Ubuntu manages background processes on boot.
-This enables the snap daemon (snapd) -- for example -- to run in the background in Ubuntu on WSL,
+This enables the [snap daemon (snapd)](https://snapcraft.io/docs) -- for example -- to run in the background in Ubuntu on WSL,
 so that software can be installed as snaps.
 
 Systemd is enabled by default on all supported versions of Ubuntu on WSL.
