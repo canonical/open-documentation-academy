@@ -339,7 +339,7 @@ This enables the [snap daemon (snapd)](https://snapcraft.io/docs) -- for example
 so that software can be installed as snaps.
 
 Systemd is enabled by default on all supported versions of Ubuntu on WSL.
-To check run the following within Ubuntu:
+To check, run the following within Ubuntu:
 
 ```text
 $ cat /etc/wsl.conf
