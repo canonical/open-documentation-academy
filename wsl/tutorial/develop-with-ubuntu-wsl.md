@@ -447,7 +447,7 @@ In Ubuntu on WSL, you can list those files with:
 ls /mnt/c/Users/<yourusername>/Downloads/
 ```
 
-To copy the image to your project directory:
+To copy the image to your project directory, use the `cp` command:
 
 
 ```{code-block} text
