@@ -44,8 +44,61 @@ A package manager is used to manage your application lifecycle; install, upgrade
 
 ## Display server
 
+This ensures that GUI applications can communicate with graphics-related hardware and input devices like the keyboard, mouse, touchscreen, etc.
+
+For example, the Ubuntu Server doesn't ship with a GUI; it runs in headless mode, with no GUI. But it can [install a GUI](https://documentation.ubuntu.com/aws/aws-how-to/instances/launch-ubuntu-desktop/#install-ubuntu-desktop-and-the-snap-store),
+and this is possible if your hardware supports graphics components.
+When the GUI is installed using `sudo apt-get install -y ubuntu-desktop`, it comes pre-installed with a display server, [desktop environment](#desktop-environment), etc.
+
+The display server consists of a communication protocol and a display server.
+
+- Protocol: Enables communication between the GUI applications and the display server. Examples are [X11](https://en.wikipedia.org/wiki/X_Window_System_core_protocol), [Wayland](https://wayland.freedesktop.org/docs/html/), etc.
+- Display server: Implements the protocol. Examples are [X.Org](https://www.x.org/wiki/), [Weston](https://wayland.pages.freedesktop.org/weston/), etc.
+
+Your choice of display server depends on your requirements. For example, you need smoother graphics rendering when gaming or running a modern GPU card.
+
 ## Services
+
+These are system applications running in the background. They often automatically start when Ubuntu Desktop boots. You can
+manage them using the `systemctl` command-line tool. These applications manage your Wi-Fi, Bluetooth, File System, and other settings.
+
+To list all your services, run:
+
+```shell
+systemctl list-units --all --type=service
+```
 
 ## Shell
 
+A shell is a command-line interface, a non-graphical way to interact with the operating system. You can access it by launching
+a Terminal application.
+
+For example, to see your working directory, run `pwd`. To list files in your current directory, you run `ls`.
+See [The Linux command line for beginners](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) for more information about Linux commands.
+
+A shell ends with `$` for non-root users and `#` for root users.
+
+There are several types of shells available:
+
+- Bourne Again Shell (bash):
+- shell (sh), etc.
+
+You can automate tasks in a shell. To do that, define your task in a shell script that ends with a `.sh` file type. Then, make the script executable and run it.
+For example, you can write a script that greets you with hello and displays the time.
+
 ## Kernel
+
+This ensures that the Ubuntu operating system can communicate with the entire hardware. It's stored in a disk drive and loaded into RAM when Ubuntu Desktop boots.
+
+Since Ubuntu Desktop is often run as a virtual machine, it means the host system has its own kernel, and so does Ubuntu Desktop.
+You can check the path to where the Ubuntu Desktop kernel binary is stored by running:
+
+```bash
+ls /boot/vmlinuz-$(uname -r)
+```
+
+There are several use cases of a kernel:
+
+- When a display server is launched, its protocol communicates with the kernel, which then directs the request to the GUI-related hardware (GPU, frame buffer, etc.).
+- Storage and CPU resources can be allocated to a launched application running [outside the kernel](https://en.wikipedia.org/wiki/User_space_and_kernel_space).
+- An application can be loaded to run inside the kernel using [Extended Berkeley Packet Filter (eBPF)](https://documentation.ubuntu.com/server/explanation/intro-to/ebpf/).
