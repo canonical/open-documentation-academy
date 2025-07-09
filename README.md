@@ -22,6 +22,7 @@ The first words of an issue's title will typically indicate the project it invol
 
 - [ADSys](https://documentation.ubuntu.com/adsys/en/stable/): Active Directory Group Policy client for Ubuntu
 - [Anbox Cloud](https://anbox-cloud.io/docs): Solution offering scalable Android in the cloud
+- [authd](https://documentation.ubuntu.com/authd/stable/): authentication service for Ubuntu that integrates with cloud identity providers
 - [Canonical Kubernetes](https://ubuntu.com/kubernetes/docs): the reference platform for Kubernetes on all major public clouds
 - [Charmed OpenStack](https://ubuntu.com/openstack/docs): our traditional enterprise cloud solution
 - [Juju](https://juju.is/docs):  open source orchestration engine
