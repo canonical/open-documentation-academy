@@ -148,6 +148,12 @@ html_context = {
     "display_contributors": True,
 }
 
+html_theme_options = {
+    # Short-term announcement about survey
+    # TODO: Remove this block by 2025-08-11
+    "announcement": "We'd like your input! <a href='https://docs.google.com/forms/d/e/1FAIpQLSc-uQ_jRxymv2ruYDsOudzbPogyHnYFS-f6grxJWWR0uJo75Q/viewform?usp=dialog' rel='nofollow' target='_blank'>Take the CODA check-in survey</a>.",
+}
+
 # Project slug; see https://meta.discourse.org/t/what-is-category-slug/87897
 #
 # TODO: If your documentation is hosted on https://docs.ubuntu.com/,
@@ -245,6 +251,9 @@ exclude_patterns = [
 
 html_css_files = [
     "css/pdf.css",
+    # For short-term announcement about survey
+    # TODO: Remove this block by 2025-08-11
+    "css/announcement.css",
 ]
 
 
