@@ -15,8 +15,9 @@ Ubuntu Desktop ships with the GNOME desktop environment by default. Other altern
 - MATE
 - Budgie
 
-Interestingly, Ubuntu Desktop comes in [different flavors](https://ubuntu.com/desktop/flavours), each with its desktop environment.
-For example, the Kubuntu flavor supports the KDE Plasma desktop environment.
+Ubuntu Desktop comes in [different flavors](https://ubuntu.com/desktop/flavours), each with its own desktop environment.
+Flavours are unique and opinionated offerings of Ubuntu, with their own visual style and applications.
+For example, the Kubuntu flavor uses the KDE Plasma desktop environment by default, while Ubuntu Studio is specially designed for content creation.
 
 A desktop environment consists of different independent components, including:
 
@@ -24,6 +25,14 @@ A desktop environment consists of different independent components, including:
 - **User app**: These are default applications in the desktop environment.
 - **File manager**: This is a UI environment for interacting with files.
 
+Ubuntu Server is essentially Ubuntu Desktop without the desktop environment and some specialised applications installed for server management. Some of these applications include:
+
+- OpenSSH server
+- ping
+
+However, you can [install a GUI](https://documentation.ubuntu.com/aws/aws-how-to/instances/launch-ubuntu-desktop/#install-ubuntu-desktop-and-the-snap-store),
+on Ubuntu Server, and this is possible if your hardware supports graphics components.
+	
 ## Applications
 
 These are comprised of system and user applications.
@@ -65,7 +74,7 @@ systemctl list-units --all --type=service
 
 ## Shell
 
-A shell is a command-line interface, a non-graphical way to interact with the operating system. You can access it by launching
+A shell is a program that uses a non-graphical way to interact with the operating system. You can access it by launching
 a Terminal application.
 
 For example, you can run the following:
@@ -83,7 +92,7 @@ There are several types of shells available, including:
 - fish
 - zsh
 
-You can automate tasks in a shell. To do that, define your task in a shell script that ends with a `.sh` file type. Then, make the script executable and run it.
+Tasks can be automated using shell scripts. To do that, define your task in a shell script that ends with a `.sh` file extension. Then, make the script executable and run it.
 For example, you can write a script that greets you with hello and displays the time.
 
 ## Kernel
