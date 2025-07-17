@@ -1,26 +1,24 @@
 # What is Ubuntu Desktop made of?
 
 Ubuntu Desktop has millions of users today. As a new user, you might be curious to know what Ubuntu Desktop is made of.
-Not necessarily a deep technical explanation, but a great overview of what it is. This is what this guide addresses.
-It explains what a desktop environment is, what applications are, how package managers work, and more.
+This guide explains the Ubuntu desktop environment, the types of applications it runs, how package managers work, and more.
 
 ## Desktop environment
 
 The Ubuntu Desktop environment provides a Graphical User Interface (GUI) for interacting with Ubuntu.
-Think of it like a theme but with more in-depth customization. Several desktop environments exist, and some are memory-intensive and others aren't.
-Ubuntu Desktop ships with the GNOME desktop environment by default. Other alternative environments are:
+The GUI determines the visual appearance of the desktop and the user experience of interacting with its tools and applications.
+Ubuntu Desktop ships with the GNOME desktop environment by default. Other alternative desktop environments include:
 
 - KDE Plasma
 - XFCE
 - LXQt
 - MATE
-- Budgie, etc.
+- Budgie
 
 Interestingly, Ubuntu Desktop comes in [different flavors](https://ubuntu.com/desktop/flavours), each with its desktop environment.
 For example, the Kubuntu flavor supports the KDE Plasma desktop environment.
 
-A desktop environment consists of different independent components that are customizable.
-Sometimes, a Linux user may choose to run only one component rather than the entire desktop environment to save memory. Anyway, some of these components are:
+A desktop environment consists of different independent components, including:
 
 - **Windows manager**: This manages a window that pops up when you open a terminal or any application at all.
 - **User app**: These are default applications in the desktop environment.
@@ -28,34 +26,31 @@ Sometimes, a Linux user may choose to run only one component rather than the ent
 
 ## Applications
 
-This comprises of system and user applications.
+These are comprised of system and user applications.
 
-- **System application**: The system applications interact with the operating system. Examples are App Center, Terminal, etc.
-- **User applications**: They perform day-to-day activities and have permissions to the operating system restricted. One example is Firefox.
+- **System application**: The system applications interact with the operating system. Examples are the App Center and GNOME Terminal.
+- **User applications**: They are used to perform day-to-day activities and have permissions to the operating system restricted. Examples are Firefox and Calculator.
 
 ## Package manager
 
-A package manager is used to manage your application lifecycle; install, upgrade, remove, etc. You can do this using a GUI or command line.
+A package manager is used to manage your application lifecycle, including install, upgrade, update and remove. You can do this using a GUI applications or with the command line.
 
-- **The GUI**: Ubuntu Desktop comes pre-installed with an application store called App Center or Snap Store. For example, you open it, search for an application, and install it.
-- **Command line**: This is the backend version of the GUI application store. It uses `apt` or `snap`, and the applications are downloaded from a repository; this may be one maintained by Canonical or a third party.
-  - **apt (Advanced Package Tool)**: This isn't Ubuntu-specific, but is used on all Debian-based systems like Ubuntu.
-  - **snap**: This is developed by Canonical.
+- **The GUI**: Ubuntu Desktop comes pre-installed with an application store called the App Center. It provides a graphical interface that allows you to search for apps and install them.
+- **Command line**: Packages can be installed from the terminal using `apt` or `snap` commands:
+  - **apt (Advanced Package Tool)**: This is the default package manager on all Debian-based systems like Ubuntu.
+  - **snap**: Another built-in package management tool on Ubuntu, which includes all dependencies in a contained environment called a "snap".
 
 ## Display server
 
-This ensures that GUI applications can communicate with graphics-related hardware and input devices like the keyboard, mouse, touchscreen, etc.
+This ensures that GUI applications can communicate with graphics-related hardware and input devices, including the keyboard, mouse, and touchscreen.
 
-For example, the Ubuntu Server doesn't ship with a GUI; it runs in headless mode, with no GUI. But it can [install a GUI](https://documentation.ubuntu.com/aws/aws-how-to/instances/launch-ubuntu-desktop/#install-ubuntu-desktop-and-the-snap-store),
-and this is possible if your hardware supports graphics components.
-When the GUI is installed using `sudo apt-get install -y ubuntu-desktop`, it comes pre-installed with a display server, [desktop environment](#desktop-environment), etc.
 
 The display server consists of a communication protocol and a display server.
 
-- Protocol: Enables communication between the GUI applications and the display server. Examples are [X11](https://en.wikipedia.org/wiki/X_Window_System_core_protocol), [Wayland](https://wayland.freedesktop.org/docs/html/), etc.
-- Display server: Implements the protocol. Examples are [X.Org](https://www.x.org/wiki/), [Weston](https://wayland.pages.freedesktop.org/weston/), etc.
+- Protocol: Enables communication between the GUI applications and the display server. Examples are [X11](https://en.wikipedia.org/wiki/X_Window_System_core_protocol) and [Wayland](https://wayland.freedesktop.org/docs/html/).
+- Display server: Implements the protocol. Examples are [X.Org](https://www.x.org/wiki/) and [Weston](https://wayland.pages.freedesktop.org/weston/).
 
-Your choice of display server depends on your requirements. For example, you need smoother graphics rendering when gaming or running a modern GPU card.
+Users of Ubuntu Desktop can currently choose between X11 and Wayland.
 
 ## Services
 
@@ -73,15 +68,20 @@ systemctl list-units --all --type=service
 A shell is a command-line interface, a non-graphical way to interact with the operating system. You can access it by launching
 a Terminal application.
 
-For example, to see your working directory, run `pwd`. To list files in your current directory, you run `ls`.
+For example, you can run the following:
+
+- `pwd`: Shows your working directory. 
+- `ls`: Lists files in your current directory.
 See [The Linux command line for beginners](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) for more information about Linux commands.
 
-A shell ends with `$` for non-root users and `#` for root users.
+The terminal prompt ends with `$` for non-root users and `#` for root users.
 
-There are several types of shells available:
+There are several types of shells available, including:
 
-- Bourne Again Shell (bash):
-- shell (sh), etc.
+- sh
+- bash
+- fish
+- zsh
 
 You can automate tasks in a shell. To do that, define your task in a shell script that ends with a `.sh` file type. Then, make the script executable and run it.
 For example, you can write a script that greets you with hello and displays the time.
@@ -97,7 +97,7 @@ You can check the path to where the Ubuntu Desktop kernel binary is stored by ru
 ls /boot/vmlinuz-$(uname -r)
 ```
 
-There are several use cases of a kernel:
+Examples of processes involving the kernel include:
 
 - When a display server is launched, its protocol communicates with the kernel, which then directs the request to the GUI-related hardware (GPU, frame buffer, etc.).
 - Storage and CPU resources can be allocated to a launched application running [outside the kernel](https://en.wikipedia.org/wiki/User_space_and_kernel_space).
