@@ -99,8 +99,8 @@ For example, you can write a script that greets you with hello and displays the 
 
 This ensures that the Ubuntu operating system can communicate with the entire hardware. It's stored in a disk drive and loaded into RAM when Ubuntu Desktop boots.
 
-Since Ubuntu Desktop is often run as a virtual machine, it means the host system has its own kernel, and so does Ubuntu Desktop.
-You can check the path to where the Ubuntu Desktop kernel binary is stored by running:
+You can run Ubuntu Desktop in a virtual machine, which means both your host (such as Windows or macOS) and the Ubuntu Desktop guest run separate kernels.
+Check the path to where the Ubuntu Desktop kernel binary is stored by running:
 
 ```bash
 ls /boot/vmlinuz-$(uname -r)
