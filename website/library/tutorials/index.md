@@ -10,6 +10,5 @@ Whether you are an experienced peer reviewer or someone wanting to give a peer r
 :titlesonly:
 :maxdepth: 1
 
-Craft a constructive peer review <craft-a-constructive-peer-review>:
-
+Craft a constructive peer review <craft-a-constructive-peer-review>
 ```
