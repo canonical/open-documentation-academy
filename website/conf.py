@@ -250,6 +250,7 @@ exclude_patterns = [
 
 html_css_files = [
     "css/pdf.css",
+    "css/header.css",
     # For short-term announcement about survey
     # TODO: Remove this block by 2025-08-11
     "css/announcement.css",

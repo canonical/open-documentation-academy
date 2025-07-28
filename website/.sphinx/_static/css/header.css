@@ -1,0 +1,33 @@
+/* Fix the odd looking navigation link (More Resources) on big screens */
+ul.p-navigation__links {
+  max-width: unset !important;
+}
+
+/* Work around to make the logo look better on small devices */
+@media (max-width: 550px) {
+  .p-logo-text {
+    color: transparent;
+    position: relative;
+  }
+  .p-logo-text::after {
+    content: "CODA";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color:white;
+  }
+}
+
+/* Hide the unwanted empty link inside the header for small devices */
+@media (max-width: 800px) {
+  .nav-ubuntu-com {
+    display: none;
+  }
+}
+
+/* Add margin to the right side of the header to improve UI */
+@media only screen and (min-width: 1310px) {
+    ul.p-navigation__links {
+        margin-right: calc(50% - 41em);
+    }
+}
