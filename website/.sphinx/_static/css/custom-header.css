@@ -6,7 +6,7 @@ ul.p-navigation__links {
 /* Work around to make the logo look better on small devices */
 @media (max-width: 550px) {
   .p-logo-text {
-    color: transparent;
+    color: transparent !important;
     position: relative;
   }
   .p-logo-text::after {
@@ -21,13 +21,13 @@ ul.p-navigation__links {
 /* Hide the unwanted empty link inside the header for small devices */
 @media (max-width: 800px) {
   .nav-ubuntu-com {
-    display: none;
+    display: none !important;
   }
 }
 
 /* Add margin to the right side of the header to improve UI */
 @media only screen and (min-width: 1310px) {
     ul.p-navigation__links {
-        margin-right: calc(50% - 41em);
+        margin-right: calc(50% - 41em) !important;
     }
 }
