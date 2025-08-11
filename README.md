@@ -18,6 +18,7 @@ Issues are identified and shared by participating projects at Canonical who cont
 
 ### Participating projects
 
+<!-- start-participating-projects -->
 The first words of an issue's title will typically indicate the project it involved. These include the following:
 
 - [ADSys](https://documentation.ubuntu.com/adsys/en/stable/): Active Directory Group Policy client for Ubuntu
@@ -44,6 +45,7 @@ The first words of an issue's title will typically indicate the project it invol
 - [Ubuntu WSL](https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/): Ubuntu terminal environment on Windows with the Windows Subsystem for Linux (WSL)
 
 This list will expand as more projects get involved. We're also happy to include projects outside of Canonical.
+<!-- end-participating-projects -->
 
 ### Contributor licence agreement
 
