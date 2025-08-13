@@ -43,6 +43,7 @@ The first words of an issue's title will typically indicate the project it invol
 - [Ubuntu Project Documentation](https://github.com/ubuntu/ubuntu-project-docs): manual for contributors to the Ubuntu Linux distribution
 - [Ubuntu Server documentation](https://github.com/canonical/ubuntu-server-documentation): Official documentation for the Ubuntu Server distribution
 - [Ubuntu WSL](https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/): Ubuntu terminal environment on Windows with the Windows Subsystem for Linux (WSL)
+- [Ubuntu Core](https://ubuntu.com/core): A minimal, containerized version of Ubuntu designed for secure, reliable, and IoT-focused deployments, featuring transactional updates and long-term support.
 
 This list will expand as more projects get involved. We're also happy to include projects outside of Canonical.
 <!-- end-participating-projects -->
