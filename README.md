@@ -1,4 +1,4 @@
-# Open Documentation Academy
+# repo Documentation Academy
 
 *Discover open source through documentation*
 
