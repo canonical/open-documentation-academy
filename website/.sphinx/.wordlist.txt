@@ -4,9 +4,16 @@ addons
 AGPLv
 API
 APIs
+artifact
+artifacts
 balancer
+Canonical's
 Charmhub
 CLI
+CODA
+CODA's
+codebase
+codebases
 DCO
 Diátaxis
 Dqlite
@@ -48,6 +55,7 @@ Permalink
 pre
 Quickstart
 ReadMe
+READMEs
 reST
 reStructuredText
 roadmap
