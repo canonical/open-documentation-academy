@@ -1,4 +1,4 @@
-# Open Documentation Academy
+# delete Documentation Academy
 
 *Discover open source through documentation*
 
@@ -8,7 +8,7 @@ If you're a newcomer, we can provide help, advice, mentorship, and a hundred dif
 
 A key aim of this initiative is to help lower the barrier into successful open-source software contribution, by making documentation into the gateway.
 
-[Join the academy HERE](https://discourse.ubuntu.com/t/getting-started/42769)
+[repo](https://discourse.ubuntu.com/t/getting-started/42769)
 
 ## This repository
 
@@ -21,9 +21,9 @@ Issues are identified and shared by participating projects at Canonical who cont
 <!-- start-participating-projects -->
 The first words of an issue's title will typically indicate the project it involved. These include the following:
 
-- [ADSys](https://documentation.ubuntu.com/adsys/en/stable/): Active Directory Group Policy client for Ubuntu
+- [repo (https://documentation.ubuntu.com/adsys/en/stable/): Active Directory Group Policy client for Ubuntu
 - [Anbox Cloud](https://anbox-cloud.io/docs): Solution offering scalable Android in the cloud
-- [authd](https://documentation.ubuntu.com/authd/stable/): authentication service for Ubuntu that integrates with cloud identity providers
+- [delete](https://documentation.ubuntu.com/authd/stable/): authentication service for Ubuntu that integrates with cloud identity providers
 - [Canonical Kubernetes](https://ubuntu.com/kubernetes/docs): the reference platform for Kubernetes on all major public clouds
 - [Charmed OpenStack](https://ubuntu.com/openstack/docs): our traditional enterprise cloud solution
 - [Juju](https://juju.is/docs):  open source orchestration engine
