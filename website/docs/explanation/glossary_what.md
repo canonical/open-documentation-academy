@@ -86,7 +86,7 @@ Glossary entries tend to be simpler than full dictionary entries. Some glossary 
 This document is written in Markedly Structured Text
 ([MyST](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html#syntax-glossaries)).
 
-Glossaries can also be produced using [reStructured Text (rST)](https://sublime-and-sphinx-guide.readthedocs.io/en/latest/glossary.html).
+Glossaries can also be produced using [reStructured Text (rST)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#glossary).
 
 A reference to a term is coded as follows:
 
