@@ -1,14 +1,23 @@
 # Develop with Ubuntu on WSL
 
-The easiest way to access your Ubuntu development environment in WSL is by using Visual Studio Code via the built-in `Remote` extension.
+The built-in tooling and Windows interoperability provided by Ubuntu on WSL
+make it a powerful development environment.
+
+In this tutorial, we guide you through a tiny web project to show what is
+possible with Ubuntu on WSL.
 
 ## What you will learn
 
-- How to install WSL and Ubuntu on WSL from the terminal
-- How to set up Visual Studio Code for remote development with Ubuntu on WSL
-- How to preview HTML served from an Ubuntu WSL instance in a native browser on Windows
-- How to share files between Windoes and Ubuntu WSL
-- How to run a service when a new Ubuntu WSL instance is created
+- Setting up Ubuntu on WSL on Windows
+- Using Ubuntu's built-in tools to create and edit files
+- Serving a simple web project from Ubuntu to a Windows browser
+- Using Visual Studio Code to develop with Ubuntu on WSL
+- Creating a service on Ubuntu to automatically serve a web page
+- Sharing files between Windows and Ubuntu
+
+```{note}
+This tutorial assumes limited knowledge of web dev and Linux.
+```
 
 ## What you will need
 
@@ -16,11 +25,11 @@ The easiest way to access your Ubuntu development environment in WSL is by using
 
 ## Install Ubuntu on WSL2
 
-The Windows Subsystem for Linux (WSL) must first be installed on your machine before you can use Ubuntu on WSL.
+Windows Subsystem for Linux (WSL) must first be installed on your machine before you can use Ubuntu on WSL.
 
 ### Install WSL
 
-Open a PowerShell prompt as an Administrator and run:
+Open PowerShell as an Administrator and run:
 
 ```{code-block} text
 > wsl --install
@@ -30,7 +39,12 @@ This command will enable the features necessary to run WSL and also install the 
 
 ### Install Ubuntu on WSL
 
-WSL supports a variety of Ubuntu releases. Check our [reference on the distributions](https://documentation.ubuntu.com/wsl/en/latest/reference/distributions/) for more information.
+WSL supports multiple Ubuntu releases, and you can install several Ubuntu
+instances on your machine at the same time. For more information about
+available distributions, see our [reference
+guide](https://documentation.ubuntu.com/wsl/en/latest/reference/distributions/).
+
+At any one time, multiple instances of Ubuntu on WSL can be installed on the same machine.
 
 There are multiple ways of installing Ubuntu on WSL, here we focus on using the terminal.
 For other installation methods, refer to our dedicated guide:
@@ -56,40 +70,37 @@ Install using 'wsl --install -d <Distro>'.
 
 ```
 
-Your list may be different once new distributions become available.
+This shows that the default Ubuntu release is already installed.
+It also shows other supported Ubuntu releases, in addition to other
+distributions like Debian, from which Ubuntu is derived.
 
 You can install a version using a NAME from the output, for example:
 
 ```{code-block} text
-> wsl --install -d Ubuntu-24.04
+> wsl --install Ubuntu-24.04
 ```
 
-You'll see an indicator of the installation progress in the terminal:
+You will then see an indicator of the installation progress in the terminal:
 
 ```{code-block} text
 Installing: Ubuntu 24.04 LTS
 [==========================72.0%==========                 ]
 ```
 
-Use `wsl -l -v` to see all your currently installed distros and the version of WSL they are using:
+After installation, your new Ubuntu instance will open.
+
+### Log in to Ubuntu and run commands
+
+Enter a username and password for the instance and
+you will be greeted with a welcome message:
 
 ```{code-block} text
-  NAME            STATE           VERSION
-  Ubuntu-20.04    Stopped         2
-* Ubuntu-24.04    Stopped         2
+Welcome to Ubuntu...
+...
+...
 ```
 
-### Confirm your WSL installation on Windows
-
-After installation, one of the ways to confirm your installation is to launch a WSL instance and run some Linux commands.
-
-Start by opening the Windows Terminal app on your machine. You can install it via Microsoft Store if it does not come pre-installed for you.
-
-You will see a down chevron icon. Click on it to display the Command Line Interfaces (CLIs) available on your machine. Select Ubuntu to start a WSL instance.
-
-![Windows terminal showing different cli options](media/windows-terminal-showing-different-cli-options.png)
-
-You can confirm that you're in a Linux environment by running:
+You can now confirm that you're in a Linux environment by running:
 
 ```{code-block} text
 $ uname -o
@@ -101,288 +112,260 @@ This should output:
 GNU/Linux
 ```
 
-Another command you can run is:
+You can also get information about the specific Ubuntu distro that you are using:
 
 ```{code-block} text
-$ pwd
+lsb_release -a
 ```
 
-This should output something like this:
+This will output the following for the Noble release.
 
 ```{code-block} text
-/home/yourUsername
+Distributor ID: Ubuntu
+Description:    Ubuntu 24.04.2 LTS
+Release:        24.04
+Codename:       noble
 ```
 
-## Creating and viewing files in your WSL development environment
+## Creating and viewing files in Ubuntu
 
-WSL allows you to create files and folders from the terminal interface, just like Linux. Let's see how to create files in WSL and interact with the files in a native Windows app such as the Windows Explorer.
+Let's see how to work with files using Linux tools and Windows Explorer.
 
-### Create an HTML file in WSL
+### Edit files and directories in the Ubuntu terminal
 
-First, you should create a new directory (call it **ubuntuWSL** for this tutorial) to save your file. Use the `mkdir` command:
+First, make a new directory called **webTest** using the `mkdir` command:
 
 ```{code-block} text
-$ mkdir ubuntuWSL
+$ mkdir webTest
 ```
 
-Next, you should navigate into the new directory:
+Next, change into that directory using `cd`:
 
 ```{code-block} text
-$ cd ubuntuWSL
+$ cd webTest
 ```
 
-After you complete the step above, you can create an HTML file by using `nano`. `nano` is a command-line text editor and it comes pre-installed with Ubuntu WSL. You can use it to quickly create and edit files right from your terminal. Type this command to create a `index.html` file from the terminal:
+Ubuntu on WSL comes pre-installed with several terminal-based tools for editing text, including Vim and Nano.
+
+Inside the `webTest` directory, type the following command to open a new `index.html` file in the Nano editor:
 
 ```{code-block} text
 $ nano index.html
 ```
 
-The command above will open a text editor in your WSL instance. Paste this HTML snippet into the editor:
+Paste this short snippet into the editor:
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Hello, World!</h1>
-  </body>
-</html>
+<h1>Hello world!</h1>
 ```
 
 Type `ctrl + s` to save your file and then `ctrl + x` to exit the edtior.
 
-To confirm that your file contains the HTML code you just pasted, use this command:
+### Browse your Ubuntu files graphically in Windows Explorer
 
-```{code-block} text
-cat index.html
-```
-
-You should see the content of your HTML file displayed on the terminal.
-
-### Browse your WSL files in Windows Explorer
-
-Interacting with files and folders from the terminal can be daunting, especially for a Windows user. It is possible to interact with your files in WSL from Windows Explorer by typing the command below:
+You can open files in Windows Explorer from Ubuntu by typing the command below:
 
 ```{code-block} text
 $ explorer.exe .
 ```
 
-The command will open up your current folder in Windows Explorer.
+The command will open the current folder (indicated by `.`) by calling the Windows Explorer executable.
 
-Alternatively, you can open the Windows Explorer normally and type the following to open up the Ubuntu WSL folders:
+If you opened `webTest`, you should see the `index.html` file that you created.
 
-```text
-\\wsl$\Ubuntu
+```{note}
+At any point, you can also find Ubuntu file systems under Linux in Windows Explorer; for example,
+the `webTest` folder can be found at `Linux > Ubuntu > home > yourusername > webTest`.
 ```
 
-This is demonstrated in the image below:
+Many Windows executables can be called from Ubuntu in this way.
+If you prefer to use Notepad for basic text editing in Ubuntu, you can use it too:
 
-![Windows Explorer showing a command to open wsl folders](media/windows-explorer-showing-a-command-to-open-wsl-folders.png)
-
-Once the folders are open, you can navigate to whichever folder you want such as the `ubuntuWSL` folder.
+```{code-block} text
+notepad.exe index.html
+```
 
 ### Serve static HTML in WSL with Python
 
-Python is a programming language that comes pre-installed with Ubuntu in WSL. You can use it for multiple things, including serving HTML files to your browser. In your command line, type the following command:
+Python comes pre-installed with Ubuntu on WSL.
+We can immediately take advantage of this by using it to serve our HTML in a single command.
+
+Make sure that you are in the `webTest` directory before running the following command to start a server:
 
 ```{code-block} python
 $ python3 -m http.server
 ```
 
-Now click [http://localhost:8000/](http://localhost:8000/) and your HTML will open in your default Windows browser.
+Now click [http://localhost:8000/](http://localhost:8000/) and "Hello world" should appear in your default Windows browser.
 
 ![HTML web page displaying "hello world" in bold text](media/html-web-page-displaying-hello-world-in-bold-text.png)
 
-To exit the server, type `ctrl + c` from within the Ubuntu terminal.
+You can edit the HTML file to see the changes in real-time. With the server
+still running, open a second instance of the same Ubuntu distro.
 
-## Remote development in Ubuntu with Visual Studio Code
+In that second instance, open the file for editing with `nano index.html` and
+make a small change. Save the file and refresh the browser to confirm the
+change.
 
-One of the advantages of WSL is that it can interact with the native Windows version of Visual Studio Code using its remote development extension.
+You can stop the server by pressing `ctrl + c` from within the terminal where it is running.
 
-To install Visual Studio Code, visit the Microsoft Store and search for Visual Studio Code.
+## Develop in Ubuntu with Visual Studio Code
 
-Then click **Install**.
+Visual Studio Code can be used to develop with Ubuntu on WSL using its powerful remote development extension.
+
+### Installation and configuration
+
+To install Visual Studio Code, visit the Microsoft Store and search for "Visual Studio Code".
 
 ![Installation page for Visual Studio Code on the Microsoft Store.](https://github.com/ubuntu/wsl/blob/main/docs/tutorials/assets/vscode/msstore.png?raw=true)
-
-Alternatively, you can install Visual Studio Code [from the web link](https://code.visualstudio.com/Download).
-
-![Visual Studio Code download page showing download options for Windows, Linux, and Mac.](https://github.com/ubuntu/wsl/blob/main/docs/tutorials/assets/vscode/download-vs-code.png?raw=true)
 
 During installation, under the 'Additional Tasks' step, ensure you check the `Add to PATH` option.
 
 ![Visual Studio Code's "Additional Tasks" setup dialog with the "Add to Path" and "Register Code as an editor for supported file types" options checked.](https://github.com/ubuntu/wsl/blob/main/docs/tutorials/assets/vscode/aditional-tasks.png?raw=true)
 
-Once the installation is complete, open Visual Studio Code.
-
-## Install the Remote Development Extension
-
-Navigate to the `Extensions` menu in the sidebar and search for `Remote Development`.
-
-This is an extension pack that allows you to open any folder in a container, remote machine, or in WSL. Alternatively, you can just install `Remote - WSL` via the terminal.
+Open VSCode, navigate to the `Extensions` menu in the sidebar and find the `Remote Development` extension from Microsoft.
 
 ![Installation page for the Remote Development Visual Studio Code extension.](https://github.com/ubuntu/wsl/blob/main/docs/tutorials/assets/vscode/remote-extension.png?raw=true)
 
-Once installed we can test it out by creating an example local web page and serve it with Python.
+### Develop in Ubuntu with Visual Studio Code
 
-## Build a web page with Ubuntu WSL in Visual Studio Code
-
-We'll use Visual Studio Code to modify the `index.html` file we created earlier. To get started, confirm that you're in the right directory with this command:
+In Ubuntu, make sure you are in `webTest` by printing the working directory:
 
 ```text
 $ pwd
 ```
 
-You should see this result:
-
-```text
-/home/yourUsername/ubuntuWSL
-```
-
-This confirms you are still in the ubuntuWSL folder. You should open up this folder in Visual Studio Code by using this command:
+Once inside `webTest`, open the project in VSCode:
 
 ```text
 $ code .
 ```
 
-The first time you do this, it will trigger a download for the necessary dependencies:
+The first time you do this, it will download a VSCode server that can communicate with the VSCode application.
 
-![Bash snippet showing the installation of Visual Studio Code Server's required dependencies.](https://github.com/ubuntu/wsl/blob/main/docs/tutorials/assets/vscode/downloading-vscode-server.png?raw=true)
+![Installation of Visual Studio Code Server after running the code command for the first time.](https://github.com/ubuntu/wsl/blob/main/docs/tutorials/assets/vscode/downloading-vscode-server.png?raw=true)
 
-Once complete, your native version of Visual Studio Code will open the folder.
+Once complete, your project will open in Visual Studio Code.
 
-Now in Visual Studio Code, open up the `index.html` file and replace it with this snippet:
+Visual Studio Code comes with many powerful development features and
+a large range of extensions.
+
+If you want to learn one way that it can help speed up development, you can try
+its built-in HTML snippets.
+
+First, delete everything in `index.html`. Now start typing `HTML` and when the
+popup appears choose `HTML:5`. This will generate HTML5 boilerplate, which
+improves the rendering, discoverability and responsiveness of web pages:
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Web Page</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>My Simple Web Page</header>
-    <div class="container">
-      <h2>Welcome!</h2>
-      <p>This is a basic webpage with some styling.</p>
-    </div>
-    <footer>&copy; 2025 My Website</footer>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
 </html>
 ```
 
-This new snippet adds some more content and a `link` tag for a CSS stylesheet.
+You can then tab through placeholder text. Tab twice to get to "Document" and change it to "To-do app".
+Now place your cursor within the body tags, type `h1+ul>li*3` and hit **enter** to generate:
 
-Create a new file in Visual Studio Code and call it `style.css`. Paste this code inside the file:
-
-```css
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  text-align: center;
-}
-header {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  font-size: 24px;
-}
-.container {
-  max-width: 800px;
-  margin: 20px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-footer {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
+```html
+...
+<body>
+    <h1></h1>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+</body>
+...
 ```
 
-The code above simply defines some styling rules for the HTML code.
+```(tip)
+The snippet `h1+ul>li*3` means:
 
-There are multiple ways to run your web page at this point, but we'll stick to using the Python command we used earlier.
+  Create a **h**eader tag **AND** an **u**nordered list,
+  and inside that list create three **li**st items
+```
 
-Since Visual Studio Code has a built-in terminal, we'll use it for our web page.
+An example of the completed HTML:
 
-Type `ctrl + j` to open up the terminal. It should open in a Ubuntu CLI by default. Here, you can run commnads the same way you run them in Windows Terminal. Type this command in the Visual Studio Code terminal:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do</title>
+</head>
+<body>
+    <h1>To-do list</h1>
+    <ul>
+      <l1>Learn Ubuntu</l1>
+      <l1>Use VSCode with Ubuntu</l1>
+      <l1>Make an app</l1>
+    </ul>
+</body>
+</html>
+```
+
+Now type `ctrl + j` to open up a terminal inside VSCode.
+Notice that this opens the project directory in an Ubuntu terminal.
+A server can be started just like before:
 
 ```text
 $ python3 -m http.server
 ```
 
-Next, visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/) to view the web page in your native browser. It should look like this:
+Visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/) to view the web page in your browser.
 
 ![HTML web page displaying a welcome message with a header and footer](media/html-web-page-displaying-a-welcome-message-with-a-header-and-footer.png)
 
-You can go on to create more complex projects in WSL and work on them in your native version of Visual Studio Code. Use `ctrl + c` to stop the server.
+Press `ctrl + c` in the terminal to stop the server.
 
-## Run a web page on WSL startup
+## Automatically serve a web page when Ubuntu starts
 
-One of the features of Ubuntu WSL is that it allows you to run services on startup. This means you can automatically start background processes like databases, web servers, and task schedulers when you open your WSL session. This can be achieved by using a tool called `systemd`.
+We have been manually starting our server each time. What if we want the server
+to always run when we open the Ubuntu instance with our web project?
 
-### Enable systemd in Ubuntu WSL
+A tool called `systemd` in Ubuntu manages background processes on boot.
+This enables the [snap daemon (snapd)](https://snapcraft.io/docs) -- for example -- to run in the background in Ubuntu on WSL,
+so that software can be installed as snaps.
 
-First, we should check if `systemd` is enabled in our WSL version. Type this command in your WSL instance from Windows Terminal:
+Systemd is enabled by default on all supported versions of Ubuntu on WSL.
+To check, run the following within Ubuntu:
 
 ```text
-$ ps -p 1 -o comm=
+$ cat /etc/wsl.conf
 ```
 
-If the command returns `systemd`, it means `systemd` is enabled and you can move to the next section.
+The following indicates that systemd is enabled on boot:
 
-If you don't see `systemd`, it means `systemd` is not enabled. Follow these steps to enable it:
+```text
+[boot]
+systemd=true
+```
 
-1. Type this command inside WSL:
+### Create a systemd service to automatically serve your web page
 
-   ```text
-   $ sudo nano /etc/wsl.conf
-   ```
+First, you need to create a service for `systemd` to run.
 
-   It will prompt you for your password. Type it and press `enter`. You will see a `nano` editor open in the terminal.
-
-2. Paste this inside the editor:
-
-   ```text
-   [boot]
-   systemd=true
-   ```
-
-   Once you have pasted it, type `ctrl + s` to save and `ctrl + x` to exit.
-
-3. Open Powershell and type the following to restart WSL:
-
-   ```text
-   > wsl --shutdown
-   ```
-
-4. Reopen your Ubuntu CLI from Windows Terminal and type `ps -p 1 -o comm=`. This time, you should see `systemd` printed in the terminal.
-
-### Create a systemd service to run your web page
-
-`systemd` is Ubuntu's default system manager. It runs necessary services whenever your open an Ubuntu WSL instance. To make your web page run on startup, you need to create a file for `systemd` to run. Follow these steps to make your web page run on startup:
-
-1.  Create a new `systemd` service file called `python-http-server`:
+1.  Create a new `systemd` service file called `py-server`:
 
     ```text
-    $ sudo nano /etc/systemd/system/python-http-server.service
+    $ sudo nano /etc/systemd/system/py-server.service
     ```
 
-    You might need to type in your password at this stage. After that, it should open a `nano` editor.
+    The `sudo` is necessary to give you elevated priviliges and
+    you will need to type in your password before the file opens.
 
-2.  Paste the following inside the editor:
+2.  Paste the following into the editor, taking care to modify `User` and `WorkingDirectory` as appropriate:
 
     ```text
     [Unit]
@@ -391,8 +374,8 @@ If you don't see `systemd`, it means `systemd` is not enabled. Follow these step
 
     [Service]
     Type=simple
-    User=yourusername
-    WorkingDirectory=/home/yourUsername/ubuntuWSL
+    User=<replacewithyourusername>
+    WorkingDirectory=/home/<replacewithyourusername>/webTest
     ExecStart=/usr/bin/python3 -m http.server 3000
     Restart=on-failure
 
@@ -401,7 +384,7 @@ If you don't see `systemd`, it means `systemd` is not enabled. Follow these step
     WantedBy=multi-user.target
     ```
 
-    In the snippet above, replace `yourUsername` with your actual username. All the code is doing is to tell `systemd` to navigate to the `ubuntuWSL` folder and run `python3 -m http.server` on port 3000, whenever you open a WSL instance.
+    Port 3000 is specified here so as not to block the default 8000 port.
     Type `ctrl + s` to save and `ctrl + x` to exit the editor.
 
 3.  Reload `systemd` so it can recognize this new service:
@@ -413,88 +396,102 @@ If you don't see `systemd`, it means `systemd` is not enabled. Follow these step
 4.  Enable the service to start at boot:
 
     ```
-    $ sudo systemctl enable python-http-server.service
+    $ sudo systemctl enable py-server.service
     ```
 
     You should see the following result:
 
     ```text
-    Created symlink /etc/systemd/system/multi-user.target.wants/python-http-server.service → /etc/systemd/system/
-    python-http-server.service.
+    Created symlink /etc/systemd/system/multi-user.target.wants/py-server.service → /etc/systemd/system/
+    py-server.service.
     ```
 
 5.  Start the service with this command:
 
     ```text
-    $ sudo systemctl start python-http-server.service
+    $ sudo systemctl start py-server.service
     ```
 
-6.  Restart your WSL instance by closing and opening the Windows Terminal app. Once you open the terminal back, your web page should already be running. You can confirm this by visiting [http://localhost:3000/](http://localhost:3000/) in your native browser. You should see your web page running
+6.  Check that the service is running:
 
-If you want to stop this behaviour, you can use this command:
+    ```text
+    $ sudo systemctl status py-server.service
+    ```
 
-```text
-$ sudo systemctl stop python-http-server.service
-```
+Now restart your Ubuntu on WSL instance. Once you reopen the terminal, your web
+page should already be running when you visit
+[http://localhost:3000/](http://localhost:3000/).
 
-Now, if you visit [http://localhost:3000/](http://localhost:3000/) in your browser, you should find an error page.
-
-## Access your Windows files in WSL
-
-Sometimes you might have created a project in Windows and then realize you need to run some Linux commands, or install some Linux-specific packages. Or maybe you downloaded an image on Windows and now you need it in WSL.
-
-It is possible to share files between your native Windows environment and WSL. You can either copy the files from your Windows environment to WSL or run the files in a WSL environment without copying them. We'll explore both options.
-
-### Copy files from Windows to WSL
-
-To demonstrate this, you should select a file to copy, preferably an image file. Open this file inside your Windows Explorer and copy it. The next step is to paste it inside WSL. We will paste this file inside our `ubuntuWSL` folder.
-
-Inside your Windows Explorer, towards the bottom left, you should see a folder called `Linux`. Open this folder and navigate to the `Ubuntu` folder inside it. You will find many folders here. Select `home` and open it up.
-By default, the `home` folder contains a folder with your username. Open it up and you should find the `ubuntuWSL` folder among others. Paste your image into the `ubuntuWSL` folder.
-
-![Windows Explorer showing the folders in Ubuntu WSL](media/windows-Explorer-showing-the-folders-in-ubuntu-wsl.png)
-
-Now, if you check the `ubuntuWSL` folder in Visual Studio Code, you will find your image. You can use this image in your project.
-
-### Run Windows files directly in WSL without copying
-
-To demonstrate this, we'll create a folder in Windows and modify it in WSL.
-
-To get started, create a new folder on your desktop. You can call it `ubuntuWindows`.
-
-Next, we'll open a new WSL instance in Windows Terminal. To do this, use the chevron icon at the top and select `Ubuntu`.
-
-Now we can access the `ubuntuWindows` folder by typing the following command:
+If you want to stop serving the web page, close Ubuntu or stop the service in the Ubuntu terminal:
 
 ```text
-$ /mnt/c/users/yourUsername/desktop/ubuntuWindows
+$ sudo systemctl stop py-server.service
 ```
 
-In the command above, change `yourUsername` to your Windows username. Also, if your Windows drive is not called `c`, change the `c` in the command to the appropriate drive name.
+## Move files between Windows and Ubuntu
 
-If you executed the command properly, your folder should be availabe inside WSL. Now you can modify it.
+Windows interoperability is a core feature of Ubuntu on WSL.
+This makes it easy to work across the two file systems.
 
-Create a new file inside this folder. Call it `test.html`:
+### Copy a file from Windows in the Ubuntu terminal
 
-```text
-nano test.html
+WSL automatically mounts Windows drives under `/mnt/`.
+
+Download any image file you can find. Let's assume it's called `image.png`.
+
+By default, this will be downloaded to the `Downloads` folder in your C drive on Windows.
+
+In Ubuntu on WSL, you can list those files with:
+
+```{code-block} text
+ls /mnt/c/Users/<yourusername>/Downloads/
 ```
 
-This will open up a `nano` editor where you can paste the following:
+To copy the image to your project directory, use the `cp` command:
+
+
+```{code-block} text
+cp /mnt/c/Users/<windowsuser>/Downloads/image.png /home/<ubuntuuser>/webTest/
+```
+
+The image can then be used in your HTML:
 
 ```html
-<h1>hello</h1>
+<img src="image.png">
 ```
 
-Save with `ctrl + s` and exit with `ctrl + x`.
+## Removing your instance
 
-Now if you view your `ubuntuWindows` folder in Windows, you will find the `test.html` file.
+You can check what instances you have installed currently with:
 
-All of this is possible because WSL automatically mounts your Windows drives under `/mnt/`.
+```{code-block} text
+> wsl -l -v
+```
+
+This outputs the installed WSL distros, whether they are running, and the
+version of WSL that they are using:
+
+```{code-block} text
+  NAME            STATE           VERSION
+  Ubuntu-20.04    Stopped         2
+* Ubuntu-24.04    Stopped         2
+```
+
+Confirm that the instance you want to remove is `Stopped`.
+
+Then remove it with the following command:
+
+```{code-block} text
+> wsl --unregister Ubuntu-24.04
+```
 
 ## Enjoy Ubuntu on WSL!
 
-In this tutorial, we’ve shown you how to connect the Windows version of Visual Studio Code to your Ubuntu on WSL filesystem and launch a basic web page served by Python. You have also seen how to share files between both Windows and WSL environments. Finally, we showed you how to start a service when a new Ubuntu instance is started by using `systemd`.
+In this tutorial, we set up Ubuntu on WSL as a Linux development environment on Windows.
+We connected Visual Studio Code to Ubuntu on WSL and used it to make a HTML web page that could be served with Python.
+With the systemd tool in Ubuntu, we automated the process of serving the web page each time the Ubuntu instance starts.
+Lastly, we used standard Linux commands to move files between Windows and Ubuntu.
+
 
 We hope you enjoy using Ubuntu inside WSL. Don’t forget to check out our other tutorials for more tips on how to use WSL.
 

@@ -148,6 +148,12 @@ html_context = {
     "display_contributors": True,
 }
 
+html_theme_options = {
+    # Short-term announcement about survey
+    # TODO: Remove this block by 2025-08-11
+    "announcement": "We'd like your input! <a href='https://docs.google.com/forms/d/e/1FAIpQLSc-uQ_jRxymv2ruYDsOudzbPogyHnYFS-f6grxJWWR0uJo75Q/viewform?usp=dialog' rel='nofollow' target='_blank'>Take the CODA check-in survey</a>.",
+}
+
 # Project slug; see https://meta.discourse.org/t/what-is-category-slug/87897
 #
 # TODO: If your documentation is hosted on https://docs.ubuntu.com/,
@@ -189,6 +195,7 @@ redirects = {}
 linkcheck_ignore = [
     "http://127.0.0.1:8000",
     "https://matrix.to/#/#documentation:ubuntu.com",
+    r"https://github\.com/canonical/open-documentation-academy/commits\?author=.*",
 ]
 
 
@@ -208,7 +215,6 @@ linkcheck_anchors_ignore_for_url = [r"https://github\.com/.*"]
 #       substitution, deflist, linkify
 
 # myst_enable_extensions = set()
-
 
 # Custom Sphinx extensions; see
 # https://www.sphinx-doc.org/en/master/usage/extensions/index.html
@@ -244,6 +250,9 @@ exclude_patterns = [
 
 html_css_files = [
     "css/pdf.css",
+    # For short-term announcement about survey
+    # TODO: Remove this block by 2025-08-11
+    "css/announcement.css",
 ]
 
 

@@ -2,6 +2,8 @@
 
 All events related to the Documentation Academy can be found in the [Documentation events calendar](https://calendar.google.com/calendar/ical/c_fa68c19aa0cf8aa5ecd73266f6c4d9e94a52053c875f36fd7cc054439b923f33%40group.calendar.google.com/public/basic.ics).
 
+(community-hour)=
+
 ## Community Hour
 
 **We host a [Community Hour](https://discourse.ubuntu.com/t/community-hour/42771) every week on a Friday, 16:00 UTC.**
@@ -53,3 +55,12 @@ We record our Community Hour meeting if there's a presentation or a session we t
 |18/10/24 | `Shane` | [Recipes and Software](https://www.youtube.com/watch?v=PW_gWv6OysM)|
 |06/12/24 | `Teodora, Joost De Cock` | [The inspiration behind freesewing.org](https://www.youtube.com/watch?v=SWyzQ3ChZ1I)|
 |13/12/24 | `David Ekete` | [Interactive RST and working with CODA](https://www.youtube.com/watch?v=_7pKdieSt74)|
+
+See {ref}`community-hour-discussions-and-presentations` for summaries of each Community Hour.
+
+```{toctree}
+:hidden:
+:maxdepth: 1
+
+Community Hour discussions <community-hour-discussions/index>
+```

@@ -18,10 +18,12 @@ Issues are identified and shared by participating projects at Canonical who cont
 
 ### Participating projects
 
+<!-- start-participating-projects -->
 The first words of an issue's title will typically indicate the project it involved. These include the following:
 
 - [ADSys](https://documentation.ubuntu.com/adsys/en/stable/): Active Directory Group Policy client for Ubuntu
 - [Anbox Cloud](https://anbox-cloud.io/docs): Solution offering scalable Android in the cloud
+- [authd](https://documentation.ubuntu.com/authd/stable/): authentication service for Ubuntu that integrates with cloud identity providers
 - [Canonical Kubernetes](https://ubuntu.com/kubernetes/docs): the reference platform for Kubernetes on all major public clouds
 - [Charmed OpenStack](https://ubuntu.com/openstack/docs): our traditional enterprise cloud solution
 - [Juju](https://juju.is/docs):  open source orchestration engine
@@ -38,11 +40,13 @@ The first words of an issue's title will typically indicate the project it invol
 - [Ubuntu Developer Guide](https://github.com/canonical/ubuntu-for-developers-docs): guide for developers using Ubuntu Desktop as a development platform
 - [ubuntu-image](https://github.com/canonical/ubuntu-image): Tool for generating bootable Ubuntu images
 - [Ubuntu on public cloud](https://documentation.ubuntu.com/public-cloud/en/latest/): Optimised Ubuntu images for partner clouds
-- [Ubuntu Packaging Guide](https://github.com/canonical/ubuntu-packaging-guide): manual for Ubuntu package maintainers
+- [Ubuntu Project Documentation](https://github.com/ubuntu/ubuntu-project-docs): manual for contributors to the Ubuntu Linux distribution
 - [Ubuntu Server documentation](https://github.com/canonical/ubuntu-server-documentation): Official documentation for the Ubuntu Server distribution
 - [Ubuntu WSL](https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/): Ubuntu terminal environment on Windows with the Windows Subsystem for Linux (WSL)
+- [Ubuntu Core](https://ubuntu.com/core): A minimal, secure, containerized Ubuntu for IoT and embedded devices with transactional updates.
 
 This list will expand as more projects get involved. We're also happy to include projects outside of Canonical.
+<!-- end-participating-projects -->
 
 ### Contributor licence agreement
 
