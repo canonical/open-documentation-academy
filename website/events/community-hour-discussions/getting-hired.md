@@ -20,7 +20,7 @@ This presentation was developed with valuable input and feedback from:
 
 ---
 
-Finding a job as a technical writer can be challenging, so it's important to view it as a project. Focus on the immediate steps and remember it’s a marathon, not a sprint.
+Finding a job as a technical writer can be challenging, so it’s important to view it as a project. Focus on the immediate steps, and remember it’s a marathon, not a sprint. Keep going, and never forget that in the end, you only need one successful interview process.
 
 ## Prerequisites for the job search
 
@@ -32,7 +32,7 @@ Your core skill is versatile writing in a professional setting. To improve at th
 
 Beyond writing, a solid grasp of information architecture systems like [Diátaxis](https://diataxis.fr/) and [Information Mapping](https://informationmapping.com/) will help you organize and present information effectively.
 
-You also need proficiency with technology, which comes in two forms. First, adopt a _T-shaped_ approach to knowledge, starting with general knowledge and then developing a few areas of expertise. Second, understand your writing tool stack. The two main stacks are docs-as-code and the [Darwin Information Typing Architecture (DITA)](https://en.wikipedia.org/wiki/Darwin_Information_Typing_Architecture). Some coding knowledge helps, but it’s not a requirement.
+You also need proficiency with technology, which comes in two forms. First, adopt a _T-shaped_ approach to knowledge, starting with general knowledge and then developing a few areas of expertise. Second, understand your writing tool stack. The two main stacks are the [Documentation as code approach](https://www.youtube.com/watch?v=AVNfH99KiME) and the [Darwin Information Typing Architecture (DITA)](https://en.wikipedia.org/wiki/Darwin_Information_Typing_Architecture). Some coding knowledge helps, but it’s not a requirement.
 
 Finally, soft skills are important as technical writing requires you to work with people, get your points across, and listen to others.
 
@@ -40,7 +40,7 @@ Finally, soft skills are important as technical writing requires you to work wit
 
 Few people know what to look for in a technical writer, so employers often focus on qualities such as excellence, leadership, initiative, and confidence. You can develop these qualities over time through volunteering and community work.
 
-You must also have self-respect by not settling for jobs you dislike, as they will make you miserable in the long term. Take pride in your work, and remember that ultimately, you only need one job.
+You must also have self-respect by not settling for jobs that undervalue your skills or that you dislike, as they will make you miserable in the long term. Technical writing is a complex, skill-intensive profession that takes years to master, so take pride in your work.
 
 ### Portfolio
 
@@ -66,20 +66,26 @@ Avoid sounding desperate for the job. Instead, explain the value you bring to th
 
 ### Research and preparation
 
-If your application is successful, be prepared to answer questions about any claims you make on your resume. Make sure you understand the job requirements and expectations, and take time to research the company’s business, culture, and values. For a remote interview, confirm that your computer is working properly and that your internet connection is stable. Finally, double-check the scheduled time and be punctual.
+If your application is successful, be prepared to answer questions about any claims you make on your resume. Make sure you understand the job requirements and expectations, and take time to research the company’s business, culture, and values. Review the company’s existing documentation and think about ways it could be improved, as this demonstrates your critical thinking and potential contributions. Also, look up the interviewers and prepare meaningful questions for them to show genuine interest and engagement.
+
+Finally, double-check the scheduled time and be punctual. For a remote interview, confirm that your computer is working properly and that your internet connection is stable.
 
 ### Interviewing
 
-Stay confident without being arrogant, and adapt to the interview style, whether panel or HR. Rephrase questions when you need clarity and ask thoughtful ones that reflect your research. Then explore what it’s like to work there, and pay close attention to vague or unclear responses.
+Stay confident without being arrogant, and adapt to the interview style, whether panel or human resources. Rephrase questions when you need clarity and ask thoughtful ones that reflect your research. Then explore what it’s like to work there, and pay close attention to vague or unclear responses.
+
+### Key outtake
+
+Start preparing and applying now, there is no better time.
 
 ## Further reading and resources
 
 * [NO IDEA BLOG](https://www.noidea.dog/glue)
 * [Write the Docs Slack](https://www.writethedocs.org/slack/)
 * [API The Docs](https://apithedocs.org/)
-* [API the Docs conference YouTube recordings](https://www.youtube.com/channel/UCEBh-gof8_hcjXvZf2HaN_g)
+* [API The Docs conference talk recordings and podcast episodes](https://www.youtube.com/channel/UCEBh-gof8_hcjXvZf2HaN_g)
 * [I’d Rather be Writing blog](https://idratherbewriting.com/)
 * [Sustain podcast](https://podcast.sustainoss.org/)
-*  [Changelog podcast](https://changelog.com/podcast)
+* [Changelog podcast](https://changelog.com/podcast)
 * [University of Oxford](https://www.ox.ac.uk/sites/files/oxford/media_wysiwyg/University%20of%20Oxford%20Style%20Guide.pdf)
 * [Inclusive Language Guide](https://policy-practice.oxfam.org/resources/inclusive-language-guide-621487/)
