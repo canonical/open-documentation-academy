@@ -49,5 +49,6 @@ This section is currently under development. If you'd like to contribute, please
 
 Reference <reference/index>
 Tutorials <tutorials/index>
+Explanation <explanation/index>
 
 ```
