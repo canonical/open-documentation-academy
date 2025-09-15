@@ -5,12 +5,14 @@ Anbox
 AngularJS
 AsciiDoc
 backends
+Benedetti's
 bootable
 capitalization
 Center
 Ceph
 CLA
 connectionless
+containerized
 Coursera
 Ctrl
 Datagram
@@ -21,7 +23,9 @@ DITA
 DNS
 docsacademy
 DTLS
+Fabrizio
 FC
+Ferri
 Fiber
 freesewing
 GnuTLS
