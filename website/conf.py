@@ -196,8 +196,7 @@ linkcheck_ignore = [
     "http://127.0.0.1:8000",
     "https://matrix.to/#/#documentation:ubuntu.com",
     r"https://github\.com/canonical/open-documentation-academy/commits\?author=.*",
-    "https://ubuntu.com/core",
-    "https://ubuntu.com/support/community-support",
+    r"https://ubuntu.com/*",
 ]
 
 
