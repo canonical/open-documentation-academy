@@ -15,5 +15,6 @@ You can also watch the original videos to explore the topics in depth.
 :maxdepth: 1
 
 Documenting a new project <documenting-new-project>
+Getting hired as a technical writer <getting-hired>
 
 ```
