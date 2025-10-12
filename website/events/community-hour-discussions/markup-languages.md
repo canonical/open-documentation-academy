@@ -34,7 +34,7 @@ Markdown has some limitations that affect larger documentation projects. Some of
 * Markdown lacks built-in `include` functionality, which limits the ability to reuse content across multiple files without external tools or extensions.
 * Advanced formatting often requires HTML embedding, making content harder to maintain.
 
-Despite the limitations, Markdown now has different flavours to address some of these issues. Each flavour adds new features but also creates potential compatibility problems between implementations. Some of these flavours include:
+Despite the limitations, Markdown now has different flavours to address some of these issues. Each flavour adds new features but also creates potential compatibility problems between implementations:
 
 * GitHub Flavoured Markdown (GFM)
 * MultiMarkdown
@@ -88,7 +88,7 @@ DocBook targets traditional publishing workflows for books and articles. It opti
 
 ### S1000D
 
-S1000D serves specialised compliance requirements in regulated industries. The format follows rigid structural requirements and supports comprehensive compliance documentation needs. Teams in regulated environments often find S1000D mandatory rather than optional. The format includes its own version control systems and data models for managing complex technical documentation that must meet specific industry formats.
+S1000D serves specialised compliance requirements in regulated industries. The format follows rigid structural requirements and supports comprehensive compliance documentation needs. Teams in regulated environments often find S1000D mandatory rather than optional. The format includes its own version control systems (VCS) and data models for managing complex technical documentation that must meet specific industry formats.
 
 ## The docs-as-code approach
 
