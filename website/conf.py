@@ -197,6 +197,7 @@ linkcheck_ignore = [
     "https://matrix.to/#/#documentation:ubuntu.com",
     r"https://github\.com/canonical/open-documentation-academy/commits\?author=.*",
     r"https://ubuntu.com/*",
+    r"https://discourse.ubuntu.com/*",
 ]
 
 
