@@ -1,5 +1,18 @@
 # Overview of Documentation Community Hour[ODH-015]: Documentation as Code
 
+Table of Content
+- [1. Introduction](#Introduction)
+- [2. What is *Docs as Code*?](#What-is-Docs-as-Code?)
+- [3. Workflow](#Workflow)
+	* [3.1 The Good](#The-Good)
+	* [3.2 The Bad and the Ugly](#The-Bad-and-the-Ugly)
+	* [3.3 Practical Tips](#Practical-Tips)
+- [4. What else ...](#What-else-...)
+  	* [4.1 Upcoming Innovations](#Upcoming-Innovations)
+	* [4.2 Other Callouts](#Other-Callouts)
+
+---
+
 ## Introduction
 
 Many of us in tech have experienced the challenge of writing both code and documentation, often favoring code over documentation. The philosophy of Documentation as Code, more commonly known as _**Docs as Code**_, bridges this gap by treating documentation with the similar tools, processes, and respect as source code. In this session, Robert Krátký explains how this approach streamlines documentation development by integrating it closely with source code in software projects.
@@ -30,8 +43,6 @@ We can further understand this through the typical lifecycle of documentation wh
 | Issue Tracking       | JIRA, Bugzilla, Mantis                    | Manage bugs and improvements                      |
 | Testing & Validation | Scripts, Linters, Spell Checkers          | Borrow software testing concepts to ensure quality and reusability |
 | Publishing           | Static Site Generators, CMS               | Automated hosting and updates                      |
-
----
 
 ### The Good
 
@@ -81,6 +92,4 @@ In the *Docs as Code* approach:
 2. Automation is being developed to verify Contributor License Agreement(CLA) before contributors can submit pull requests to the Open Documentation Repository.
 3. The Open Documentation schedule is available on the Forum to plan future Office Hour discussion topics.
 4. Next week’s session will feature Nick Veitch discussing *Vale* for testing documentation.
-
----
 
