@@ -4,7 +4,7 @@
 ## Blogs
 
 - [I'd Rather Be Writing](https://idratherbewriting.com/): Tom Johnson’s blog on technical writing, docs-as-code, and APIs.
-- [Passo uno](https://passo.uno/): Fabrizio Ferri Benedetti’s blog on technical writing, documentation, and language.
+- [Passo uno](https://passo.uno/): Fabrizio Ferri Benedetti's blog on technical writing, documentation, and language.
 
 ## Community
 

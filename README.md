@@ -25,13 +25,14 @@ The first words of an issue's title will typically indicate the project it invol
 - [Anbox Cloud](https://anbox-cloud.io/docs): Solution offering scalable Android in the cloud
 - [authd](https://documentation.ubuntu.com/authd/stable/): authentication service for Ubuntu that integrates with cloud identity providers
 - [Canonical Kubernetes](https://ubuntu.com/kubernetes/docs): the reference platform for Kubernetes on all major public clouds
+- [Charmed Ceph](https://ubuntu.com/ceph/docs): a Juju-native way of deploying a Ceph cluster
 - [Charmed OpenStack](https://ubuntu.com/openstack/docs): our traditional enterprise cloud solution
 - [Juju](https://juju.is/docs):  open source orchestration engine
 - [LXD](https://documentation.ubuntu.com/lxd/en/latest/): open source container and VM management at any scale
 - [Landscape](https://ubuntu.com/landscape/docs): Ubuntu systems management, monitoring and administration platform
 - [Launchpad](https://documentation.ubuntu.com/launchpad/en/latest/): software development lifecycle and collaboration platform
 - [MAAS](https://maas.io/docs): bare metal cloud with on-demand servers
-- [MicroCeph](https://canonical-microceph.readthedocs-hosted.com/en/squid-stable/): the easiest way to get up and running with Ceph
+- [MicroCeph](https://canonical-microceph.readthedocs-hosted.com/en/squid-stable/): a Ceph orchestration tool; the easiest way to deploy and manage a Ceph cluster
 - [MicroStack](https://microstack.run/docs): our next generation enterprise cloud solution
 - [Multipass](https://discourse.ubuntu.com/t/multipass-documentation/8294): tool to generate cloud-style Ubuntu virtual machines
 - [Netplan](https://github.com/canonical/netplan): network configuration for various backends
