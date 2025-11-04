@@ -60,6 +60,7 @@ As open source culture has become widespread and global, its champions must thin
 The primary operational goal of CODA is to make open source approachable. Our objective is to provide a model and a space for open source and documentation.
 
 We focus on documentation contributions because they present an opportunity for the public to share their direct experience with software to its maintainers, it has the lowest barrier to entry, it is low risk, and because documentation is always evolving and growing in projects. By contributing to documentation, members get closer to the software itself, which is good preparation if they want to engage as developers, too.
+
 CODA delivers two programs to fulfil the main objective.
 
 
