@@ -87,5 +87,5 @@ Start preparing and applying now, there is no better time.
 * [I’d Rather be Writing blog](https://idratherbewriting.com/)
 * [Sustain podcast](https://podcast.sustainoss.org/)
 * [Changelog podcast](https://changelog.com/podcast)
-* [University of Oxford Style Guide 2025](https://www.ox.ac.uk/sites/files/oxford/aUniversity_of_Oxford_Style_Guide_2025.docx)
+* [University of Oxford Style Guide](https://www.ox.ac.uk/public-affairs/style-guide)
 * [Inclusive Language Guide](https://policy-practice.oxfam.org/resources/inclusive-language-guide-621487/)
