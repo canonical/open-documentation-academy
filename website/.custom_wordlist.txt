@@ -35,6 +35,7 @@ Ferri
 Fiber
 freesewing
 GFM
+GitLab
 GnuTLS
 golang
 Hackmamba
@@ -80,6 +81,7 @@ specializes
 SSL
 TLS
 UDP
+uniquenesses
 VCS
 WSL
 XML
