@@ -39,11 +39,11 @@ The Open Documentation Academy is sponsored by [Canonical Ltd](https://canonical
 :hidden:
 :maxdepth: 3
 
+our-vision
 Recognition <recognition>
-Release notes <release-notes>
 Academy events <events/index>
 Participating projects <projects>
 Academy handbook <docs/index>
 Writing resources <library/index>
-
+Release notes <release-notes>
 ```

@@ -1,5 +1,4 @@
-/* Style for short-term announcement about survey
-TODO: Remove this file by 2025-08-11 */
+/* Style for announcement banner. */
 
 .announcement-content a {
   color: var(--color-link) !important;
