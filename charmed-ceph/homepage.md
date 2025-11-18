@@ -2,7 +2,7 @@
 
 Charmed Ceph is a software-defined storage solution that provides object, block and file storage on commodity hardware.
 
-Charmed Ceph makes it easy to use and deploy [Ceph][upstream-ceph]. It provides a simpler way to deliver Ceph to users using a set of scripts called charms that are deployed with [Juju](https://juju.is/).
+Charmed Ceph makes it easy to use and deploy [Ceph][upstream-ceph]. It provides a simpler way to deliver Ceph to users using a set of scripts called charms that are deployed with [Juju][juju].
 
 Corporate users can benefit from the robust and manageable full-suite storage solution, and the ease with which their Ceph clusters can be deployed with Charmed Ceph.
 
@@ -14,8 +14,8 @@ An individual or corporate user with a large and growing volume of valuable data
 
 |  |  |
 |--|--|
-| **Tutorial** </br> [Get Started][gs]: a hands-on introduction to Ceph clusters for new users | **How-to guides** </br> [How-to guides][ht] for installation, integration and other key operations |
-| **Explanation** </br> Technical background, discussions and clarification of key topics, including [pool types][pt] and [storage types](https://ubuntu.com/ceph/docs/explanation#storage-types)| **Reference** </br> Technical information: [supported versions](/t/supported-ceph-versions/18799), [release cycle](/t/release-cycle/18800), [release notes](/t/ceph-release-notes/18764) and [appendices](/t/release-cycle/18800)|
+| **Tutorial** </br> [Get Started][get-started]: a hands-on introduction to Ceph clusters for new users | **How-to guides** </br> [How-to guides][how-to] for installation, integration and other key operations |
+| **Explanation** </br> Technical background, discussions and clarification of key topics, including [pool types][pool-types] and [storage types][storage-types]| **Reference** </br> Technical information: [supported versions][supported-versions], [release cycle][release-cycle], [release notes][release-notes] and [appendices][appendices]|
 
 ---
 
@@ -24,25 +24,30 @@ An individual or corporate user with a large and growing volume of valuable data
 Charmed Ceph is an Open Source project that welcomes usage discussion, project feedback, and especially contributions!
 
 * Join our [user forum][juju-discourse-openstack]
-* Chat to us on [Matrix](https://app.element.io/#/room/#ceph-general:ubuntu.com)
+* Chat to us on [Matrix][matrix]
 * We abide by the [Ubuntu Code of Conduct][ubuntu-coc]
-* Get involved in improving our [software][ceph-charm-repos] or [documentation](/t/39095)
+* Get involved in improving our [software][ceph-charm-repos] or [documentation][docs]
 
 Don't hesitate to [contact us][contact-ceph] if you have questions about integrating Charmed Ceph into your project.
 
 <!-- LINKS -->
 
 [upstream-ceph]: https://ceph.com/en/
-
-[gs]: /t/getting-started/18801
-[ht]: /t/31143
-[pt]: /t/pool-types/30609
-[rns]: /t/ceph-release-notes/18764
-[apps]: /t/appendices/30626
-[ubuntu-coc]: https://ubuntu.com/community/ethos/code-of-conduct
+[juju]: https://juju.is/
+[get-started]: https://ubuntu.com/ceph/docs/tutorial
+[how-to]: https://ubuntu.com/ceph/docs/howtos
+[pool-types]: https://ubuntu.com/ceph/docs/explanation#p-118843-pool-types
+[storage-types]: https://ubuntu.com/ceph/docs/explanation#storage-types
+[supported-versions]: https://ubuntu.com/ceph/docs/supported-ceph-versions
+[release-cycle]: /t/release-cycle/18800
+[release-notes]: https://ubuntu.com/ceph/docs/release-notes
+[appendices]: https://ubuntu.com/ceph/docs/appendices
 [juju-discourse-openstack]: https://discourse.charmhub.io/tag/openstack
-[contact-ceph]: https://ubuntu.com/ceph/contact-us
+[matrix]: https://app.element.io/#/room/#ceph-general:ubuntu.com
+[ubuntu-coc]: https://ubuntu.com/community/ethos/code-of-conduct
 [ceph-charm-repos]: https://opendev.org/explore/repos?sort=recentupdate&language=&q=charm-ceph&only_show_relevant=false
+[docs]: https://ubuntu.com/ceph/docs/doc-contrib
+[contact-ceph]: https://ubuntu.com/ceph/contact-us
 
 <!-- MENU -->
 
