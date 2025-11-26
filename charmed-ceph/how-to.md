@@ -16,7 +16,11 @@ To ensure the health of your cluster, you need to scale your OSDs and MONs up or
   - [Replacing OSD disks](/t/18788)
   - [Removing OSDs](/t/28296)
   - [Removing MONs](/t/27595)
-  - [Enabling full disk encryption](/t/68577)
+
+## Security
+
+- [Enabling full disk encryption](/t/68577)
+- [Report security vulnerabilities](/t/68578)
 
 ## Multi-site operations
 
@@ -34,7 +38,5 @@ There are three pieces of software in a Charmed Ceph deployment that can be upgr
 2. [cluster node operating system](/t/18777)
 3. [Ceph itself](/t/18778)
 
-## Contact us
-
-  - [Report security vulnerabilities](/t/68578)
+  
   
