@@ -20,11 +20,11 @@ To ensure the health of your cluster, you need to scale your OSDs and MONs up or
 
 ## Multi-site operations
 
-Here we discuss setting up [RADOS Gateway multi-site replication](https://ubuntu.com/ceph/docs/multi-site) in a charmed Ceph deployment. Native replication between ceph-radosgw applications is supported via `juju relations`. By default, both primary and secondary RGW applications accept write operations (i.e. active-active replication is configured).
+Here we discuss setting up [RADOS Gateway multi-site replication](https://ubuntu.com/ceph/docs/multi-site-replication) in a charmed Ceph deployment. Native replication between ceph-radosgw applications is supported via `juju relations`. By default, both primary and secondary RGW applications accept write operations (i.e. active-active replication is configured).
 
-* [Setting up multi-site replication](t/setting-up-multi-site-replication/36025)
-* [Recovering from an outage with multi-site replication](t/recovering-from-an-outage-with-multi-site-replication/36026)
-* [Scaling down multi-site to single-site](t/scaling-down-multi-site-to-single-site/36027)
+* [Setting up multi-site replication](https://ubuntu.com/ceph/docs/setting-up-multi-site-replication)
+* [Recovering from an outage with multi-site replication](https://ubuntu.com/ceph/docs/recovering-from-an-outage-with-multi-site-replication)
+* [Scaling down multi-site to single-site](https://ubuntu.com/ceph/docs/scaling-down-multi-site-to-single-site)
 
 ## Upgrading deployment software
 
