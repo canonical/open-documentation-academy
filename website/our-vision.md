@@ -1,12 +1,12 @@
 # Open Documentation Academy
 
-__Document. Learn. Contribute. Lead: Discover open source through better documentation__
+__Document. Learn. Contribute. Lead: Discover open source through better documentation.__
 
 ## Our Vision
 
 __Documentation accessible to all. Contribution possible for everyone. Leadership within reach.__
 
-We envision a future where quality documentation is the foundation and lifeblood of open-source ecosystems—a world where clear, accessible, and thoughtful content demystifies technology, inviting both newcomers and experienced contributors from every corner of the globe to collaborate, innovate, and ensure open-source thrives for generations to come.
+At CODA, Canonical Open Documentation Academy, we envision a future where quality documentation is the foundation and lifeblood of open-source ecosystems—a world where clear, accessible, and thoughtful content demystifies technology, inviting both newcomers and experienced contributors from every corner of the globe to collaborate, innovate, and ensure open-source thrives for generations to come.
 
 ---
 
@@ -14,10 +14,10 @@ We envision a future where quality documentation is the foundation and lifeblood
 
 To build the premier global community advancing open-source documentation excellence through mentorship and collaboration.
 
-As a pioneering program focused on the craft of documentation, CODA:
+As a pioneering program focused on the craft of documentation, the Open Documentation Academy:
 
 - **Enables** members to build skills in a safe and supportive environment  
-- **Cultivates** a thriving worldwide community through workshops, regular sessions, and personalized mentoring  
+- **Cultivates** a thriving worldwide community through workshops, regular sessions, and personalised mentoring  
 - **Delivers** clear learning paths, systematic support, and tangible recognition to help participants become proficient documentation creators  
 - **Removes obstacles** to open-source engagement by establishing documentation as the primary entry pathway
 
