@@ -26,3 +26,17 @@ As a pioneering program focused on the craft of documentation, the Open Document
 - **Cultivates** a thriving worldwide community through workshops, regular sessions, and personalised guidance  
 - **Delivers** clear learning paths, systematic support, and visible recognition to help participants become proficient documentation creators  
 - **Removes obstacles** to open-source engagement by establishing documentation as the primary entry pathway
+
+
+---
+
+## Our vision for your journey at CODA
+![Pathway Diagram](media/open-documentation-academy-pathway.png)
+
+Every CODA member follows their own path, but most journeys include these milestones:
+
+- **Newcomer**: Join our forum, introduce yourself, and connect with a personal coach  
+- **First Contribution**: Select a curated task and submit your initial documentation work  
+- **Regular Contributor**: Build your portfolio, develop consistent skills, and earn official certification
+- **Mentor**: Guide new members, share your expertise, and strengthen the community  
+- **Leader**: Spearhead documentation initiatives and shape the future of projects
