@@ -13,17 +13,3 @@ We thrive through collective effort. Through facilitation, peer assistance, and 
 
 **Quality**  
 We pursue industry-leading documentation standards, supporting contributors at their current level and facilitating professional development through experience in established projects.
-
-
----
-
-## Our vision for your journey at CODA
-![Pathway Diagram](media/open-documentation-academy-pathway.png)
-
-Every CODA member follows their own path, but most journeys include these milestones:
-
-- **Newcomer**: Join our forum, introduce yourself, and connect with a personal coach  
-- **First Contribution**: Select a curated task and submit your initial documentation work  
-- **Regular Contributor**: Build your portfolio, develop consistent skills, and earn official certification
-- **Mentor**: Guide new members, share your expertise, and strengthen the community  
-- **Leader**: Spearhead documentation initiatives and shape the future of projects
