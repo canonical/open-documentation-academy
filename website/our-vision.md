@@ -11,7 +11,7 @@ With our help, your open source journey can be a valuable experience that you ca
 
 __Documentation accessible to all. Contribution possible for everyone. Leadership within reach.__
 
-At CODA—the Canonical Open Documentation Academy—we envision a future where *quality documentation forms the foundation and lifeblood of open-source ecosystems*. We see a world where *clear, accessible, and thoughtful content demystifies technology*. This environment welcomes both newcomers and experienced contributors from every corner of the globe. Together, we commit to collaborate and innovate to ensure open-source thrives for generations to come.
+At CODA—the Canonical Open Documentation Academy—we envision a future where *quality documentation forms the foundation and lifeblood of open-source ecosystems*. We see a world where *clear, accessible, and thoughtful content demystifies technology*. This environment welcomes both newcomers and experienced contributors from every corner of the globe. Together, we commit to build a collaborative and innovative community where open source thrives for generations to come.
 
 
 ---
