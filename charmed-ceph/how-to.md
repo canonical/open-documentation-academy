@@ -19,8 +19,10 @@ To ensure the health of your cluster, you need to scale your OSDs and MONs up or
 
 ## Security
 
+Secure your cluster with full disk encryption and by reporting vulnerabilities to our Security Team.
+
 - [Enabling full disk encryption](/t/68577)
-- [Report security vulnerabilities](/t/68578)
+- [Reporting security vulnerabilities](/t/68578)
 
 ## Multi-site operations
 
