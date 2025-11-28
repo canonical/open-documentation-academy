@@ -1,4 +1,4 @@
-## Our core values
+# Our core values
 
 Anyone who participates in a CODA space or works on a CODA task is a CODA member, and we aim to collaborate with projects that share our values. By participating, you agree to uphold the spirit of the [Ubuntu code of conduct](https://discourse.ubuntu.com/t/ubuntu-code-of-conduct-v2-0/33111/1), champion the CODA values described below, and help set the standard for open-source collaboration.
 
