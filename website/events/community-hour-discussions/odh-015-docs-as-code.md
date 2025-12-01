@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Many of us in tech have experienced the challenge of writing both code and documentation, often favoring code over documentation. The philosophy of Documentation as Code, more commonly known as _**Docs as Code**_, bridges this gap by treating documentation with the similar tools, processes, and respect as source code. In this session, Robert Krátký explains how this approach streamlines documentation development by integrating it closely with source code in software projects.
+The philosophy of Documentation as Code, more commonly known as _**Docs as Code**_, bridges the gap between software development and documentation by treating documentation with software tools and processes. In this session, Robert Krátký explains how this approach streamlines documentation development by integrating it closely with source code in software projects.
 
 Watch the full video here: [UbuntuOnAir: ODH-015](https://www.youtube.com/watch?v=AVNfH99KiME)
 
