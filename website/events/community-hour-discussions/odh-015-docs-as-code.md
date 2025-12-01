@@ -1,24 +1,43 @@
-# Overview of Documentation Community Hour[ODH-015]: Documentation as Code
+# Getting hired as a technical writer
+
+## Presenter
+
+[Robert Krátký](https://cz.linkedin.com/in/robertkratky)
+
+## Special thanks
+
+This presentation was developed with valuable input and feedback from:
+
+* [Graham Morrison](https://github.com/degville)
+* [Artem Konev](https://ie.linkedin.com/in/artemkonev)
+* [Bill Wear](https://www.linkedin.com/in/bill-wear-737825192/)
+* [Ruth Fuchss](https://www.linkedin.com/in/rfuchss/)
+* [Nick Veitch](https://www.linkedin.com/in/nickveitch/)
+
+---
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=AVNfH99KiME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
 
 ## Introduction
 
 The philosophy of Documentation as Code, more commonly known as _**Docs as Code**_, bridges the gap between software development and documentation by treating documentation with software tools and processes. In this session, Robert Krátký explains how this approach streamlines documentation development by integrating it closely with source code in software projects.
 
-Watch the full video here: [UbuntuOnAir: ODH-015](https://www.youtube.com/watch?v=AVNfH99KiME)
 
 ---
 
 ## What is *Docs as Code*?
 
-*Docs as Code* is an approach that treats documentation as a first-class citizen alongside software source code. Instead of favoring code, it places documentation on equal footing in the software development lifecycle.
+*Docs as Code* is an approach that places documentation on equal footing with software source code in the software development lifecycle.
 
-This approach avoids reliance on a single monolithic system, it leverages specialized tools throughout the content creation, review, and publishing process. Often, the choice of tools aligns with the specific software process it addresses.
+This approach avoids reliance on a single monolithic system, that is a traditional software development model that uses one code base to perform multiple functions. Instead, *Docs as Code* leverages specialized tools throughout the content creation, review, and publishing process. Often, the choice of tools aligns with the specific software process it addresses.
 
 ---
 
 ## Workflow
 
-One of the core objectives of the *Docs as Code* approach is to promote using the most suitable tools for each documentation task. As the saying goes, 'If your only tool is a hammer, every problem looks like a nail.' Understanding the purpose and selecting the right tools leads to more effective and valuable documentation.
+One of the core objectives of the *Docs as Code* approach is to promote using the most suitable tools for each documentation task. Understanding the purpose and selecting the right tools leads to more effective and valuable documentation.
 
 We can further understand this through the typical lifecycle of documentation when it is maintained as code.
 
@@ -31,7 +50,7 @@ We can further understand this through the typical lifecycle of documentation wh
 | Testing & Validation | Scripts, Linters, Spell Checkers | Borrow software testing concepts to ensure quality and reusability |
 | Publishing | Static Site Generators, CMS | Automated hosting and updates |
 
-### The Good
+### The Positives
 
 In the *Docs as Code* approach:
 
@@ -51,7 +70,7 @@ In the *Docs as Code* approach:
   
 - Developers already know these tools- including IDEs, text editors, and scripting tools- making it more natural for them to contribute to documentation, fostering stronger collaboration.
 
-### The Bad and the Ugly
+### The Negatives
 
 - Writers may face a steep learning curve adapting to markup languages and distributed tooling.
 - Developers might resist added documentation responsibilities.
