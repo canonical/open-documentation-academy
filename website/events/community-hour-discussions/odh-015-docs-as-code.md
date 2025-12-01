@@ -22,14 +22,14 @@ One of the core objectives of the *Docs as Code* approach is to promote using th
 
 We can further understand this through the typical lifecycle of documentation when it is maintained as code.
 
-| Goals                | Tools                                      | Reasoning                                          		      |
-|----------------------|-------------------------------------------|------------------------------------------------------------------|
-| Content Authoring    | Text Editors                              | Use non-binary, human-readable formats 			|
-| Formatting & Styling | Markup Languages                          | Semantic formatting with stylesheets enables multiple output formats (HTML, PDF) |
-| Version Control      | Git, SVN, Mercurial                       | Essential for tracking changes and history       					|
-| Issue Tracking       | JIRA, Bugzilla, Mantis                    | Manage bugs and improvements                      |
-| Testing & Validation | Scripts, Linters, Spell Checkers          | Borrow software testing concepts to ensure quality and reusability |
-| Publishing           | Static Site Generators, CMS               | Automated hosting and updates                      |
+| Goals | Tools | Reasoning |
+|---|---|---|
+| Content Authoring | Text Editors | Use non-binary, human-readable formats |
+| Formatting & Styling | Markup Languages | Semantic formatting with stylesheets enables multiple output formats (HTML, PDF) |
+| Version Control | Git, SVN, Mercurial | Essential for tracking changes and history |
+| Issue Tracking | JIRA, Bugzilla, Mantis | Manage bugs and improvements |
+| Testing & Validation | Scripts, Linters, Spell Checkers | Borrow software testing concepts to ensure quality and reusability |
+| Publishing | Static Site Generators, CMS | Automated hosting and updates |
 
 ### The Good
 
