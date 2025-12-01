@@ -1,4 +1,4 @@
-# Getting hired as a technical writer
+# Documentation as Code
 
 ## Presenter
 
