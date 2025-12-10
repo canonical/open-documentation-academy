@@ -52,23 +52,35 @@ We can further understand this through the typical lifecycle of documentation wh
 
 ### The Positives
 
-In the *Docs as Code* approach:
+#### Automation
 
-- Documentation tools support automated processes like change tracking, testing, and publishing via static site generators or content management systems ensuring high quality and seamless updates.
-  
-- Version control of documentation provides:
-  - Parallel updates and easier collaboration.
-  - Detailed change tracking that clearly matches modifications to their authors.
-  - Improved transparency, flexibility, and maintainability across the project.
-    
-- It streamlines the integration and maintenance of documentation alongside code, for example:
-	- Completion of functional documentation hand in hand with software development, synchronized with key project milestones such as software release.
-	- Peer document reviews tied closely with code reviews.
-	- Accurate document-to-code version alignment, keeping docs synced with the corresponding code on each individual software release branch.
-   
-- The core tools used are typically open-source and portable, rather than proprietary solutions (e.g., Adobe FrameMaker, MadCap, or RoboHelp). This avoids vendor lock-in, preventing dependency on a single vendor’s ecosystem that complicates switching or migration.
-  
-- Developers already know these tools- including IDEs, text editors, and scripting tools- making it more natural for them to contribute to documentation, fostering stronger collaboration.
+Documentation tooling supports automated processes such as change tracking, testing, and publishing through static site generators or content management systems, helping ensure high quality and smooth update.
+
+#### Version Control
+
+Version-controlled documentation enables:
+
+- Parallel updates and easier collaboration.
+
+- Detailed change tracking that clearly links modifications to individual authors.
+
+- Greater transparency, flexibility, and maintainability across the project.
+
+#### Maintenance
+
+Integrating documentation with code streamlines ongoing maintenance, for example:
+
+- Completing functional documentation in step with software development and key milestones such as releases.
+
+- Running peer reviews of documentation alongside code reviews.
+
+- Keeping documentation versions aligned with the corresponding code on each release branch.
+
+#### Tools
+
+Core tooling is typically open source and portable rather than proprietary (for example, instead of Adobe FrameMaker, MadCap, or RoboHelp), which reduces vendor lock-in and makes future tool changes easier.
+
+Because developers are already familiar with these tools—such as IDEs, text editors, and scripting tools—they can contribute to documentation more naturally, strengthening collaboration.
 
 ### The Negatives
 
@@ -91,11 +103,3 @@ In the *Docs as Code* approach:
 ### Upcoming Innovations
 
 - "Diagrams as Code" is emerging to keep images and graphics updated alongside text and code.
-
-### Other Callouts
-
-1. Efforts are underway to streamline collaboration with external projects.
-2. Automation is being developed to verify Contributor License Agreement(CLA) before contributors can submit pull requests to the Open Documentation Repository.
-3. The Open Documentation schedule is available on the Forum to plan future Office Hour discussion topics.
-4. Next week’s session will feature Nick Veitch discussing *Vale* for testing documentation.
-
