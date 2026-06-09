@@ -55,6 +55,8 @@ We record our Community Hour meeting if there's a presentation or a session we t
 |18/10/24 | `Shane` | [Recipes and Software](https://www.youtube.com/watch?v=PW_gWv6OysM)|
 |06/12/24 | `Teodora, Joost De Cock` | [The inspiration behind freesewing.org](https://www.youtube.com/watch?v=SWyzQ3ChZ1I)|
 |13/12/24 | `David Ekete` | [Interactive RST and working with CODA](https://www.youtube.com/watch?v=_7pKdieSt74)|
+|24/01/25 | `Simon Fels` | [An engineering manager’s approach](https://www.youtube.com/watch?v=jLP6JJ1Yut8)|
+|10/10/25 | `Dilyn Corner` | [Engineering perspectives on docs](https://www.youtube.com/watch?v=1GbTb_J9G8Y)|
 
 See {ref}`community-hour-discussions-and-presentations` for summaries of each Community Hour.
 
