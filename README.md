@@ -32,8 +32,8 @@ The first words of an issue's title will typically indicate the project it invol
 - [Landscape](https://ubuntu.com/landscape/docs): Ubuntu systems management, monitoring and administration platform
 - [Launchpad](https://documentation.ubuntu.com/launchpad/en/latest/): software development lifecycle and collaboration platform
 - [MAAS](https://maas.io/docs): bare metal cloud with on-demand servers
-- [MicroCeph](https://canonical-microceph.readthedocs-hosted.com/en/squid-stable/): a Ceph orchestration tool; the easiest way to deploy and manage a Ceph cluster
-- [MicroStack](https://microstack.run/docs): our next generation enterprise cloud solution
+- [MicroCeph](https://documentation.ubuntu.com/canonical-microceph/stable/): a Ceph orchestration tool; the easiest way to deploy and manage a Ceph cluster
+- [MicroStack](https://canonical-openstack.readthedocs-hosted.com/en/latest/): our next generation enterprise cloud solution
 - [Multipass](https://discourse.ubuntu.com/t/multipass-documentation/8294): tool to generate cloud-style Ubuntu virtual machines
 - [Netplan](https://github.com/canonical/netplan): network configuration for various backends
 - [Our Sphinx and RST starter pack](https://github.com/canonical/sphinx-docs-starter-pack): our open source template for building modern documentation
