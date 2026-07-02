@@ -198,6 +198,7 @@ linkcheck_ignore = [
     r"https://apithedocs\.org/podcast/?",
     r"https://document360\.com/blog/technical-writer-style-guide/?",
     r"https://www\.chicagomanualofstyle\.org/home\.html",
+    r"https://www\.ox\.ac\.uk/public-affairs/style-guide/?",
 ]
 
 
