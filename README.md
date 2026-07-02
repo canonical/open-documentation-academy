@@ -21,9 +21,9 @@ Issues are identified and shared by participating projects at Canonical who cont
 <!-- start-participating-projects -->
 The first words of an issue's title will typically indicate the project it involved. These include the following:
 
-- [ADSys](https://documentation.ubuntu.com/adsys/en/stable/): Active Directory Group Policy client for Ubuntu
+- [ADSys](https://ubuntu.com/docs/adsys/stable/): Active Directory Group Policy client for Ubuntu
 - [Anbox Cloud](https://anbox-cloud.io/docs): Solution offering scalable Android in the cloud
-- [authd](https://documentation.ubuntu.com/authd/stable/): authentication service for Ubuntu that integrates with cloud identity providers
+- [authd](https://ubuntu.com/docs/authd/stable-docs/): authentication service for Ubuntu that integrates with cloud identity providers
 - [Canonical Kubernetes](https://ubuntu.com/kubernetes/docs): the reference platform for Kubernetes on all major public clouds
 - [Charmed Ceph](https://ubuntu.com/ceph/docs): a Juju-native way of deploying a Ceph cluster
 - [Charmed OpenStack](https://ubuntu.com/openstack/docs): our traditional enterprise cloud solution
@@ -32,8 +32,8 @@ The first words of an issue's title will typically indicate the project it invol
 - [Landscape](https://ubuntu.com/landscape/docs): Ubuntu systems management, monitoring and administration platform
 - [Launchpad](https://documentation.ubuntu.com/launchpad/en/latest/): software development lifecycle and collaboration platform
 - [MAAS](https://maas.io/docs): bare metal cloud with on-demand servers
-- [MicroCeph](https://canonical-microceph.readthedocs-hosted.com/en/squid-stable/): a Ceph orchestration tool; the easiest way to deploy and manage a Ceph cluster
-- [MicroStack](https://microstack.run/docs): our next generation enterprise cloud solution
+- [MicroCeph](https://documentation.ubuntu.com/canonical-microceph/stable/): a Ceph orchestration tool; the easiest way to deploy and manage a Ceph cluster
+- [MicroStack](https://canonical-openstack.readthedocs-hosted.com/en/latest/): our next generation enterprise cloud solution
 - [Multipass](https://discourse.ubuntu.com/t/multipass-documentation/8294): tool to generate cloud-style Ubuntu virtual machines
 - [Netplan](https://github.com/canonical/netplan): network configuration for various backends
 - [Our Sphinx and RST starter pack](https://github.com/canonical/sphinx-docs-starter-pack): our open source template for building modern documentation
@@ -44,7 +44,7 @@ The first words of an issue's title will typically indicate the project it invol
 - [Ubuntu on public cloud](https://documentation.ubuntu.com/public-cloud/en/latest/): Optimised Ubuntu images for partner clouds
 - [Ubuntu Project Documentation](https://github.com/ubuntu/ubuntu-project-docs): manual for contributors to the Ubuntu Linux distribution
 - [Ubuntu Server documentation](https://github.com/canonical/ubuntu-server-documentation): Official documentation for the Ubuntu Server distribution
-- [Ubuntu WSL](https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/): Ubuntu terminal environment on Windows with the Windows Subsystem for Linux (WSL)
+- [Ubuntu WSL](https://ubuntu.com/wsl/docs/stable/): Ubuntu terminal environment on Windows with the Windows Subsystem for Linux (WSL)
 - [Ubuntu Core](https://ubuntu.com/core): A minimal, secure, containerized Ubuntu for IoT and embedded devices with transactional updates.
 
 This list will expand as more projects get involved. We're also happy to include projects outside of Canonical.
