@@ -42,4 +42,4 @@ If there is no mentor for the issue, use: `This issue does not currently have a 
 <!-- List URLs or references that help the contributor research and complete the task.
 
 Include contact information, for example: -->
-Please feel free to reach out to the mentor on [Matrix](matrix_address) if you have further questions.
+Please feel free to reach out to the mentor on [Matrix](<INSERT_YOUR_MATRIX_DM_ADDRESS_HERE>) if you have further questions.
