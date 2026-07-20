@@ -25,7 +25,7 @@ If there is no mentor for the issue, use: `This issue does not currently have a 
 
 <!-- Explicitly state if specific domain knowledge or tools are required, or if the issue is beginner-friendly. -->
 
-# Takeaways
+# What you will learn
 
 <!-- Briefly list what the contributor will learn from working on this issue. -->
 
