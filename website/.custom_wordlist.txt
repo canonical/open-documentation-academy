@@ -57,6 +57,8 @@ MultiMarkdown
 Multipass
 natively
 Netplan
+npm
+OCI
 ODA
 onboarding
 OpenLDAP
@@ -73,6 +75,7 @@ rebasing
 repo
 repos
 reStructured
+Rockcraft
 RST
 rST
 scalable
