@@ -249,7 +249,7 @@ Our AI guide states all contributions aided by AI should include a disclosure st
 - A PR has been generated immediately after the issue was posted.
 - A bot is authoring commits.
 
-The list is not exhaustive. If you spot any of these signs or you feel AI was used, start a conversation with the participant. If they do not comply with the [AI guidelines](https://docs.google.com/document/d/1jgqQUp9t4_kG_asyYHcXITEMmFZ4l_WkTn3roJdG7S8/edit?tab=t.0#heading=h.t773crw8es2i), inform them and close the PR. Make the issue available for another participant.
+The list is not exhaustive. If you spot any of these signs or you feel AI was used, start a conversation with the participant. If they do not comply with the AI guidelines, inform them and close the PR. Make the issue available for another participant.
 
 ## Celebrating success and giving credit
 
