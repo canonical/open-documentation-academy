@@ -243,7 +243,7 @@ Note on priority changes: If an issue unexpectedly becomes high-priority, reach 
 
 ### Manage undisclosed AI contributions
 
-Our [AI guide](https://docs.google.com/document/d/1jgqQUp9t4_kG_asyYHcXITEMmFZ4l_WkTn3roJdG7S8/edit?tab=t.0#heading=h.t773crw8es2i) states all contributions aided by AI should include a disclosure statement. When this is not the case, it might be hard to spot AI usage. There are, however, some signs that could indicate this:
+Our AI guide states all contributions aided by AI should include a disclosure statement. When this is not the case, it might be hard to spot AI usage. There are, however, some signs that could indicate this:
 
 - The [style guide](https://documentation.ubuntu.com/style-guide/) is not followed.
 - A PR has been generated immediately after the issue was posted.
