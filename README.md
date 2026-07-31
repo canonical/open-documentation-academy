@@ -127,7 +127,7 @@ Review pre-existing documentation for quality, accuracy and consistency. This wo
 
 #### https://github.com/canonical/open-documentation-academy/labels/size%201 https://github.com/canonical/open-documentation-academy/labels/size%202 https://github.com/canonical/open-documentation-academy/labels/size%203 https://github.com/canonical/open-documentation-academy/labels/size%205 https://github.com/canonical/open-documentation-academy/labels/size%208
 
-This is our estimation of effort and complexity. Size values range from 1 to 8, representing _least effort_ to _most effort_ respectively. These numbers follow the [Fibonacci ### sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) sequence of 1, 2, 3, 5, 8, with size 8 likely to be a significant undertaking.
+This is our estimation of effort and complexity. Size values range from 1 to 8, representing _least effort_ to _most effort_ respectively. These numbers follow the [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) of 1, 2, 3, 5, 8, with size 8 likely to be a significant undertaking.
 
 #### https://github.com/canonical/open-documentation-academy/labels/ta%20wanted
 
