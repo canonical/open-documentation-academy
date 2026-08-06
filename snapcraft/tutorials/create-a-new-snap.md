@@ -61,7 +61,7 @@ LXD can now be initialised with the 'lxd init' command:
 lxd init --minimal
 ```
 
-See [How to install LXD](https://documentation.ubuntu.com/lxd/en/latest/installing/#installing) for further installation options and troubleshooting.
+See [How to install LXD](https://canonical.com/lxd/docs/latest/installing/#installing) for further installation options and troubleshooting.
 
 <h3 id='heading--yaml'>1.2 Create a YAML template</h3>
 
