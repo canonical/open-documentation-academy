@@ -33,7 +33,7 @@ Create new issues directly as issues on the [CODA repository](https://github.com
 
 Start with the associated project name followed by a short description:
 
-```
+```text
 Ubuntu on WSL: Review contribution guidelines for documentation
 ```
 
@@ -41,17 +41,20 @@ Ubuntu on WSL: Review contribution guidelines for documentation
 
 Expand on the title, providing clear context that helps users understand the product and problem:
 
+```text
 Rockcraft contains native support for four web app frameworks, including Express. The Express framework has a dedicated tutorial to create a simple "Hello, world" app, package its contents into an OCI-compliant image, and use the container image in some simple ways.
 
 After the npm install step, the terminal outputs a message referring to 14 vulnerabilities (6 low, 5 high, 3 critical). The message looks scary, but it is known, expected, and should not affect the tutorial experience. However, for beginners without much experience, this message might introduce uncertainty or fear into their tutorial experience.
 
 That's where you come in!
+```
 
 #### Task
 
-Include the expected steps for the completion of the issue, including the repository where the PR must be opened in (TODO: remove when we have a dashboard) and mention the requirement of signing the [Canonical contributor license agreement](https://canonical.com/legal/contributors) (CLA):
+<!---TODO: update sentence when we have a dashboard--->
+Include the expected steps for the completion of the issue, including the repository where the pull request must be opened in and mention the requirement of signing the [Canonical contributor license agreement](https://canonical.com/legal/contributors) (CLA):
 
-```
+```text
 Add a new note admonition that appears after the npm install step in the "Create the Express app" section:
 
 - Mention that the terminal outputs a message referring to vulnerabilities (possibly including the exact text 14 vulnerabilities (6 low, 5 high, 3 critical))
@@ -66,7 +69,7 @@ Once you're assigned this issue, please open a pull request directly into canoni
 
 This section is optional. Explicitly state if specific domain knowledge or tools are required, or if the issue is beginner-friendly:
 
-```
+```text
 This is an ideal issue for anyone with some knowledge of npm and Sphinx, who is willing to help add a note admonition into a preexisting tutorial to offer context and reassurance to the user.
 ```
 
@@ -74,7 +77,7 @@ This is an ideal issue for anyone with some knowledge of npm and Sphinx, who is 
 
 Briefly list what the contributor will learn from working on this issue:
 
-```
+```text
 Upon completion of this issue, you will have learned the following:
 
 - Reading error log outputs
@@ -86,7 +89,7 @@ Upon completion of this issue, you will have learned the following:
 
 Specify the expected outcome required to close the issue:
 
-```
+```text
 On completion of this issue, the note admonition will provide additional context that will reassure the user that this warning is expected and can be safely ignored.
 ```
 
@@ -94,7 +97,7 @@ On completion of this issue, the note admonition will provide additional context
 
 Include URLs to the current documentation or source files to help the contributor research the problem:
 
-```
+```text
 - [Rockcraft repository](https://github.com/canonical/rockcraft)
 - [Express tutorial](https://documentation.ubuntu.com/rockcraft/latest/tutorial/express/), [source file](https://github.com/canonical/rockcraft/blob/main/docs/tutorial/express.rst)
 - [Contributing to the Rockcraft documentation](https://documentation.ubuntu.com/rockcraft/latest/contribute-to-this-documentation/)
@@ -106,7 +109,7 @@ Include URLs to the current documentation or source files to help the contributo
 
 Add who the mentor of the issue is:
 
-```
+```text
 The mentor for this issue is [GH username]. They are the Technical Author for [Product name].
 ```
 
@@ -114,13 +117,13 @@ If the mentor is not a TA, the second sentence must be modified accordingly.
 
 If there is no mentor for the issue, include the following:
 
-```
+```text
 This issue does not currently have a mentor. If you are interested in working on it, please leave a comment and we will assign one as soon as possible. Please bear in mind this might take a few days.
 ```
 
 Include how to contact the mentor:
 
-```
+```text
 Please feel free to reach out to the mentor on [Matrix](https://matrix.to/#/@username) if you have further questions.
 ```
 
@@ -246,7 +249,7 @@ Note on priority changes: If an issue unexpectedly becomes high-priority, reach 
 Our AI guide states all contributions aided by AI should include a disclosure statement. When this is not the case, it might be hard to spot AI usage. There are, however, some signs that could indicate this:
 
 - The [style guide](https://documentation.ubuntu.com/style-guide/) is not followed.
-- A PR has been generated immediately after the issue was posted.
+- A pull request has been generated immediately after the issue was posted.
 - A bot is authoring commits.
 
 The list is not exhaustive. If you spot any of these signs or you feel AI was used, start a conversation with the participant. If they do not comply with the AI guidelines, inform them and close the PR. Make the issue available for another participant.

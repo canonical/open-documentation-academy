@@ -72,6 +72,7 @@ categorizing
 prioritize
 rebase
 rebasing
+recognize
 repo
 repos
 reStructured
