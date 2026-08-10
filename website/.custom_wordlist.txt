@@ -41,12 +41,15 @@ golang
 Hackmamba
 howto
 https
+IDEs
 IoT
 JIRA
 KDE
+Krátký
 LaTeX
 LDAP
 lifecycle
+Linters
 MAAS
 makefile
 md
@@ -67,7 +70,7 @@ organize
 Pandoc
 prized
 PRs
-Prioritize 
+Prioritize
 categorizing
 prioritize
 rebase
@@ -76,6 +79,7 @@ recognize
 repo
 repos
 reStructured
+reusability
 Rockcraft
 RST
 rST
@@ -84,6 +88,7 @@ Snapcraft
 specialized
 specializes
 SSL
+stylesheets
 TLS
 UDP
 uniquenesses

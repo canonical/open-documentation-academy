@@ -127,8 +127,6 @@ Include how to contact the mentor:
 Please feel free to reach out to the mentor on [Matrix](https://matrix.to/#/@username) if you have further questions.
 ```
 
-There are several examples of the application of this model: [#352](https://github.com/canonical/open-documentation-academy/issues/352)
-
 ### Labels
 
 Make sure to label the issue correctly following the guidelines specified in the CODA repository's [README file](https://github.com/canonical/open-documentation-academy#issue-labels), including the size of the issue.
@@ -269,6 +267,5 @@ As such, the mentors should recognize significant achievements in the following 
 
 ## Additional resources
 
-- [How to create an issue](https://documentation.academy/docs/howto/create-an-issue/)
 - [Craft a constructive peer review](https://documentation.academy/library/tutorials/craft-a-constructive-peer-review/)
 - [How to implement a peer reviewer's feedback in your documentation](https://documentation.academy/library/reference/how-to-implement-peer-reviewers-feedback/)

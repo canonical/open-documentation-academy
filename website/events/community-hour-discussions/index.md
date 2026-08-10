@@ -17,6 +17,6 @@ You can also watch the original videos to explore the topics in depth.
 Documenting a new project <documenting-new-project>
 Getting hired as a technical writer <getting-hired>
 Markup languages for documentation <markup-languages>
-Documentation as Code <odh-015-docs-as-code>
+Documentation as Code <docs-as-code>
 
 ```
