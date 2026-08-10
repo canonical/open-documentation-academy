@@ -15,8 +15,7 @@ This presentation was developed with valuable input and feedback from:
 * [Nick Veitch](https://www.linkedin.com/in/nickveitch/)
 
 ---
-
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=AVNfH99KiME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AVNfH99KiME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 
@@ -78,9 +77,9 @@ Integrating documentation with code streamlines ongoing maintenance, for example
 
 #### Tools
 
-Core tooling is typically open source and portable rather than proprietary (for example, instead of Adobe FrameMaker, MadCap, or RoboHelp), which reduces vendor lock-in and makes future tool changes easier.
+Core tooling is typically open source and portable rather than proprietary, which reduces vendor lock-in and makes future tool changes easier.
 
-Because developers are already familiar with these tools—such as IDEs, text editors, and scripting tools—they can contribute to documentation more naturally, strengthening collaboration.
+Because developers are already familiar with these tools—such as Integrated Development Environments (IDEs), text editors, and scripting tools—they can contribute to documentation more naturally, strengthening collaboration.
 
 ### The Negatives
 

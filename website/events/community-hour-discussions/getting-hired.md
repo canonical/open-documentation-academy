@@ -88,4 +88,4 @@ Start preparing and applying now, there is no better time.
 * [Sustain podcast](https://podcast.sustainoss.org/)
 * [Changelog podcast](https://changelog.com/podcast)
 * [University of Oxford Style Guide](https://www.ox.ac.uk/public-affairs/style-guide)
-* [Inclusive Language Guide](https://policy-practice.oxfam.org/resources/inclusive-language-guide-621487/)
+* [Inclusive Language Guide](https://oxfamilibrary.openrepository.com/server/api/core/bitstreams/b84e4514-6044-404a-9136-1c677ed3d518/content)
