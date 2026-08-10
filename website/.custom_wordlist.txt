@@ -50,6 +50,8 @@ LaTeX
 LDAP
 lifecycle
 Linters
+LLM
+LLMs
 MAAS
 makefile
 md
