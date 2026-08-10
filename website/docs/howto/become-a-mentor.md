@@ -267,6 +267,5 @@ As such, the mentors should recognize significant achievements in the following 
 
 ## Additional resources
 
-- [How to create an issue](https://documentation.academy/docs/howto/create-an-issue/)
 - [Craft a constructive peer review](https://documentation.academy/library/tutorials/craft-a-constructive-peer-review/)
 - [How to implement a peer reviewer's feedback in your documentation](https://documentation.academy/library/reference/how-to-implement-peer-reviewers-feedback/)
