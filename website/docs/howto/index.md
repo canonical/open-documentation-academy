@@ -5,5 +5,5 @@
 
 Get started <get-started/index>
 Work on a task <work-on-an-issue>
-Create a task <create-an-issue>
+Become a mentor <become-a-mentor>
 ```
