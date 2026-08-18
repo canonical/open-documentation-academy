@@ -52,7 +52,7 @@ That's where you come in!
 #### Task
 
 <!---TODO: update sentence when we have a dashboard--->
-Include the expected steps for the completion of the issue, including the repository where the pull request must be opened in and mention the requirement of signing the [Canonical contributor license agreement](https://canonical.com/legal/contributors) (CLA):
+Include the expected steps for the completion of the issue, including the repository where the pull request (PR) must be opened in and mention the requirement of signing the [Canonical contributor license agreement](https://canonical.com/legal/contributors) (CLA):
 
 ```text
 Add a new note admonition that appears after the npm install step in the "Create the Express app" section:
@@ -178,7 +178,7 @@ Adding new or missing documentation for a specific tool, feature, or function.
 
 #### [oda-admin](https://github.com/canonical/open-documentation-academy/labels/oda-admin)
 
-Tasks relating to the admin of the Open Documentation Academy (ODA) project.
+Tasks relating to the administration of the CODA project.
 
 #### [reference](https://github.com/canonical/open-documentation-academy/labels/reference)
 
@@ -254,16 +254,15 @@ The list is not exhaustive. If you spot any of these signs or you feel AI was us
 
 ## Celebrating success and giving credit
 
-Public recognition builds a strong community around Canonical and rewards contributors for their hard work.
+Public recognition builds a strong community and rewards contributors for their hard work.
 
 ### Recognition framework
 
-Helping people to make their first contributions to open source projects, a key objective of the Open Documentation Academy is to recognize the value of such contributions in meaningful ways.
+Helping people to make their first contributions to open source projects is a key objective of the academy. Recognizing contributors' achievements and the value of their contributions is important, and should be done in meaningful ways, for example:
 
-As such, the mentors should recognize significant achievements in the following ways:
-
-- Credit the participant in the project's release notes.
-- Provide a certificate (created by the CODA team) that can be shared on social media.
+- Highlighting the value of a contribution, and thanking the contributor, in the PR comments
+- Crediting the participant in the project's release notes
+- Listing the contributor at the footer of the page they contributed to
 
 ## Additional resources
 
