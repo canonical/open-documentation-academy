@@ -166,7 +166,7 @@ An ideal task to start with. Marking issues with this label is a widely adopted 
 
 #### [help wanted](https://github.com/canonical/open-documentation-academy/labels/help%20wanted)
 
-Another [GitHub convention](https://github.com/topics/help-wanted) to indicate that a project welcomes community help with an issue.
+Another [GitHub convention](https://github.com/topics/help-wanted) to indicate that a project welcomes community help with an issue
 
 #### [how-to](https://github.com/canonical/open-documentation-academy/labels/how-to)
 
@@ -174,11 +174,11 @@ Create or revise a document to better reflect a [how-to guide](https://diataxis.
 
 #### [new](https://github.com/canonical/open-documentation-academy/labels/new)
 
-Adding new or missing documentation for a specific tool, feature, or function.
+Adding new or missing documentation for a specific tool, feature, or function
 
 #### [oda-admin](https://github.com/canonical/open-documentation-academy/labels/oda-admin)
 
-Tasks relating to the administration of the CODA project.
+Tasks relating to the administration of the CODA project
 
 #### [reference](https://github.com/canonical/open-documentation-academy/labels/reference)
 
