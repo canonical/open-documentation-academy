@@ -63,11 +63,11 @@ templates or conventions.
 - Informative images have concise alternative text.
 - Complex diagrams have an adjacent description of their essential
   information.
-- Color is not the only way that information or state is communicated.
+- Colour is not the only way that information or state is communicated.
 - Text and essential graphical elements meet the project's contrast
   requirements.
-- Language avoids stereotypes, unnecessary gendering, and exclusionary
-  assumptions.
+- Language avoids stereotypes, unnecessary references to gender, and
+  exclusionary assumptions.
 
 ## Code, commands, and media
 
