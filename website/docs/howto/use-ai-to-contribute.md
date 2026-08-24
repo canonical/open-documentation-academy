@@ -1,4 +1,4 @@
-# Using AI for CODA tasks
+# How to use AI to contribute
 Canonical’s Open Documentation Academy (CODA) is a place for people to discover open source through documentation contributions. This guide explains how we think about Artificial Intelligence (AI) in the context of CODA contributions and how you can use AI tools as a contributor.
 
 ## Why it matters
