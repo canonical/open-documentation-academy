@@ -1,26 +1,21 @@
 [Interfaces](/t/35928) allow (or deny) access to a resource outside of a snap's confinement.
 
-Most users don't need to worry about interfaces. Snaps are designed for strong application isolation and safe interface connections are made automatically. 
+Most users don't need to worry about interfaces. Snaps are designed for strong application isolation and safe interface connections are made automatically.
 
 An interface is most commonly used to enable a snap to access sound playback or recording, your network, and your $HOME directory. But which interfaces a snap requires, and *provides*, is very much dependent on the type of snap and its own requirements.
 
 See [Supported interfaces](/t/supported-interfaces/7744) for a comprehensive list of interfaces and what kind of access they permit.
 
-<h2 id='heading--slots-plugs'>Plugs and slots</h2>
+## View all the snaps using an interface
 
-An interface provides a level of access to resources, such as audio playback, as defined by a *slot*. One or more snaps can access this resource by connecting a corresponding *plug* to the slot.
+Run the command:
 
-In other words, the slot is the provider of the resource while the plug is the consumer, and a slot can support multiple plug connections.
+```bash
+snap interface <interface name>
 
-![How an interfaces uses a plug and a slot](https://assets.ubuntu.com/v1/59c290a8-snapd-interfaces.png) 
+```
 
-In the output to `snap connections vlc` (see above), every interface used by VLC is listed in the first column. The *Plug* and *Slot* columns then describe how each interface is connected.
-
-For instance, the `audio-playback` interface connects VLC's audio-playback plug to the system's audio-playback slot so you can hear the sound it produces.
-
-<h2 id='heading--listing'>Listing interfaces</h2>
-
-You can see which snaps are using an interface with the `interface` command:
+The `interface` command shows the snaps using an interface. For example, for the audio-playback interface you'd see:
 
 ```bash
 $ snap interface audio-playback
@@ -34,61 +29,36 @@ slots:
   - snapd
 ```
 
-In the above output, you can see that Chromium, VLC and the Zoom snaps are connected to _snapd's_ audio-playback slot, which is synonymous with *Core* and *system*.
+In the previous output, you can see that Chromium, VLC and the Zoom snaps are connected to _snapd's_ audio-playback slot, which is synonymous with _Core_ and _system_.
 
 To see all the interfaces being used by your system, run `snap interface`. To see all the interfaces available to your system, including those not currently being used, run `snap interface --all`.
 
-<h2 id='heading--snap-store'>Using a GUI</h2>
+## View all the interfaces used by a snap
 
-The Ubuntu Software/[Snap Store](https://snapcraft.io/snap-store) desktop application is installed by default on Ubuntu and can be used to list an application's interfaces and to connect and disconnect them.
-
-An application first needs to be installed as a snap:
-
-![Snap Store VLC install from snap](https://assets.ubuntu.com/v1/8905c627-store-01.png)
-
-To access the interface management functions, either search for an installed snap, or select it from the _Installed_ view. The interfaces for the selected application can then be viewed by selecting **Permissions**:
-
-![Snap store permissions](https://assets.ubuntu.com/v1/7fbcf74c-store-04.png)
-
-Each interface can now be connected or disconnected by selecting the toggle switch to the right of its description, and you may be prompted for your password.
-
--->
-
-<h2 id='heading--listing'>Snap connections</h2>
-
-On the terminal, the _snap_ command provides more granular control over interface connections and which interfaces are operational on your system.
-
-The `snap connections` command lists which interfaces are connected and being used, while adding `--all` additionally shows interfaces with unconnected slots or plugs (shown in the output as a `-`):
+Run the command:
 
 ```bash
-$ snap connections --all
-Interface            Plug                           Slot                     Notes
-adb-support          scrcpy:adb-support             :adb-support             -
-alsa                 ffmpeg:alsa                    :alsa                    manual
-appstream-metadata   snap-store:appstream-metadata  :appstream-metadata      -
-iaudio-playback      ardour:audio-playback          :audio-playback          -
-dbus                 -                              cameractrls:dbus-daemon  -
-[...]
+snap connections <snap name>
 ```
 
-To see which interfaces a snap is using, and which interfaces it could use but isn't, type `snap connections <snapname>`:
+The `connections` command lists the interfaces a snap uses. For example, for the VLC snap you'd see:
 
 ```bash
 $ snap connections vlc
-Interface       Plug                   Slot                 Notes
-audio-playback  vlc:audio-playback     :audio-playback      -
-audio-record    vlc:audio-record       -                    -
-camera          vlc:camera             -                    -
-desktop         vlc:desktop            :desktop             -
-home            vlc:home               :home                -
-(...)
+Interface         Plug                  Slot               Notes
+camera            vlc:camera            -                  -
+desktop           vlc:desktop           :desktop           -
+desktop-legacy    vlc:desktop-legacy    :desktop-legacy    -
+home              vlc:home              :home              -
+mount-observe     vlc:mount-observe     -                  -
+[...]
 ```
 
-In the above output, the [`camera`](/t/the-home-interface/7838) interface is not connected because its slot is empty. This means VLC cannot access any connected cameras.
+In the previous <!-- above, left, right, below are assuming reading direction --> example, you <!-- TODO Style guide question, as authors should we talk directly to our readers YOU instead of WE --> can see that the `vlc:camera` interface is disconnected because it has an empty *Slot* entry.
 
-VLC can access the user's _/home_ directory because the [`home`](/t/the-home-interface/7838) interface is connected to the system `$HOME` directory (denoted by the `:home` slot name).
+See [Interface management](/t/interface-management/6154) for further interface details, including how to disconnect interfaces and make manual connections, and [Security policy and sandboxing](https://forum.snapcraft.io/t/security-policy-and-sandboxing/554) for more information on how confinement is implemented.
 
-To see all connected interfaces on your system, use the _snap connections_ command without a snap name:
+To see all connected interfaces on your system, use the `snap connections` command without a snap name:
 
 ```bash
 $ snap connections
@@ -101,7 +71,7 @@ audio-playback chromium:audio-playback :audio-playback      -
 (...)
 ```
 
-Adding `--all` to the _snap connections_ command will list all interfaces, including those without a connection:
+Adding `--all` to the `snap connections` command will list all interfaces, including those without a connection:
 
 ```bash
 $ snap connections --all
@@ -113,7 +83,7 @@ alsa           guvcview:alsa           -                    -
 (...)
 ```
 
-<h3 id='heading--auto-connections'>Auto-connections</h3>
+### Auto-connections
 
 Many interfaces are automatically connected when a snap is installed, and this ability is a property of either the interface itself, or the snap.
 
@@ -129,7 +99,7 @@ For more technical details on how interface auto-connections are processed, see 
 
 > ⓘ See the _Auto-connect_ column in the [Supported interfaces](/t/supported-interfaces/7744) table for which interfaces are connected automatically.
 
-<h3 id='heading--manual-connections'>Manual connections</h3>
+### Manual connections
 
 When you need to connect an interface manually, such as when you want to grant a snap access to [audio-record](/t/the-audio-record-interface/13090) for audio input, use the `snap connect` command:
 
@@ -153,14 +123,13 @@ snap connect <snap>:<plug interface> <snap>:<slot interface>
 
 A slot and a plug can only be connected if they have the same interface name. 
 
-Add the `--no-wait` option to _snap connect_ or _snap disconnect_ to run the process in the background and return immediately to the command prompt.
+Add the `--no-wait` option to `snap connect` or `snap disconnect` to run the process in the background and return immediately to the command prompt.
 
 [note type="positive"]
 A successful connection grants any necessary permissions that may be required by the interface to function.
 [/note]
 
-<h2 id='heading--disconnect'>Disconnect interfaces</h2>
-
+## Disconnect interfaces
 
 To disconnect an interface, use `snap disconnect`:
 
@@ -174,8 +143,22 @@ Following our previous example, you would disconnect *vlc:audio-record* with the
 sudo snap disconnect vlc:audio-record
 ```
 
-<h3 id='heading--forget'>Forget manual disconnections</h3>
+### Forget manual disconnections
 
 When an automatic connection ([see above](#heading--auto-connections)) is manually disconnected, its disconnected state is retained after a [snap refresh](/t/managing-updates/7022). This state is even stored **after a snap has been removed**, including removal with the `--purge` option.
 
 The `--forget` flag can be added to the disconnect command to reset this behaviour, and consequently, re-enable the automatic re-connection after a snap refresh.
+
+## Control interfaces using a GUI
+
+The Ubuntu Software/[Snap Store](https://snapcraft.io/snap-store) desktop application is installed by default on Ubuntu and can be used to list an application's interfaces and to connect and disconnect them.
+
+An application first needs to be installed as a snap:
+
+![A screenshot of the Snap Store showing the VLC install page.](../media/GIMP-snap-install.png)
+
+To access the interface management functions, either search for an installed snap, or select it from the _Installed_ view. To view the  interfaces for the selected application, select **Permissions**:
+
+![A screenshot of a Snap permissions dialogue.](../media/GIMP-interfaces.png)
+
+Each interface can now be connected or disconnected by selecting the toggle switch to the right of its description, and you may be prompted for your password.
