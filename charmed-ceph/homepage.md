@@ -6,7 +6,7 @@ Charmed Ceph makes it easy to use and deploy [Ceph][upstream-ceph]. It provides 
 
 Corporate users can benefit from the robust and manageable full-suite storage solution, and the ease with which their Ceph clusters can be deployed with Charmed Ceph.
 
-An individual or corporate user with a large and growing volume of valuable data to manage, and appreciates the ease of integration with other cloud services would greatly benefit from Charmed Ceph.
+An individual or corporate user with a large and growing volume of valuable data to manage, and who appreciates the ease of integration with other cloud services, would greatly benefit from Charmed Ceph.
 
 ---
 
