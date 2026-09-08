@@ -27,6 +27,7 @@ The first words of an issue's title will typically indicate the project it invol
 - [Canonical Kubernetes](https://ubuntu.com/kubernetes/docs): the reference platform for Kubernetes on all major public clouds
 - [Charmed Ceph](https://ubuntu.com/ceph/docs): a Juju-native way of deploying a Ceph cluster
 - [Charmed OpenStack](https://ubuntu.com/openstack/docs): our traditional enterprise cloud solution
+- [Chisel](https://ubuntu.com/chisel/docs/latest/): tool for extracting customized and specialized package subsets to create compact, secure software
 - [Juju](https://juju.is/docs):  open source orchestration engine
 - [LXD](https://documentation.ubuntu.com/lxd/en/latest/): open source container and VM management at any scale
 - [Landscape](https://ubuntu.com/landscape/docs): Ubuntu systems management, monitoring and administration platform
@@ -37,7 +38,7 @@ The first words of an issue's title will typically indicate the project it invol
 - [Multipass](https://discourse.ubuntu.com/t/multipass-documentation/8294): tool to generate cloud-style Ubuntu virtual machines
 - [Netplan](https://github.com/canonical/netplan): network configuration for various backends
 - [Our Sphinx and RST starter pack](https://github.com/canonical/sphinx-docs-starter-pack): our open source template for building modern documentation
-- [Rockcraft](https://documentation.ubuntu.com/rockcraft/stable/): tool to create a new generation of secure container images
+- [Rockcraft](https://ubuntu.com/containers/rockcraft/docs/latest/): tool to create a new generation of secure container images
 - [Snap and Snapcraft](https://snapcraft.io/docs): Linux app packages and the build tools for desktop, cloud and IoT
 - [Ubuntu Developer Guide](https://github.com/canonical/ubuntu-for-developers-docs): guide for developers using Ubuntu Desktop as a development platform
 - [ubuntu-image](https://github.com/canonical/ubuntu-image): Tool for generating bootable Ubuntu images
