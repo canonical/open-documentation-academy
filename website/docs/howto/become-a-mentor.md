@@ -1,6 +1,6 @@
 # CODA mentor handbook
 
-A guide for participants interested in creating issues and mentoring contributors in Canonical's Open Documentation Academy (CODA).
+Use this handbook to create documentation tasks for the Open Documentation Academy (CODA) and mentor contributors through to completion. It explains how to create and scope suitable issues, guide contributors through their work, and provide feedback as they complete their tasks.
 
 ## Creating issues
 
