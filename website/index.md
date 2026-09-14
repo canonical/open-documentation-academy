@@ -39,7 +39,8 @@ The Open Documentation Academy is sponsored by [Canonical Ltd](https://canonical
 :hidden:
 :maxdepth: 3
 
-our-vision
+Our ambition for CODA <our-vision>
+our-values
 Recognition <recognition>
 Academy events <events/index>
 Participating projects <projects>
