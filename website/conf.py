@@ -33,7 +33,7 @@ author = "Canonical Ltd."
 #
 # TODO: To disable the title, set to an empty string.
 
-html_title = project + ""
+html_title = project
 
 
 # Copyright string; shown at the bottom of the page
@@ -132,7 +132,6 @@ html_context = {
     # NOTE: If set, links for viewing the documentation source files
     #       and creating GitHub issues are added at the bottom of each page.
     "github_url": "https://github.com/canonical/open-documentation-academy",
-    # Docs branch in the repo; used in links for viewing the source files
     # Add a feedback button
     "github_issues": "enabled",
     # TODO: To customise the branch, uncomment and update as needed.
@@ -254,7 +253,6 @@ exclude_patterns = [
 html_css_files = [
     "css/pdf.css",
     # For short-term announcement about survey
-    # TODO: Remove this block by 2025-08-11
     "css/announcement.css",
 ]
 
