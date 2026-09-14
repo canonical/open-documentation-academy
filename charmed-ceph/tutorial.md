@@ -53,7 +53,7 @@ juju bootstrap localhost lxd-controller
 Creating Juju controller "lxd-controller" on localhost/localhost
 Looking for packaged Juju agent version 3.6.3 for amd64
 Located Juju agent version 3.6.3-ubuntu-amd64 at https://streams.canonical.com/juju/tools/agent/3.6.3/juju-3.6.3-linux-amd64.tgz
-To configure your system to better support LXD containers, please see: https://documentation.ubuntu.com/lxd/en/latest/explanation/performance_tuning/
+To configure your system to better support LXD containers, please see: https://canonical.com/lxd/docs/latest/explanation/performance_tuning/
 Launching controller instance(s) on localhost/localhost...
  - juju-6f74c7-0 (arch=amd64)            	 
 Installing Juju agent on bootstrap instance

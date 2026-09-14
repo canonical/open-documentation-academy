@@ -29,7 +29,7 @@ The first words of an issue's title will typically indicate the project it invol
 - [Charmed OpenStack](https://ubuntu.com/openstack/docs): our traditional enterprise cloud solution
 - [Chisel](https://ubuntu.com/chisel/docs/latest/): tool for extracting customized and specialized package subsets to create compact, secure software
 - [Juju](https://juju.is/docs):  open source orchestration engine
-- [LXD](https://documentation.ubuntu.com/lxd/en/latest/): open source container and VM management at any scale
+- [LXD](https://canonical.com/lxd/docs/latest/): open source container and VM management at any scale
 - [Landscape](https://ubuntu.com/landscape/docs): Ubuntu systems management, monitoring and administration platform
 - [Launchpad](https://documentation.ubuntu.com/launchpad/en/latest/): software development lifecycle and collaboration platform
 - [MAAS](https://maas.io/docs): bare metal cloud with on-demand servers
