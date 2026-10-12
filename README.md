@@ -37,7 +37,7 @@ The first words of an issue's title will typically indicate the project it invol
 - [Multipass](https://discourse.ubuntu.com/t/multipass-documentation/8294): tool to generate cloud-style Ubuntu virtual machines
 - [Netplan](https://github.com/canonical/netplan): network configuration for various backends
 - [Our Sphinx and RST starter pack](https://github.com/canonical/sphinx-docs-starter-pack): our open source template for building modern documentation
-- [Rockcraft](https://ubuntu.com/containers/rockcraft/docs/stable/): tool to create a new generation of secure container images
+- [Rockcraft](https://ubuntu.com/containers/rockcraft/docs/latest/): tool to create a new generation of secure container images
 - [Snap and Snapcraft](https://snapcraft.io/docs): Linux app packages and the build tools for desktop, cloud and IoT
 - [Ubuntu Developer Guide](https://github.com/canonical/ubuntu-for-developers-docs): guide for developers using Ubuntu Desktop as a development platform
 - [ubuntu-image](https://github.com/canonical/ubuntu-image): Tool for generating bootable Ubuntu images
