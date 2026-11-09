@@ -63,7 +63,7 @@ If it manages to complete the run successfully, you will see a big rush of comma
 
 ![The documentation has built successfully](images/docs_being_served.png)
 
-This means the documentation was successfully built, and now you can view it in your web browser by right clicking on that `http://127.0.0.1@8000` link and either selecting "open link" or "copy link" (which you can then paste into your browser of choice). 
+This means the documentation was successfully built, and now you can view it in your web browser by right-clicking on the <http://127.0.0.1:8000> link and either selecting "open link" or "copy link" (which you can then paste into your browser of choice).
 
 It's really convenient to have this running while you're working on your changes, because every time you save a file, it will update the build and show you a live preview of what your changes look like. 
 
